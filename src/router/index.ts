@@ -1,6 +1,6 @@
 import Vue from 'vue';
-import VueRouter, { RouteConfig } from 'vue-router';
-import Home from '../views/Home.vue';
+import VueRouter, {RouteConfig} from 'vue-router';
+import Home from '@/views/Home.vue';
 
 Vue.use(VueRouter);
 
@@ -13,22 +13,22 @@ const routes: Array<RouteConfig> = [
   {
     path: '/mirrors',
     name: 'Mirrors',
-    component: () => import('../views/Mirrors.vue')
+    component: () => import('@/views/Mirrors.vue')
   },
   {
     path: '/help',
     name: 'Help',
-    component: () => import('../views/Help.vue')
+    component: () => import('@/views/Help.vue')
   },
   {
     path: '/about',
     name: 'About',
-    component: () => import('../views/About.vue'),
+    component: () => import('@/views/About.vue'),
   },
   {
     path: '/err',
     name: 'Error',
-    component: () => import('../views/Error.vue')
+    component: () => import('@/views/Error.vue'),
   }
 ];
 

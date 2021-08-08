@@ -1,11 +1,18 @@
 <template>
-  <div>Mirrors</div>
+  <div>
+    <MirrorList/>
+  </div>
+
 </template>
 
 <script>
-export default {
+import Vue from 'vue';
+import MirrorList from '@/components/MirrorList';
 
-};
+export default Vue.extend({
+  name: 'Mirrors',
+  components: {MirrorList},
+});
 </script>
 
 <style>

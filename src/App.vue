@@ -9,7 +9,9 @@
           <router-view/>
         </transition>
       </el-main>
-      <el-aside width="200px" v-show="showAside">Aside</el-aside>
+      <el-aside width="23%" v-show="showAside">
+        <Aside/>
+      </el-aside>
     </el-container>
     <el-footer>
       <BottomBar/>
@@ -22,10 +24,11 @@ import Vue from 'vue';
 
 import TopNavi from '@/components/TopNavi.vue';
 import BottomBar from '@/components/BottomBar.vue';
+import Aside from '@/components/Aside.vue';
 
 export default Vue.extend({
   name: 'App',
-  components: {BottomBar, TopNavi},
+  components: {Aside, BottomBar, TopNavi},
   computed: {
     showAside(): boolean {
       const path = this.$route.path;
