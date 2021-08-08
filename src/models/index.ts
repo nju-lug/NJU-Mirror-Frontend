@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // const URL = 'https://mirrors.nju.edu.cn/.mirrorz/tunasync.json';
-const URL = 'http://localhost:8080/tunasync.json';
+const REQUEST_URL = 'http://localhost:8080/tunasync.json';
 
 export interface SyncEntry {
   name: string,
@@ -16,10 +16,12 @@ export interface SyncEntry {
   next_schedule: string,
   next_schedule_ts: number,
   upstream: string,
-  size: string
+  size: string,
+  path: string,
 }
 
 export async function fetchEntries() {
-  const res = await axios.get(URL);
-  return res.data as Array<SyncEntry>;
+  const res = await axios.get(REQUEST_URL);
+  const data: Array<SyncEntry> = res.data;
+  return data.map(value => ({...value, path: new URL(value.upstream).pathname}));
 }
