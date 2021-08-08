@@ -1,32 +1,55 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <el-container id="container">
+    <el-header>
+      <TopNavi/>
+    </el-header>
+    <el-container>
+      <el-main>
+        <transition name="fade">
+          <router-view/>
+        </transition>
+      </el-main>
+      <el-aside width="200px" v-show="showAside">Aside</el-aside>
+    </el-container>
+    <el-footer>
+      <BottomBar/>
+    </el-footer>
+  </el-container>
 </template>
 
+<script lang="ts">
+import Vue from 'vue';
+
+import TopNavi from '@/components/TopNavi.vue';
+import BottomBar from '@/components/BottomBar.vue';
+
+export default Vue.extend({
+  name: 'App',
+  components: {BottomBar, TopNavi},
+  computed: {
+    showAside(): boolean {
+      const path = this.$route.path;
+      return path == '/' || path == '/mirrors';
+    }
+  }
+});
+</script>
+
 <style lang="less">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+body {
+  font-family: Microsoft YaHei UI, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
 }
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+.fade-enter-active {
+  transition: opacity .5s;
 }
+
+.fade-enter, .fade-leave-to, .fade-leave-active {
+  opacity: 0;
+}
+
 </style>
