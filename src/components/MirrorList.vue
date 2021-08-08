@@ -56,7 +56,7 @@ export default Vue.extend({
   },
   methods: {
     handleClick(item: SyncEntry) {
-      this.$router.replace(item.path);
+      this.$router.push(item.path);
     },
     filterList(keyword: string) {
       this.filter = keyword.toLowerCase();

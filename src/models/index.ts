@@ -20,8 +20,16 @@ export interface SyncEntry {
   path: string,
 }
 
+function parse(url: string): string {
+  const segments = url.split('/');
+  if (url.endsWith('/')) {
+    return segments[segments.length - 2];
+  }
+  return segments[segments.length - 1];
+}
+
 export async function fetchEntries() {
   const res = await axios.get(REQUEST_URL);
   const data: Array<SyncEntry> = res.data;
-  return data.map(value => ({...value, path: new URL(value.upstream).pathname}));
+  return data.map(value => ({...value, path: parse(value.upstream)}));
 }
