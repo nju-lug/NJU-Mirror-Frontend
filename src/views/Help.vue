@@ -9,11 +9,11 @@
                   style="margin-bottom: 10px">
           <i slot="prefix" class="el-input__icon el-icon-search"></i>
         </el-input>
-        <el-menu :default-active="entries[0].route"
+        <el-menu :default-active="'/help/' + entries[0].route"
                  class="el-menu-vertical-demo"
                  router>
           <el-menu-item v-for="entry in entries"
-                        :index="entry.route"
+                        :index="'/help/' + entry.route"
                         :key="entry.name">
             <span slot="title">{{ entry.name }}</span>
           </el-menu-item>
@@ -28,16 +28,14 @@
 
 <script lang="ts">
 import Vue from 'vue';
+import config from '@/config';
 
 export default Vue.extend({
   name: 'Help',
   data() {
     return {
       filter: '',
-      entries: [
-        {name: 'Arch Linux', route: '/help/archlinux'},
-        {name: 'Debian', route: '/help/debian'},
-      ]
+      entries: config,
     };
   },
   methods: {
@@ -52,7 +50,7 @@ export default Vue.extend({
     }
   },
   mounted() {
-    this.$router.replace(this.entries[0].route);
+    this.$router.replace('/help/' + this.entries[0].route);
   }
 });
 </script>

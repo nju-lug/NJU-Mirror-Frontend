@@ -38,7 +38,7 @@ export default Vue.extend({
   },
   computed: {
     active(): string {
-      return '/' + this.$route.path.split('/').reverse()[1];
+      return '/' + this.$route.path.split('/')[0];
     }
   },
   methods: {

@@ -21,6 +21,9 @@ const routes: Array<RouteConfig> = [
     name: 'Help',
     component: () => import('@/views/Help.vue'),
     children: documentations,
+    props: {
+      entries: documentations,
+    }
   },
   {
     path: '/about',
