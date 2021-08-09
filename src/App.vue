@@ -3,16 +3,18 @@
     <el-header>
       <TopNavi/>
     </el-header>
-    <el-container>
-      <el-main>
-        <transition name="fade">
-          <router-view/>
-        </transition>
-      </el-main>
-      <el-aside width="300px" v-show="showAside">
-        <Aside/>
-      </el-aside>
-    </el-container>
+    <el-main>
+      <el-row :gutter="20">
+        <el-col :md="18">
+          <transition name="fade">
+            <router-view/>
+          </transition>
+        </el-col>
+        <el-col :md="6" width="300px" v-show="showAside">
+          <Aside/>
+        </el-col>
+      </el-row>
+    </el-main>
     <el-footer>
       <BottomBar/>
     </el-footer>
@@ -47,10 +49,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  height: 100%;
 }
 
 .el-container {
-  max-width: 1140px;
+  // max-width: 1140px;
   min-height: auto;
 }
 
