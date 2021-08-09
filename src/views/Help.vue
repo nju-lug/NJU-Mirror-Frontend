@@ -1,7 +1,7 @@
 <template>
   <div class="help-page">
-    <el-container>
-      <el-aside width="200px" class="aside">
+    <el-row>
+      <el-col :span="6">
         <h5>Mirror Name</h5>
         <el-input placeholder="Search mirror"
                   v-model="filter"
@@ -19,11 +19,11 @@
             <span slot="title">{{ entry.name }}</span>
           </el-menu-item>
         </el-menu>
-      </el-aside>
-      <el-main class="main">
+      </el-col>
+      <el-col :span="18">
         <router-view/>
-      </el-main>
-    </el-container>
+      </el-col>
+    </el-row>
   </div>
 </template>
 
@@ -64,24 +64,6 @@ export default Vue.extend({
 </script>
 
 <style scoped lang="less">
-.aside {
-  position: absolute;
-  left: 200px;
-  top: 30px;
-  bottom: 0px;
-  overflow-y: scroll;
-  z-index: -1;
-}
-
-.main {
-  position: absolute;
-  left: 400px;
-  right: 200px;
-  top: 30px;
-  bottom: 0px;
-  z-index: -2;
-}
-
 .el-menu-vertical-demo {
   margin-bottom: 10px;
 }
