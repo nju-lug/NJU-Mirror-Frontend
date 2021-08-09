@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // const URL = 'https://mirrors.nju.edu.cn/.mirrorz/tunasync.json';
-const REQUEST_URL = 'http://localhost:8080/tunasync.json';
+const REQUEST_URL = '/tunasync.json';
 
 export interface SyncEntry {
   name: string,
