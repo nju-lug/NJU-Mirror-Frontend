@@ -1,8 +1,8 @@
 <template>
   <div>
-    <el-input placeholder="Type regular expression to search"
+    <el-input placeholder="Search mirror"
               v-model="filter"
-              @change="filterList">
+              @input="filterList">
       <i slot="prefix" class="el-input__icon el-icon-search"></i>
     </el-input>
     <el-table class="mirror-container"
@@ -47,20 +47,17 @@ export default Vue.extend({
     return {
       timer_: 0,
       entries: Array<SyncEntry>(),
-      filter: "",
+      filter: '',
     };
   },
   computed: {
     show(): Array<SyncEntry> {
-      return this.entries.filter(value => value.name.toLowerCase().search(RegExp(this.filter)) != -1);
+      return this.entries.filter(value => value.name.toLowerCase().includes(this.filter.toLowerCase()));
     },
   },
   methods: {
-    handleClick(item: SyncEntry) {
-      window.location.pathname = item.path;
-    },
-    filterList(exp: string) {
-      this.filter = exp;
+    filterList(keyword: string) {
+      this.filter = keyword;
     },
     rowType({row}: { row: SyncEntry }): string {
       switch (row.status) {
