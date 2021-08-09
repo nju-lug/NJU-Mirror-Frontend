@@ -23,6 +23,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
+import pubsub from 'pubsub-js';
 
 import TopNavi from '@/components/TopNavi.vue';
 import BottomBar from '@/components/BottomBar.vue';
@@ -30,13 +31,43 @@ import Aside from '@/components/aside/Aside.vue';
 
 export default Vue.extend({
   name: 'App',
+  data() {
+    return {
+      timer: false,
+      screenWidth: document.body.clientWidth,
+    };
+  },
   components: {Aside, BottomBar, TopNavi},
   computed: {
     showAside(): boolean {
       const path = this.$route.path;
-      return path == '/' || path == '/mirrors';
-    }
-  }
+      return (path == '/' || path == '/mirrors') && !this.isMobile;
+    },
+    isMobile(): boolean {
+      return this.screenWidth < 600;
+    },
+  },
+  mounted() {
+    window.onresize = () => {
+      this.screenWidth = document.body.clientWidth;
+    };
+  },
+  watch: {
+    screenWidth(newValue: number) {
+      // 为了避免频繁触发resize函数导致页面卡顿，使用定时器
+      if (!this.timer) {
+        // 一旦监听到的screenWidth值改变，就将其重新赋给data里的screenWidth
+        this.screenWidth = newValue;
+        this.timer = true;
+        setTimeout(() => {
+          this.timer = false;
+        }, 400);
+      }
+    },
+    isMobile() {
+      pubsub.publish('updateWidth', this.isMobile);
+    },
+  },
 });
 </script>
 

@@ -33,13 +33,13 @@
 
 <script lang="ts">
 import Vue from 'vue';
+import pubsub from 'pubsub-js';
 
 export default Vue.extend({
   name: 'TopNavi',
   data() {
     return {
-      screenWidth: document.body.clientWidth,
-      timer: false,
+      isMobile: document.body.clientWidth < 600,
       routes: [
         {route: '/', name: 'Home'},
         {route: '/mirrors', name: 'Mirrors'},
@@ -52,29 +52,16 @@ export default Vue.extend({
     active(): string {
       return '/' + this.$route.path.split('/')[0];
     },
-    isMobile(): boolean {
-      return this.screenWidth < 600;
-    }
-  },
-  watch: {
-    screenWidth(newValue: number) {
-      // 为了避免频繁触发resize函数导致页面卡顿，使用定时器
-      if (!this.timer) {
-        // 一旦监听到的screenWidth值改变，就将其重新赋给data里的screenWidth
-        this.screenWidth = newValue;
-        this.timer = true;
-        setTimeout(() => {
-          //console.log(this.screenWidth);
-          this.timer = false;
-        }, 400);
-      }
-    }
+
   },
   mounted() {
-    window.onresize = () => {
-      this.screenWidth = document.body.clientWidth;
-    };
+    pubsub.subscribe('updateWidth', (_: any, value: boolean) => {
+      this.isMobile = value;
+    });
   },
+  beforeDestroy() {
+    pubsub.unsubscribe('updateWidth');
+  }
 });
 </script>
 

@@ -21,6 +21,7 @@ const routes: Array<RouteConfig> = [
     name: 'Help',
     component: () => import('@/views/Help.vue'),
     children: documentations,
+    redirect: '/help/archlinux',
   },
   {
     path: '/about',

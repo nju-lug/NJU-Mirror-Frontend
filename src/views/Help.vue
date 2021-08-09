@@ -60,9 +60,6 @@ export default Vue.extend({
       }
     }
   },
-  mounted() {
-    this.$router.replace('/help/' + this.entries[0].route);
-  }
 });
 </script>
 
