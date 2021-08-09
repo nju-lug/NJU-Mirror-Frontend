@@ -10,9 +10,10 @@
               :row-class-name="rowType"
               style="width: 100%; margin-top: 10px;">
       <el-table-column prop="name"
-                       label="Mirror Name">
+                       label="Mirror Name"
+                       min-width="200">
         <template slot-scope="scope">
-          <el-button @click="handleClick(scope.row)" type="text">{{ scope.row.name }}</el-button>
+          <el-link :href="scope.row.path" :underline="false" type="primary">{{scope.row.name}}</el-link>
         </template>
       </el-table-column>
       <el-table-column prop="status"
@@ -42,7 +43,6 @@ import {SyncEntry, fetchEntries} from '@/models';
 
 export default Vue.extend({
   name: 'MirrorList',
-
   data() {
     return {
       timer_: 0,
