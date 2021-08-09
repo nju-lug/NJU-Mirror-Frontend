@@ -1,6 +1,6 @@
 <template>
   <div>
-    Documentation of {{ name }}
+    <h1>Documentation of {{ name }} Mirror</h1>
     <div v-html="help" class="document-container markdown-body"/>
   </div>
 </template>
