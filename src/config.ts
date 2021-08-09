@@ -15,9 +15,9 @@ export default [
   route: 'anthon'
 },
 {
-  name: 'archive.raspberrypi.org',
+  name: 'raspberrypi',
   path: 'archive.raspberrypi.org.md',
-  route: 'archive.raspberrypi.org'
+  route: 'raspberrypi'
 },
 {
   name: 'archlinuxcn',
@@ -28,11 +28,6 @@ export default [
   name: 'archlinux',
   path: 'archlinux.md',
   route: 'archlinux'
-},
-{
-  name: 'arch',
-  path: 'arch.md',
-  route: 'arch'
 },
 {
   name: 'blackarch',
@@ -54,11 +49,11 @@ export default [
   path: 'chakra.md',
   route: 'chakra'
 },
-{
-  name: 'debian-cdimage',
-  path: 'debian-cdimage.md',
-  route: 'debian-cdimage'
-},
+//{
+//  name: 'debian-cdimage',
+//  path: 'debian-cdimage.md',
+//  route: 'debian-cdimage'
+//},
 {
   name: 'debian-cd',
   path: 'debian-cd.md',
@@ -89,11 +84,11 @@ export default [
   path: 'docker-ce.md',
   route: 'docker-ce'
 },
-{
-  name: 'dockerhub',
-  path: 'dockerhub.md',
-  route: 'dockerhub'
-},
+//{
+//  name: 'dockerhub',
+//  path: 'dockerhub.md',
+//  route: 'dockerhub'
+//},
 {
   name: 'epel',
   path: 'epel.md',
@@ -148,11 +143,6 @@ export default [
   name: 'homebrew-core.git',
   path: 'homebrew-core.git.md',
   route: 'homebrew-core.git'
-},
-{
-  name: 'index',
-  path: 'index.md',
-  route: 'index'
 },
 {
   name: 'kali',
