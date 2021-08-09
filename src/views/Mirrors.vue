@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mirrors-page">
     <h1>Mirror List</h1>
     <MirrorList/>
   </div>

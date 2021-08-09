@@ -9,7 +9,7 @@
           <router-view/>
         </transition>
       </el-main>
-      <el-aside width="23%" v-show="showAside">
+      <el-aside width="300px" v-show="showAside">
         <Aside/>
       </el-aside>
     </el-container>
@@ -24,7 +24,7 @@ import Vue from 'vue';
 
 import TopNavi from '@/components/TopNavi.vue';
 import BottomBar from '@/components/BottomBar.vue';
-import Aside from '@/components/Aside.vue';
+import Aside from '@/components/aside/Aside.vue';
 
 export default Vue.extend({
   name: 'App',
@@ -40,11 +40,18 @@ export default Vue.extend({
 
 <style lang="less">
 body {
+  display: flex;
+  justify-content: center;
   font-family: Microsoft YaHei UI, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+.el-container {
+  max-width: 1140px;
+  min-height: auto;
 }
 
 .fade-enter-active {
@@ -55,4 +62,16 @@ body {
   opacity: 0;
 }
 
+.el-header, .el-footer {
+  text-align: center;
+  line-height: 60px;
+}
+
+span {
+  font-family: Microsoft YaHei UI, Helvetica, Arial, sans-serif;
+}
+
+code {
+  font-family: Consolas, monospace;
+}
 </style>

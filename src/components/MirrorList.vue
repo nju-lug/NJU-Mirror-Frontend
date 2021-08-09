@@ -8,11 +8,11 @@
     <el-table class="mirror-container"
               :data="show"
               :row-class-name="rowType"
-              style="width: 100%; margin-top: 10px">
+              style="width: 100%; margin-top: 10px;">
       <el-table-column prop="name"
                        label="Mirror Name">
         <template slot-scope="scope">
-          <el-button @click="$router.push(scope.row.path)" type="text">{{ scope.row.name }}</el-button>
+          <el-button @click="handleClick(scope.row)" type="text">{{ scope.row.name }}</el-button>
         </template>
       </el-table-column>
       <el-table-column prop="status"
@@ -21,6 +21,7 @@
         <template slot-scope="scope">
           {{ scope.row.status }}
           <i v-if="scope.row.status === 'syncing'" class="el-icon-loading"></i>
+          <i v-else-if="scope.row.status === 'failed'" class="el-icon-error"></i>
         </template>
       </el-table-column>
       <el-table-column prop="last_update"
@@ -44,6 +45,7 @@ export default Vue.extend({
 
   data() {
     return {
+      timer_: 0,
       entries: Array<SyncEntry>(),
       filter: '',
     };
@@ -55,7 +57,7 @@ export default Vue.extend({
   },
   methods: {
     handleClick(item: SyncEntry) {
-      this.$router.push(item.path);
+      window.location.pathname = item.path;
     },
     filterList(keyword: string) {
       this.filter = keyword;
@@ -70,16 +72,23 @@ export default Vue.extend({
         return 'syncing-row';
       }
       return 'succeeded-row';
+    },
+    update() {
+      fetchEntries().then(
+        res => {
+          this.entries = res;
+          this.entries.sort((a, b) => a.name.localeCompare(b.name));
+        },
+        err => this.$message.error(err.message),
+      );
     }
   },
   beforeMount() {
-    fetchEntries().then(
-      res => {
-        this.entries = res;
-        this.entries.sort((a, b) => a.name.localeCompare(b.name));
-      },
-      err => this.$message.error(err.message),
-    );
+    this.update();
+    this.timer_ = setInterval(() => this.update(), 60000);
+  },
+  beforeDestroy() {
+    clearInterval(this.timer_);
   }
 });
 </script>

@@ -1,24 +1,17 @@
-# nju-mirror-frontend
+# NJU Mirror Frontend
 
-## Project setup
-```
-npm install
-```
+> A Vue frontend for [NJU Open Source Software Mirror](https://mirrors.nju.edu.cn/).
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Build The Project
 
-### Compiles and minifies for production
-```
-npm run build
-```
+Run `npm install` to install all dependencies for development
 
-### Lints and fixes files
-```
-npm run lint
-```
+Run `npm run build` to compile for production.
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## TODOs
+
++ [ ] Connection to backend
++ [ ] Download pages
++ [ ] SideBar news
++ [ ] Mirror documentations
++ [ ] Help & About page
