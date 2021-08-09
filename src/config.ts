@@ -1,4 +1,10 @@
-export default [
+export interface DocItem {
+  name: string,
+  path: string,
+  route: string
+}
+
+export default <Array<DocItem>>[
   {
     name: 'alpine',
     path: 'alpine.md',

@@ -13,7 +13,7 @@
                        label="Mirror Name"
                        min-width="200">
         <template slot-scope="scope">
-          <el-link :href="scope.row.path" :underline="false" type="primary">{{scope.row.name}}</el-link>
+          <el-link :href="scope.row.path" :underline="false" type="primary">{{ scope.row.name }}</el-link>
         </template>
       </el-table-column>
       <el-table-column prop="status"
@@ -56,9 +56,6 @@ export default Vue.extend({
     },
   },
   methods: {
-    handleClick(item: SyncEntry) {
-      window.location.pathname = item.path;
-    },
     filterList(keyword: string) {
       this.filter = keyword;
     },

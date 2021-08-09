@@ -1,8 +1,8 @@
 <template>
   <el-menu :default-active="active"
-            mode="horizontal"
-            active-text-color="#63065f"
-            router>
+           mode="horizontal"
+           active-text-color="#63065f"
+           router>
     <el-menu-item>
       <el-link :underline="false" type="primary" href="/" class="logo-container">
         <img src="@/assets/logo.png" alt="Logo"/>
@@ -25,7 +25,7 @@
         <i class="el-icon-s-fold" style="font-size:28px;"></i>
       </template>
       <el-menu-item v-for="(item,key) in routes" :key="key"
-                    :index="item.route">{{item.name}}
+                    :index="item.route">{{ item.name }}
       </el-menu-item>
     </el-submenu>
   </el-menu>
@@ -52,12 +52,12 @@ export default Vue.extend({
     active(): string {
       return '/' + this.$route.path.split('/')[0];
     },
-    isMobile():boolean{
-      return this.screenWidth<600;
+    isMobile(): boolean {
+      return this.screenWidth < 600;
     }
   },
   watch: {
-    screenWidth(newValue:number) {
+    screenWidth(newValue: number) {
       // 为了避免频繁触发resize函数导致页面卡顿，使用定时器
       if (!this.timer) {
         // 一旦监听到的screenWidth值改变，就将其重新赋给data里的screenWidth
@@ -70,7 +70,7 @@ export default Vue.extend({
       }
     }
   },
-  mounted(){
+  mounted() {
     window.onresize = () => {
       this.screenWidth = document.body.clientWidth;
     };
@@ -79,18 +79,11 @@ export default Vue.extend({
 </script>
 
 <style scoped lang="less">
-// .el-row {
-//   margin-bottom: 20px;
-
-//   &:last-child {
-//     margin-bottom: 0;
-//   }
-// }
-
 .el-col {
   border-radius: 4px;
 }
-.menu-item{
+
+.menu-item {
   font-weight: bold;
 }
 

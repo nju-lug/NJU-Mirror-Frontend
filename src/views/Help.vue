@@ -5,16 +5,17 @@
         <h5>Mirror Name</h5>
         <el-input placeholder="Search mirror"
                   v-model="filter"
-                  @input="filterList"
+                  @change="filterList"
                   style="margin-bottom: 10px">
           <i slot="prefix" class="el-input__icon el-icon-search"></i>
         </el-input>
-        <el-menu :default-active="'/help/' + entries[0].route"
+        <el-menu :default-active="$route.fullPath"
                  class="el-menu-vertical-demo"
                  router>
-          <el-menu-item v-for="entry in entries"
+          <el-menu-item v-for="entry in show"
                         :index="'/help/' + entry.route"
-                        :key="entry.name">
+                        :key="entry.name"
+                        @click="goTop">
             <span slot="title">{{ entry.name }}</span>
           </el-menu-item>
         </el-menu>
@@ -28,7 +29,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import config from '@/config';
+import config, {DocItem} from '@/config';
 
 export default Vue.extend({
   name: 'Help',
@@ -38,9 +39,25 @@ export default Vue.extend({
       entries: config,
     };
   },
+  computed: {
+    show(): Array<DocItem> {
+      return this.entries.filter(value => value.name.toLowerCase().includes(this.filter.toLowerCase()));
+    }
+  },
   methods: {
-    filterList({key, keyIndex}: { key: any, keyIndex: number }) {
-      console.log(key, keyIndex);
+    filterList(input: string) {
+      this.filter = input;
+    },
+    goTop() {
+      document.body.scrollTop = document.documentElement.scrollTop = 0;
+    }
+  },
+  watch: {
+    show() {
+      if (this.show.length > 0) {
+        const route = '/help/' + this.show[0].route;
+        route != this.$route.path && this.$router.replace(route);
+      }
     }
   },
   mounted() {
