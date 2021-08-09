@@ -1,20 +1,14 @@
 import Doc from '@/components/Doc.vue';
+import config from '../config';
 
-export default [
-  {
-    path: 'archlinux',
+export default config.map(value => {
+  return {
+    path: value.route,
+    name: value.name,
     component: Doc,
     props: {
-      name: 'Arch Linux',
-      path: 'arch.md',
+      name: value.name,
+      path: value.path
     }
-  },
-  {
-    path: 'debian',
-    component: Doc,
-    props: {
-      name: 'Debian',
-      path: 'debian.md'
-    }
-  }
-];
+  };
+});
