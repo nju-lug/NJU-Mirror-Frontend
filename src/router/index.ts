@@ -29,7 +29,7 @@ const routes: Array<RouteConfig> = [
     path: '/err',
     name: 'Error',
     component: () => import('@/views/Error.vue'),
-  }
+  },
 ];
 
 const router = new VueRouter({

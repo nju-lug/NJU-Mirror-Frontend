@@ -9,7 +9,7 @@
           <router-view/>
         </transition>
       </el-main>
-      <el-aside width="23%" v-show="showAside">
+      <el-aside width="25%" v-show="showAside">
         <Aside/>
       </el-aside>
     </el-container>
