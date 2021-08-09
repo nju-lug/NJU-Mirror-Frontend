@@ -29,6 +29,8 @@ import TopNavi from '@/components/TopNavi.vue';
 import BottomBar from '@/components/BottomBar.vue';
 import Aside from '@/components/aside/Aside.vue';
 
+import '@/assets/theme/index.css'
+
 export default Vue.extend({
   name: 'App',
   data() {
