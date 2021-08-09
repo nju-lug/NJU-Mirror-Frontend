@@ -1,6 +1,5 @@
 <template>
   <div class="home-page">
-    <img alt="Vue logo" src="@/assets/logo.png">
     <IndexPage msg="Welcome to Your Vue.js + TypeScript App"/>
   </div>
 </template>

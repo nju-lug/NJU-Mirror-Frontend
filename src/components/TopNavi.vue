@@ -18,7 +18,7 @@
         {{ route.name }}
       </el-menu-item>
     </template>
-    
+
     <el-submenu v-else
                 index="colapse">
       <template slot="title">
@@ -50,7 +50,7 @@ export default Vue.extend({
   },
   computed: {
     active(): string {
-      return '/' + this.$route.path.split('/').reverse()[1];
+      return '/' + this.$route.path.split('/')[0];
     },
     isMobile():boolean{
       return this.screenWidth<600;
@@ -75,14 +75,6 @@ export default Vue.extend({
       this.screenWidth = document.body.clientWidth;
     };
   },
-  methods: {
-    jumpTo(path: string) {
-      if (this.$route.path == path) {
-        return;
-      }
-      this.$router.push(path);
-    }
-  }
 });
 </script>
 

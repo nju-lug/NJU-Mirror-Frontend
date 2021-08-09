@@ -39,12 +39,6 @@ export default Vue.extend({
     };
   },
   methods: {
-    handleOpen(key: any, keyPath: any) {
-      console.log(key, keyPath);
-    },
-    handleClose(key: any, keyPath: any) {
-      console.log(key, keyPath);
-    },
     filterList({key, keyIndex}: { key: any, keyIndex: number }) {
       console.log(key, keyIndex);
     }

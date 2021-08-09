@@ -31,5 +31,5 @@ function parse(url: string): string {
 export async function fetchEntries(): Promise<Array<SyncEntry>> {
   const res = await axios.get(REQUEST_URL);
   const data: Array<SyncEntry> = res.data;
-  return data.map(value => ({ ...value, path: parse(value.upstream) }));
+  return data.map(value => ({...value, path: parse(value.upstream)}));
 }

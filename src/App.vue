@@ -4,13 +4,13 @@
       <TopNavi/>
     </el-header>
     <el-main>
-      <el-row :gutter="20">
-        <el-col :md="18">
+      <el-row>
+        <el-col :span="showAside ? 18 : 24">
           <transition name="fade">
             <router-view/>
           </transition>
         </el-col>
-        <el-col :md="6" width="300px" v-show="showAside">
+        <el-col :span="6" width="300px" v-show="showAside">
           <Aside/>
         </el-col>
       </el-row>
@@ -53,8 +53,11 @@ body {
 }
 
 .el-container {
-  // max-width: 1140px;
-  min-height: auto;
+  max-width: 1200px;
+}
+
+.el-main {
+  min-height: calc(100vh - 140px);
 }
 
 .fade-enter-active {
