@@ -32,7 +32,7 @@ export default Vue.extend({
   computed: {
     showAside(): boolean {
       const path = this.$route.path;
-      return path == '/';
+      return path == '/' || path == '/mirrors';
     }
   }
 });
@@ -42,6 +42,7 @@ export default Vue.extend({
 body {
   display: flex;
   justify-content: center;
+  font-family: Microsoft YaHei UI, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -66,8 +67,11 @@ body {
   line-height: 60px;
 }
 
-* {
-  font-family: Helvetica, Microsoft YaHei UI, Arial, sans-serif;
+span {
+  font-family: Microsoft YaHei UI, Helvetica, Arial, sans-serif;
 }
 
+code {
+  font-family: Consolas, monospace;
+}
 </style>

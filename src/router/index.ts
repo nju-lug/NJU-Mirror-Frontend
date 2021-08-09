@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import VueRouter, {RouteConfig} from 'vue-router';
 import Home from '@/views/Home.vue';
+import documentations from './documentations';
 
 Vue.use(VueRouter);
 
@@ -18,7 +19,8 @@ const routes: Array<RouteConfig> = [
   {
     path: '/help',
     name: 'Help',
-    component: () => import('@/views/Help.vue')
+    component: () => import('@/views/Help.vue'),
+    children: documentations,
   },
   {
     path: '/about',

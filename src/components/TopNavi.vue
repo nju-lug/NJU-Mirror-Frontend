@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <el-menu :default-active="$route.path"
+    <el-menu :default-active="active"
              class="el-menu-demo"
              mode="horizontal"
              style="display: flex"
@@ -8,7 +8,7 @@
       <el-button type="text" @click="jumpTo('/')">
         <div class="logo-container">
           <img src="@/assets/logo.png" alt="Logo"/>
-          <span>NJU Mirror</span>
+          <span>NJU Open Source Software Mirror</span>
         </div>
       </el-button>
       <el-menu-item v-for="(route, index) in routes"
@@ -35,6 +35,11 @@ export default Vue.extend({
         {route: '/about', name: 'About'},
       ],
     };
+  },
+  computed: {
+    active(): string {
+      return '/' + this.$route.path.split('/').reverse()[1];
+    }
   },
   methods: {
     jumpTo(path: string) {

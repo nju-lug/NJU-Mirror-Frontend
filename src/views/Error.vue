@@ -1,14 +1,18 @@
 <template>
-  <div>Error 404</div>
+  <div>
+    Error
+  </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue from 'vue';
+
+export default Vue.extend({
   name: 'error',
   mounted() {
     this.$message.error('Unable to reach the page you required');
   }
-};
+});
 </script>
 
 <style scoped>
