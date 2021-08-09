@@ -9,7 +9,7 @@
           <router-view/>
         </transition>
       </el-main>
-      <el-aside width="25%" v-show="showAside">
+      <el-aside width="300px" v-show="showAside">
         <Aside/>
       </el-aside>
     </el-container>
@@ -24,7 +24,7 @@ import Vue from 'vue';
 
 import TopNavi from '@/components/TopNavi.vue';
 import BottomBar from '@/components/BottomBar.vue';
-import Aside from '@/components/Aside.vue';
+import Aside from '@/components/aside/Aside.vue';
 
 export default Vue.extend({
   name: 'App',
@@ -32,7 +32,7 @@ export default Vue.extend({
   computed: {
     showAside(): boolean {
       const path = this.$route.path;
-      return path == '/' || path == '/mirrors';
+      return path == '/';
     }
   }
 });
@@ -40,11 +40,17 @@ export default Vue.extend({
 
 <style lang="less">
 body {
-  font-family: Microsoft YaHei UI, Helvetica, Arial, sans-serif;
+  display: flex;
+  justify-content: center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+.el-container {
+  max-width: 1140px;
+  min-height: auto;
 }
 
 .fade-enter-active {
@@ -53,6 +59,15 @@ body {
 
 .fade-enter, .fade-leave-to, .fade-leave-active {
   opacity: 0;
+}
+
+.el-header, .el-footer {
+  text-align: center;
+  line-height: 60px;
+}
+
+* {
+  font-family: Helvetica, Microsoft YaHei UI, Arial, sans-serif;
 }
 
 </style>

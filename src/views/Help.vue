@@ -1,11 +1,15 @@
 <template>
-  <div>Help</div>
+  <div class="help-page">
+    <h1>NJU Mirror Help</h1>
+  </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue from 'vue';
 
-};
+export default Vue.extend({
+  name: 'Help',
+});
 </script>
 
 <style>
