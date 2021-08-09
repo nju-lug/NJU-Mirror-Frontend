@@ -1,8 +1,8 @@
 <template>
   <div>
+    <h1>Mirror List</h1>
     <MirrorList/>
   </div>
-
 </template>
 
 <script>

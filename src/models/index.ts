@@ -6,7 +6,7 @@ const REQUEST_URL = 'http://localhost:8080/tunasync.json';
 export interface SyncEntry {
   name: string,
   is_master: boolean,
-  status: 'success' | 'failed',
+  status: 'success' | 'failed' | 'syncing',
   last_update: string,
   last_update_ts: number,
   last_started: string,
@@ -28,7 +28,7 @@ function parse(url: string): string {
   return segments[segments.length - 1];
 }
 
-export async function fetchEntries() {
+export async function fetchEntries(): Promise<Array<SyncEntry>> {
   const res = await axios.get(REQUEST_URL);
   const data: Array<SyncEntry> = res.data;
   return data.map(value => ({...value, path: parse(value.upstream)}));
