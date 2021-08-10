@@ -10,7 +10,7 @@
             <router-view/>
           </transition>
         </el-col>
-        <el-col :span="6" width="300px" v-show="showAside">
+        <el-col :span="6" v-show="showAside">
           <Aside/>
         </el-col>
       </el-row>
@@ -40,10 +40,10 @@ export default Vue.extend({
   computed: {
     showAside(): boolean {
       const path = this.$route.path;
-      return (path == '/' || path == '/mirrors') && !this.isMobile;
+      return (path == '/' || path == '/mirrors') && this.screenWidth > 1000;
     },
     isMobile(): boolean {
-      return this.screenWidth < 600;
+      return this.screenWidth < 680;
     },
   },
   mounted() {

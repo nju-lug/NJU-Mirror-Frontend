@@ -1,7 +1,7 @@
 export interface DocItem {
   name: string,
   path: string,
-  route: string
+  route: string,
 }
 
 export default <Array<DocItem>>[

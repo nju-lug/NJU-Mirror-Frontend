@@ -6,7 +6,7 @@
         <el-input placeholder="Search mirror"
                   v-model="filter"
                   @change="filterList"
-                  style="margin-bottom: 10px">
+                  style="margin-bottom: 10px;">
           <i slot="prefix" class="el-input__icon el-icon-search"></i>
         </el-input>
         <el-menu :default-active="$route.fullPath" router>
@@ -27,14 +27,14 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import config, {DocItem} from '@/config';
+import {docConfig, DocItem} from '@/configs';
 
 export default Vue.extend({
   name: 'Help',
   data() {
     return {
       filter: '',
-      entries: config,
+      entries: docConfig,
     };
   },
   computed: {
@@ -60,3 +60,18 @@ export default Vue.extend({
   },
 });
 </script>
+
+<style lang="less">
+.el-menu-item {
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+}
+
+.el-menu-item span {
+  white-space: normal;
+  word-break: break-all;
+  line-height: 20px;
+  flex: 1;
+}
+</style>

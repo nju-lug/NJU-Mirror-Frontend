@@ -1,9 +1,9 @@
 <template>
   <el-card class="box-card">
     <div slot="header" class="clearfix">
-      <span>Links</span>
+      {{ entries.title }}
     </div>
-    <div v-for="(entry, index) in entries" :key="index" class="text item">
+    <div v-for="(entry, index) in entries.links" :key="index" class="text item aside-link">
       <el-link :icon="entry.icon || 'el-icon-top-right'" type="info" :href="entry.url">{{ entry.title }}</el-link>
     </div>
   </el-card>
@@ -11,36 +11,21 @@
 
 <script lang="ts">
 import Vue from 'vue';
-
-interface LinkItem {
-  title: String,
-  url: String,
-  icon?: string,
-}
+// import {CardItem} from '@/configs';
 
 export default Vue.extend({
-  name: 'AsideLink', data() {
-    return {
-      entries: Array<LinkItem>(),
-    };
+  name: 'AsideLink',
+  props: {
+    entries: Object,
   },
-  beforeMount() {
-    this.entries = [
-      {
-        title: 'NJU GitLab',
-        url: 'https://git.nju.edu.cn',
-      },
-      {
-        title: 'NJU TeX Online',
-        url: 'https://tex.nju.edu.cn',
-        icon: 'el-icon-notebook-2',
-      },
-      {
-        title: 'NJU Box',
-        url: 'https://box.nju.edu.cn',
-        icon: 'el-icon-upload',
-      },
-    ];
+  mounted() {
+    console.log(this.entries);
   }
 });
 </script>
+
+<style scoped lang="less">
+.aside-link {
+  text-align: left;
+}
+</style>

@@ -1,7 +1,7 @@
-import config from '@/config';
+import {docConfig} from '@/configs';
 import {RouteConfig} from 'vue-router';
 
-export default config.map(
+export default docConfig.map(
   value => <RouteConfig>{
     path: value.route,
     name: value.name,

@@ -1,15 +1,19 @@
 <template>
   <div class="aside">
-    <AsideLink/>
+    <AsideLink v-for="entry in linkConfig" :key="entry.title" :entries="entry"/>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
+import {linkConfig} from '@/configs';
 import AsideLink from './AsideLink.vue';
 
 export default Vue.extend({
   name: 'Aside',
+  data() {
+    return {linkConfig};
+  },
   components: {AsideLink},
 });
 </script>
