@@ -7,8 +7,7 @@
 <script lang="ts">
 import Vue from 'vue';
 import {linkConfig} from '@/configs';
-import AsideLink from './AsideLink.vue';
-console.log(linkConfig);
+import AsideLink from './Card.vue';
 
 export default Vue.extend({
   name: 'Aside',

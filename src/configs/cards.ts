@@ -15,18 +15,11 @@ const esci: Promise<CardItem> = axios.get('/cards/esci.json').then(
   res => new Promise(resolve => resolve(res.data)),
 );
 
-const friends: CardItem = {
-  title: 'Our Friends',
-  links: [
-    {
-      title: 'IT Xia',
-      url: 'https://nju.itxia.cn/',
-      icon: 'el-icon-male',
-    },
-  ],
-};
+const friends: Promise<CardItem> = axios.get('/cards/friends.json').then(
+  res => new Promise(resolve => resolve(res.data)),
+);
 
 export default <Array<Promise<CardItem>>>[
-  new Promise<CardItem>((resolve) => resolve(friends)),
   esci,
+  friends,
 ];
