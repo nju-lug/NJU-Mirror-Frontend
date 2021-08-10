@@ -22,7 +22,7 @@ export default Vue.extend({
   },
   methods: {
     update() {
-      axios.get('/documentations/' + this.path).then(
+      axios.get('/.mirrorz/documentations/' + this.path).then(
         res => this.help = marked(res.data),
         () => {
           this.$message.warning('No help available for this mirror');

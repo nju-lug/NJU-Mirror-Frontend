@@ -1,8 +1,5 @@
 import axios from 'axios';
 
-// const URL = 'https://mirrors.nju.edu.cn/.mirrorz/tunasync.json';
-const REQUEST_URL = '/tunasync.json';
-
 export interface SyncEntry {
   name: string,
   is_master: boolean,
@@ -29,7 +26,7 @@ function parse(url: string): string {
 }
 
 export async function fetchEntries(): Promise<Array<SyncEntry>> {
-  const res = await axios.get(REQUEST_URL);
+  const res = await axios.get('/.mirrorz/tunasync.json');
   const data: Array<SyncEntry> = res.data;
   return data.map(value => ({...value, path: parse(value.upstream)}));
 }
