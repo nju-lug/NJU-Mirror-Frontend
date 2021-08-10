@@ -1,8 +1,8 @@
 <template>
   <div class="footer">
-    <span class="about">
-      南京大学开源镜像站
-    </span>
+    <p>
+      <strong>NJU Mirror</strong> is maintained by <a href="https://www.yaoge123.com">@yaoge123</a>.
+    </p>
   </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-html="help" class="document-container markdown-body"/>
+    <div v-html="help" class="markdown-body"/>
   </div>
 </template>
 
@@ -42,8 +42,8 @@ export default Vue.extend({
 });
 </script>
 
-<style scoped>
-.document-container {
+<style lang="less" scoped>
+.markdown-body {
   text-align: left;
   padding: 20px;
 }

@@ -85,10 +85,15 @@ body {
 
 .el-container {
   max-width: 1200px;
-}
 
-.el-main {
-  min-height: calc(100vh - 140px);
+  .el-main {
+    min-height: calc(100vh - 150px);
+  }
+
+  .el-header, .el-footer {
+    text-align: center;
+    line-height: 60px;
+  }
 }
 
 .fade-enter-active {
@@ -97,11 +102,6 @@ body {
 
 .fade-enter, .fade-leave-to, .fade-leave-active {
   opacity: 0;
-}
-
-.el-header, .el-footer {
-  text-align: center;
-  line-height: 60px;
 }
 
 span {

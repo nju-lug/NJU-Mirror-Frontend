@@ -1,6 +1,9 @@
 <template>
   <div>
-    Error
+    <h1>404 Not found</h1>
+    <el-button @click="redirect">
+      Home page
+    </el-button>
   </div>
 </template>
 
@@ -8,7 +11,12 @@
 import Vue from 'vue';
 
 export default Vue.extend({
-  name: 'error',
+  name: 'Error',
+  methods: {
+    redirect() {
+      this.$router.replace('/');
+    }
+  },
   mounted() {
     this.$message.error('Unable to reach the page you required');
   }

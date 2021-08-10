@@ -41,8 +41,7 @@ export default Vue.extend({
     return {
       isMobile: document.body.clientWidth < 600,
       routes: [
-        {route: '/', name: 'Home'},
-        {route: '/mirrors', name: 'Mirrors'},
+        {route: '/', name: 'Mirrors'},
         {route: '/help', name: 'Help'},
         {route: '/about', name: 'About'},
       ]
