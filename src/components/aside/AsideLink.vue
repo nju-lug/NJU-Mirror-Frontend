@@ -24,15 +24,11 @@ export default Vue.extend({
     entries: Promise,
   },
   beforeMount() {
-    console.log(this.entries);
     (this.entries as Promise<CardItem>).then(
       res => this.card = res,
       err => {
         this.$message.warning(err.message);
-        this.card = {
-          title: 'Error',
-          links: [],
-        };
+        this.card = {title: 'Error', links: []};
       },
     );
   }

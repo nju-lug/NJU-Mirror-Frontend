@@ -82,7 +82,14 @@ body {
 
   .el-header {
     position: fixed;
+    left: 0;
+    top: 0;
     width: 100%;
+
+    .el-menu {
+      background-color: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(5px);
+    }
   }
 
   .el-header, .el-footer {
