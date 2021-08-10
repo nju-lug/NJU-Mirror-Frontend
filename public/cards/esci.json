@@ -1,0 +1,44 @@
+{
+  "title": "E-Sci Services",
+  "links": [
+    {
+      "title": "NJU GitLab",
+      "url": "https://git.nju.edu.cn"
+    },
+    {
+      "title": "NJU TeX Online",
+      "url": "https://tex.nju.edu.cn",
+      "icon": "el-icon-notebook-2"
+    },
+    {
+      "title": "NJU Box",
+      "url": "https://box.nju.edu.cn",
+      "icon": "el-icon-upload"
+    },
+    {
+      "title": "HPC Center",
+      "url": "https://hpc.nju.edu.cn/zh/",
+      "icon": "el-icon-s-data"
+    },
+    {
+      "title": "NJU Table",
+      "url": "https://table.nju.edu.cn",
+      "icon": "el-icon-pie-chart"
+    },
+    {
+      "title": "Speed Test",
+      "url": "http://test.nju.edu.cn/",
+      "icon": "el-icon-sort"
+    },
+    {
+      "title": "Repo Manager",
+      "url": "https://repo.nju.edu.cn/",
+      "icon": "el-icon-coin"
+    },
+    {
+      "title": "Remote Control",
+      "url": "https://entry.nju.edu.cn/shterm/login",
+      "icon": "el-icon-monitor"
+    }
+  ]
+}

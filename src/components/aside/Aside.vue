@@ -1,6 +1,6 @@
 <template>
   <div class="aside">
-    <AsideLink v-for="entry in linkConfig" :key="entry.title" :entries="entry"/>
+    <AsideLink v-for="(entry, index) in linkConfig" :key="index" :entries="entry"/>
   </div>
 </template>
 
@@ -8,6 +8,7 @@
 import Vue from 'vue';
 import {linkConfig} from '@/configs';
 import AsideLink from './AsideLink.vue';
+console.log(linkConfig);
 
 export default Vue.extend({
   name: 'Aside',

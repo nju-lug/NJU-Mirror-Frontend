@@ -7,7 +7,6 @@
     </el-input>
     <el-table class="mirror-container"
               :data="show"
-              :row-class-name="rowType"
               style="width: 100%; margin-top: 10px;">
       <el-table-column prop="name"
                        label="Mirror Name"
@@ -20,9 +19,12 @@
                        label="Sync Status"
                        width="150">
         <template slot-scope="scope">
-          {{ scope.row.status }}
-          <i v-if="scope.row.status === 'syncing'" class="el-icon-loading"></i>
-          <i v-else-if="scope.row.status === 'failed'" class="el-icon-error"></i>
+          <el-tag :type="tagType(scope.row.status)">
+            <i v-if="scope.row.status === 'syncing'" class="el-icon-loading"/>
+            <i v-else-if="scope.row.status === 'failed'" class="el-icon-error"/>
+            <i v-else class="el-icon-check"/>
+            {{ scope.row.status }}
+          </el-tag>
         </template>
       </el-table-column>
       <el-table-column prop="last_update"
@@ -52,23 +54,25 @@ export default Vue.extend({
   },
   computed: {
     show(): Array<SyncEntry> {
-      return this.entries.filter(value => value.name.toLowerCase().includes(this.filter.toLowerCase()));
+      return this.entries.filter(
+        value => value.name.toLowerCase().includes(this.filter.toLowerCase())
+      );
     },
   },
   methods: {
     filterList(keyword: string) {
       this.filter = keyword;
     },
-    rowType({row}: { row: SyncEntry }): string {
-      switch (row.status) {
+    tagType(status: string): string {
+      switch (status) {
       case 'failed':
-        return 'failed-row';
+        return 'danger';
       case 'success':
-        return 'succeeded-row';
+        return 'success';
       case 'syncing':
-        return 'syncing-row';
+        return 'warning';
       }
-      return 'succeeded-row';
+      return 'success';
     },
     update() {
       fetchEntries().then(

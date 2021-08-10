@@ -1,9 +1,9 @@
 <template>
   <el-card class="box-card">
     <div slot="header" class="clearfix">
-      {{ entries.title }}
+      {{ card.title }}
     </div>
-    <div v-for="(entry, index) in entries.links" :key="index" class="text item aside-link">
+    <div v-for="(entry, index) in card.links" :key="index" class="text item aside-link">
       <el-link :icon="entry.icon || 'el-icon-top-right'" type="info" :href="entry.url">{{ entry.title }}</el-link>
     </div>
   </el-card>
@@ -11,15 +11,30 @@
 
 <script lang="ts">
 import Vue from 'vue';
-// import {CardItem} from '@/configs';
+import {CardItem} from '@/configs';
 
 export default Vue.extend({
   name: 'AsideLink',
-  props: {
-    entries: Object,
+  data() {
+    return {
+      card: {title: 'Loading', links: []} as CardItem,
+    };
   },
-  mounted() {
+  props: {
+    entries: Promise,
+  },
+  beforeMount() {
     console.log(this.entries);
+    (this.entries as Promise<CardItem>).then(
+      res => this.card = res,
+      err => {
+        this.$message.warning(err.message);
+        this.card = {
+          title: 'Error',
+          links: [],
+        };
+      },
+    );
   }
 });
 </script>

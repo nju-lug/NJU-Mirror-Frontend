@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 export interface LinkItem {
   title: String,
   url: String,
@@ -9,51 +11,9 @@ export interface CardItem {
   links: Array<LinkItem>,
 }
 
-// static resource should be defined here
-const esci: CardItem = {
-  title: 'E-Sci Services',
-  links: [
-    {
-      title: 'NJU GitLab',
-      url: 'https://git.nju.edu.cn',
-    },
-    {
-      title: 'NJU TeX Online',
-      url: 'https://tex.nju.edu.cn',
-      icon: 'el-icon-notebook-2',
-    },
-    {
-      title: 'NJU Box',
-      url: 'https://box.nju.edu.cn',
-      icon: 'el-icon-upload',
-    },
-    {
-      title: 'HPC Center',
-      url: 'https://hpc.nju.edu.cn/zh/',
-      icon: 'el-icon-s-data',
-    },
-    {
-      title: 'NJU Table',
-      url: 'https://table.nju.edu.cn',
-      icon: 'el-icon-pie-chart',
-    },
-    {
-      title: 'Speed Test',
-      url: 'http://test.nju.edu.cn/',
-      icon: 'el-icon-sort',
-    },
-    {
-      title: 'Repo Manager',
-      url: 'https://repo.nju.edu.cn/',
-      icon: 'el-icon-coin',
-    },
-    {
-      title: 'Remote Control',
-      url: 'https://entry.nju.edu.cn/shterm/login',
-      icon: 'el-icon-monitor',
-    },
-  ],
-};
+const esci: Promise<CardItem> = axios.get('/cards/esci.json').then(
+  res => new Promise(resolve => resolve(res.data)),
+);
 
 const friends: CardItem = {
   title: 'Our Friends',
@@ -66,8 +26,7 @@ const friends: CardItem = {
   ],
 };
 
-// dynamic items should be acquired by using axios and then converted to CardItem
-
-export default <Array<CardItem>>[
-  esci, friends
+export default <Array<Promise<CardItem>>>[
+  new Promise<CardItem>((resolve) => resolve(friends)),
+  esci,
 ];
