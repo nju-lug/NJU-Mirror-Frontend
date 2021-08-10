@@ -50,7 +50,7 @@ export default Vue.extend({
   },
   computed: {
     active(): string {
-      return '/' + this.$route.path.split('/')[0];
+      return '/' + this.$route.path.split('/')[1];
     },
   },
   mounted() {

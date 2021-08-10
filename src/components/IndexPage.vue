@@ -45,10 +45,11 @@ img {
   width: 150px;
   height: 150px;
   -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, .3);
+  margin-top: 60px;
+  margin-bottom: 30px;
 }
 
 .index-page-container {
   align-content: center;
-  margin-top: 60px;
 }
 </style>
