@@ -52,7 +52,6 @@ export default Vue.extend({
     active(): string {
       return '/' + this.$route.path.split('/')[0];
     },
-
   },
   mounted() {
     pubsub.subscribe('updateWidth', (_: any, value: boolean) => {
