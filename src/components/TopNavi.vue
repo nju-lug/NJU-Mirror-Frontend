@@ -22,7 +22,7 @@
     <el-submenu v-else
                 index="colapse">
       <template slot="title">
-        <i class="el-icon-s-fold" style="font-size:28px;"></i>
+        <i class="el-icon-s-fold" style="font-size:28px;"/>
       </template>
       <el-menu-item v-for="(item,key) in routes" :key="key"
                     :index="item.route">{{ item.name }}
