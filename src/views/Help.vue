@@ -9,9 +9,7 @@
                   style="margin-bottom: 10px">
           <i slot="prefix" class="el-input__icon el-icon-search"></i>
         </el-input>
-        <el-menu :default-active="$route.fullPath"
-                 class="el-menu-vertical-demo"
-                 router>
+        <el-menu :default-active="$route.fullPath" router>
           <el-menu-item v-for="entry in show"
                         :index="'/help/' + entry.route"
                         :key="entry.name"
@@ -62,9 +60,3 @@ export default Vue.extend({
   },
 });
 </script>
-
-<style scoped lang="less">
-.el-menu-vertical-demo {
-  margin-bottom: 10px;
-}
-</style>

@@ -42,7 +42,7 @@ export default Vue.extend({
 });
 </script>
 
-<style lang="less" scoped>
+<style scoped lang="less">
 .markdown-body {
   text-align: left;
   padding: 20px;

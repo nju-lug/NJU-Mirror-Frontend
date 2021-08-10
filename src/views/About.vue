@@ -2,9 +2,12 @@
   <div class="index-page-container">
     <img src="@/assets/index-logo.jpg" alt="logo-index"/>
     <h1>NJU Open Source Mirror</h1>
-    <h5>Made with <i class="el-icon-male" /> by NJU LUG</h5>
+    <h5>Made with <i class="el-icon-male"/> by NJU LUG</h5>
     <el-row>
-      <el-button icon="el-icon-male" @click="redirect('https://git.nju.edu.cn/nju-lug/')">NJU LUG</el-button>
+      <el-button icon="el-icon-male"
+                 @click="redirect('https://git.nju.edu.cn/nju-lug/')">
+        NJU LUG
+      </el-button>
       <el-button icon="el-icon-paperclip"
                  @click="redirect('https://git.nju.edu.cn/iori_ichinose/nju-mirror-frontend')">
         Source Code
@@ -32,7 +35,6 @@ export default Vue.extend({
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
 .index-page-container {
-  align-content: center;
   img {
     border-radius: 35px;
     width: 200px;
@@ -41,6 +43,7 @@ export default Vue.extend({
     margin-top: 60px;
     margin-bottom: 30px;
   }
+
   span {
     margin-bottom: 30px;
   }

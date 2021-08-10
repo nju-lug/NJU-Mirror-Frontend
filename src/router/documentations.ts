@@ -1,12 +1,11 @@
-import Doc from '@/components/Doc.vue';
-import config from '../config';
+import config from '@/config';
 import {RouteConfig} from 'vue-router';
 
-export default config.map(value => {
-  return <RouteConfig>{
+export default config.map(
+  value => <RouteConfig>{
     path: value.route,
     name: value.name,
-    component: Doc,
+    component: () => import('@/components/Doc.vue'),
     props: {
       name: value.name,
       path: value.path,
@@ -14,5 +13,5 @@ export default config.map(value => {
     meta: {
       title: `Help · ${value.name} - NJU Mirror`,
     }
-  };
-});
+  }
+);
