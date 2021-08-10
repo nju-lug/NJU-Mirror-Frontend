@@ -81,18 +81,26 @@ body {
   text-align: center;
   color: #2c3e50;
   height: 100%;
+  margin: 0;
 }
 
 .el-container {
   max-width: 1200px;
 
   .el-main {
-    min-height: calc(100vh - 150px);
+    padding-top: 70px;
+    min-height: calc(100vh - 80px);
+  }
+
+  .el-header {
+    position: fixed;
+    width: 100%;
   }
 
   .el-header, .el-footer {
     text-align: center;
     line-height: 60px;
+    z-index: 1500;
   }
 }
 

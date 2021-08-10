@@ -17,5 +17,7 @@ export default Vue.extend({
 <style scoped lang="less">
 .about {
   text-align: center;
+  vertical-align: center;
+  height: 80px;
 }
 </style>
