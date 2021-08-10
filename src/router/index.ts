@@ -32,17 +32,13 @@ const routes: Array<RouteConfig> = [
     }
   },
   {
-    path: '/error',
+    path: '*',
     name: 'Error',
     component: () => import('@/views/Error.vue'),
     meta: {
       title: 'Error · NJU Mirror',
     }
   },
-  {
-    path: '*',
-    redirect: '/error',
-  }
 ];
 
 const router = new VueRouter({
