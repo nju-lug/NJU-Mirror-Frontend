@@ -40,7 +40,7 @@ export default Vue.extend({
   computed: {
     showAside(): boolean {
       const path = this.$route.path;
-      return (path == '/' || path == '/mirrors') && this.screenWidth > 1000;
+      return (path == '/' || path == '/about') && this.screenWidth > 1000;
     },
     isMobile(): boolean {
       return this.screenWidth < 680;

@@ -11,7 +11,7 @@ export interface CardItem {
 
 // static resource should be defined here
 const esci: CardItem = {
-  title: 'Links',
+  title: 'E-Sci Services',
   links: [
     {
       title: 'NJU GitLab',
@@ -27,21 +27,47 @@ const esci: CardItem = {
       url: 'https://box.nju.edu.cn',
       icon: 'el-icon-upload',
     },
+    {
+      title: 'HPC Center',
+      url: 'https://hpc.nju.edu.cn/zh/',
+      icon: 'el-icon-s-data',
+    },
+    {
+      title: 'NJU Table',
+      url: 'https://table.nju.edu.cn',
+      icon: 'el-icon-pie-chart',
+    },
+    {
+      title: 'Speed Test',
+      url: 'http://test.nju.edu.cn/',
+      icon: 'el-icon-sort',
+    },
+    {
+      title: 'Repo Manager',
+      url: 'https://repo.nju.edu.cn/',
+      icon: 'el-icon-coin',
+    },
+    {
+      title: 'Remote Control',
+      url: 'https://entry.nju.edu.cn/shterm/login',
+      icon: 'el-icon-monitor',
+    },
   ],
 };
 
-const test: CardItem = {
-  title: 'Test',
+const friends: CardItem = {
+  title: 'Our Friends',
   links: [
     {
-      title: '草',
-      url: 'www.baidu.com'
-    }
+      title: 'IT Xia',
+      url: 'https://nju.itxia.cn/',
+      icon: 'el-icon-male',
+    },
   ],
 };
 
 // dynamic items should be acquired by using axios and then converted to CardItem
 
 export default <Array<CardItem>>[
-  esci, test
+  esci, friends
 ];
