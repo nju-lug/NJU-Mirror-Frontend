@@ -33,7 +33,6 @@ export default Vue.extend({
   name: 'App',
   data() {
     return {
-      timer: false,
       screenWidth: document.body.clientWidth,
     };
   },
@@ -53,19 +52,8 @@ export default Vue.extend({
     };
   },
   watch: {
-    screenWidth(newValue: number) {
-      // 为了避免频繁触发resize函数导致页面卡顿，使用定时器
-      if (!this.timer) {
-        // 一旦监听到的screenWidth值改变，就将其重新赋给data里的screenWidth
-        this.screenWidth = newValue;
-        this.timer = true;
-        setTimeout(() => {
-          this.timer = false;
-        }, 400);
-      }
-    },
-    isMobile() {
-      pubsub.publish('updateWidth', this.isMobile);
+    isMobile(newValue: boolean) {
+      pubsub.publish('updateWidth', newValue);
     },
   },
 });
