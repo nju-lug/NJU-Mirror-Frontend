@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {serverPrefix} from '@/configs';
+import {serverPrefix} from '@/configs/index';
 
 interface RawEntry {
   name: string,

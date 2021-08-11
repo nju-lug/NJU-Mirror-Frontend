@@ -1,1 +1,1 @@
-export const serverPrefix = '/.mirrorz/';
+export const serverPrefix = '/configs/';

@@ -35,7 +35,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import {SyncEntry, fetchEntries} from '@/models';
+import {SyncEntry, fetchEntries} from '@/configs';
 
 export default Vue.extend({
   name: 'MirrorList',
