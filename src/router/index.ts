@@ -1,13 +1,17 @@
 import Vue from 'vue';
-import VueRouter, {RouteConfig} from 'vue-router';
-import {convertRoute, DocItem} from '@/router/documentations';
+import VueRouter, { RouteConfig } from 'vue-router';
+import documentations from './documentations';
+
+documentations.push({
+  path: 'index',
+  name: 'Index',
+  component: () => import('@/components/HelpIndex.vue'),
+  meta: {
+    title: 'Help · NJU Mirror'
+  },
+});
 
 Vue.use(VueRouter);
-
-const xhr = new XMLHttpRequest();
-xhr.open('GET', '/configs/documentations/index.json', false);
-const docConfigs: Array<DocItem> = xhr.status == 200 ? xhr.response : [];
-const docRoutes = docConfigs.map(convertRoute);
 
 const routes: Array<RouteConfig> = [
   {
@@ -22,16 +26,7 @@ const routes: Array<RouteConfig> = [
     path: '/help',
     name: 'Help',
     component: () => import('@/views/Help.vue'),
-    children: [
-      {
-        path: 'index',
-        name: 'Index',
-        component: () => import('@/components/HelpIndex.vue'),
-        children: docRoutes,
-        meta: {
-          title: 'Help · NJU Mirror'
-        },
-      }],
+    children: documentations,
     meta: {
       title: 'Help · NJU Mirror',
     },
@@ -58,15 +53,16 @@ const routes: Array<RouteConfig> = [
 const router = new VueRouter({
   mode: 'hash',
   base: process.env.BASE_URL,
-  routes,
+  routes
 });
 
-router.onError(() => window.location.replace('/error'));
+router.onError(() => {
+  window.location.replace('/err');
+});
 
 router.beforeEach((to, from, next) => {
   document.title = to.meta?.title || 'NJU Mirror';
   next();
 });
 
-export {docConfigs, DocItem};
 export default router;
