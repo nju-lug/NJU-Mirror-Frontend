@@ -4,14 +4,12 @@
     <h1>NJU Open Source Mirror</h1>
     <h5>Made with <i class="el-icon-male"/> by NJU LUG</h5>
     <el-row>
-      <el-button icon="el-icon-male"
-                 @click="redirect('https://git.nju.edu.cn/nju-lug/')">
-        NJU LUG
-      </el-button>
-      <el-button icon="el-icon-paperclip"
-                 @click="redirect('https://git.nju.edu.cn/iori_ichinose/nju-mirror-frontend')">
-        Source Code
-      </el-button>
+      <a href="https://git.nju.edu.cn/nju-lug" target="_blank" rel="noopener">
+        <el-button icon="el-icon-male">NJU LUG</el-button>
+      </a>
+      <a href="https://git.nju.edu.cn/iori_ichinose/nju-mirror-frontend" target="_blank" rel="noopener">
+        <el-button icon="el-icon-paperclip">Source Code</el-button>
+      </a>
     </el-row>
   </div>
 </template>
@@ -39,6 +37,7 @@ export default Vue.extend({
     border-radius: 35px;
     width: 200px;
     height: 200px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .3); // add box-shadow rule
     -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, .3);
     margin-top: 60px;
     margin-bottom: 30px;
@@ -46,6 +45,9 @@ export default Vue.extend({
 
   span {
     margin-bottom: 30px;
+  }
+  a+a{
+    margin-left: 10px;
   }
 }
 </style>
