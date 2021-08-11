@@ -90,11 +90,11 @@ export default <Array<DocItem>>[
     path: 'docker-ce.md',
     route: 'docker-ce'
   },
-  //{
-  //  name: 'dockerhub',
-  //  path: 'dockerhub.md',
-  //  route: 'dockerhub'
-  //},
+  {
+    name: 'dockerhub',
+    path: 'dockerhub.md',
+    route: 'dockerhub'
+  },
   {
     name: 'epel',
     path: 'epel.md',
