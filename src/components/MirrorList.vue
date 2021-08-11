@@ -46,10 +46,8 @@ import {SyncEntry, fetchEntries} from '@/models';
 export default Vue.extend({
   name: 'MirrorList',
   data() {
-    // issue: https://blog.csdn.net/ollin2012/article/details/88963553
-    let timer_: any = 0; // `setInterval` return NodeJS.Timer while `clearInterval` needs number
     return {
-      timer_,
+      timer_: 0, // issue
       entries: Array<SyncEntry>(),
       filter: '',
     };
@@ -86,7 +84,7 @@ export default Vue.extend({
       );
     }
   },
-  beforeMount() {
+  mounted() {
     this.update();
     this.timer_ = setInterval(() => this.update(), 60000);
   },

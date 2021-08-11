@@ -23,7 +23,7 @@ export default Vue.extend({
   props: {
     entries: Promise,
   },
-  beforeMount() {
+  mounted() {
     (this.entries as Promise<CardItem>).then(
       res => this.card = res,
       err => {
