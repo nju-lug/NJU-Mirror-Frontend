@@ -20,11 +20,11 @@
     </template>
 
     <el-submenu v-else
-                index="colapse">
+                index="collapse">
       <template slot="title">
         <i class="el-icon-s-fold" style="font-size:28px;"/>
       </template>
-      <el-menu-item v-for="(item,key) in routes" :key="key"
+      <el-menu-item v-for="(item, index) in routes" :key="index"
                     :index="item.route">{{ item.name }}
       </el-menu-item>
     </el-submenu>
@@ -62,6 +62,12 @@ export default Vue.extend({
   }
 });
 </script>
+
+<style lang="less">
+.el-menu--horizontal > .el-submenu {
+  float: right;
+}
+</style>
 
 <style scoped lang="less">
 .el-col {
