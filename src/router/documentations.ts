@@ -1,8 +1,13 @@
-import {docConfig} from '@/configs';
 import {RouteConfig} from 'vue-router';
 
-export default docConfig.map(
-  value => <RouteConfig>{
+export interface DocItem {
+  name: string,
+  path: string,
+  route: string,
+}
+
+export function convertRoute(value: DocItem): RouteConfig {
+  return {
     path: value.route,
     name: value.name,
     component: () => import('@/components/Doc.vue'),
@@ -13,5 +18,5 @@ export default docConfig.map(
     meta: {
       title: `Help · ${value.name} - NJU Mirror`,
     }
-  }
-);
+  };
+}

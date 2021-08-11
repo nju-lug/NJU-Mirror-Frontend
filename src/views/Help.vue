@@ -27,7 +27,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import {docConfig, DocItem} from '@/configs';
+import {docConfigs, DocItem} from '@/router';
 import pubsub from 'pubsub-js';
 
 export default Vue.extend({
@@ -36,7 +36,7 @@ export default Vue.extend({
     return {
       filter: '',
       isMobile: document.body.clientWidth < 600,
-      entries: docConfig,
+      entries: docConfigs,
     };
   },
   computed: {
