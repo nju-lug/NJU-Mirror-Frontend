@@ -1,7 +1,7 @@
 <template>
   <div class="help-page">
     <el-row>
-      <el-col :span="6">
+      <el-col :span="isMobile ? 24 : 6" v-show="showNavi">
         <h5>Mirror Name</h5>
         <el-input placeholder="Search mirror"
                   v-model="filter"
@@ -18,8 +18,10 @@
           </el-menu-item>
         </el-menu>
       </el-col>
-      <el-col :span="18">
-        <router-view/>
+      <el-col :span="isMobile ? 24 : 18">
+        <transition name="fade">
+          <router-view/>
+        </transition>
       </el-col>
     </el-row>
   </div>
@@ -28,19 +30,24 @@
 <script lang="ts">
 import Vue from 'vue';
 import {docConfig, DocItem} from '@/configs';
+import pubsub from 'pubsub-js';
 
 export default Vue.extend({
   name: 'Help',
   data() {
     return {
       filter: '',
+      isMobile: document.body.clientWidth < 600,
       entries: docConfig,
     };
   },
   computed: {
     show(): Array<DocItem> {
       return this.entries.filter(value => value.name.toLowerCase().includes(this.filter.toLowerCase()));
-    }
+    },
+    showNavi(): boolean {
+      return !this.isMobile || this.$route.path == '/help';
+    },
   },
   methods: {
     filterList(input: string) {
@@ -58,6 +65,14 @@ export default Vue.extend({
       }
     }
   },
+  mounted() {
+    pubsub.subscribe('updateWidth', (_: any, value: boolean) => {
+      this.isMobile = value;
+    });
+  },
+  beforeDestroy() {
+    pubsub.unsubscribe('updateWidth');
+  },
 });
 </script>
 
@@ -73,5 +88,13 @@ export default Vue.extend({
   word-break: break-all;
   line-height: 20px;
   flex: 1;
+}
+
+.fade-enter-active {
+  transition: opacity .5s;
+}
+
+.fade-enter, .fade-leave-to, .fade-leave-active {
+  opacity: 0;
 }
 </style>

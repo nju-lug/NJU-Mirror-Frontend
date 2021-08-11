@@ -37,14 +37,8 @@ Docker CE 仓库镜像
 还需要将该文件中的 `download.docker.com` 地址换成
 `mirrors.nju.edu.cn/docker-ce`。
 
-::: tip
-::: title
-Tip
-:::
-
-以上 Docker CE 的官方文档有中文版，但更新可能不如英文版及时，请移步
-<https://docs.docker-cn.com/engine/installation/> 。
-:::
+**Tip**
+> 以上 Docker CE 的官方文档有中文版，但更新可能不如英文版及时，请移步<https://docs.docker-cn.com/engine/installation/> 。
 
 ## 相关链接
 

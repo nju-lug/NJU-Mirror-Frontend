@@ -28,14 +28,9 @@ Debian Unstable 用户与 Debian Testing（目前为 Buster）用户同用 buste
 
 ## 使用说明
 
-::: tip
-::: title
-Tip
-:::
+**Tip**
+> 请参考: [上游使用说明](https://github.com/debiancn/repo) 并将所有`repo.debiancn.org` 字符串替换为 `mirrors.nju.edu.cn` 即可。
 
-请参考: [上游使用说明](https://github.com/debiancn/repo) 并将所有
-`repo.debiancn.org` 字符串替换为 `mirrors.nju.edu.cn` 即可。
-:::
 
 ## 相关链接
 

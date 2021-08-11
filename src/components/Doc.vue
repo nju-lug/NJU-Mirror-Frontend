@@ -1,5 +1,6 @@
 <template>
   <div>
+    <el-page-header @back="goBack" :content="name"/>
     <div v-html="help" class="markdown-body"/>
   </div>
 </template>
@@ -30,7 +31,10 @@ export default Vue.extend({
           this.help = 'No help available';
         },
       );
-    }
+    },
+    goBack() {
+      this.$router.push('/help/index');
+    },
   },
   watch: {
     path() {

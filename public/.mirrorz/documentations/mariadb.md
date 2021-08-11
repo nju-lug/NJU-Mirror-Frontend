@@ -16,8 +16,7 @@
 
 ### Fedora, CentOS, Red Hat
 
-使用 [MariaDB Repository Configuration
-Tool](https://downloads.mariadb.org/mariadb/repositories)
+使用 [MariaDB Repository Configuration Tool](https://downloads.mariadb.org/mariadb/repositories)
 生成一份配置，保存为 `/etc/yum.repos.d/mariadb.repo`
 
 然后执行以下命令替换源地址：
@@ -34,8 +33,7 @@ unreachable"，将源地址中的 `mirrors.nju.edu.cn` 替换为
 
 ### Mint, Ubuntu, Debian
 
-1.  使用 [MariaDB Repository Configuration
-    Tool](https://downloads.mariadb.org/mariadb/repositories)
+1.  使用 [MariaDB Repository Configuration Tool](https://downloads.mariadb.org/mariadb/repositories)
     生成要执行的命令（Mirror 选择 Babylon Network - NL）
 2.  将 `add-apt-repository` 命令中的
     \"<http://nl.mirror.babylon.network>\" 替换为

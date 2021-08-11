@@ -19,22 +19,13 @@ i386，amd64
 
 ## 使用方法
 
-::: warning
-::: title
-Warning
-:::
-
-操作前请做好相应备份。
-:::
+**Warning**
+> 操作前请做好相应备份。
 
 编辑
-`/etc/apt/sources.list.d/official-package-repositories.list`{.interpreted-text
-role="file"} ：
+`/etc/apt/sources.list.d/official-package-repositories.list` ：
 
 -   对于基于 Ubuntu 的原版，以 Linuxmint 19.1 Tessa 为例：
-
-```{=html}
-<!-- -->
 ```
     deb https://mirrors.nju.edu.cn/linuxmint/ tessa main upstream import backport
     deb https://mirrors.nju.edu.cn/ubuntu/ bionic main restricted universe multiverse
@@ -42,11 +33,8 @@ role="file"} ：
     deb https://mirrors.nju.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
     deb https://mirrors.nju.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
     deb http://archive.canonical.com/ubuntu/ bionic partner
-
+```
 -   对于基于 Debian 的 LMDE，以 LMDE 2 为例：
-
-```{=html}
-<!-- -->
 ```
     deb https://mirrors.nju.edu.cn/linuxmint/ betsy main upstream import
     deb https://mirrors.nju.edu.cn/debian jessie main contrib non-free
@@ -54,20 +42,13 @@ role="file"} ：
     deb https://mirrors.nju.edu.cn/debian jessie-backports main contrib non-free
     deb https://mirrors.nju.edu.cn/debian-security/ jessie/updates main non-free contrib
     deb https://mirrors.nju.edu.cn/deb-multimedia/ jessie main non-free
-
+```
 然后运行 `sudo apt-get update` 更新索引以生效。
 
-::: tip
-::: title
-Tip
-:::
+**Tip**
+> 完成后请不要再使用mintsources（自带的图形化软件源设置工具）进行任何操作，
+> 因为在操作后，无论是否有按"确定"，mintsources均会复写`/etc/apt/sources.list.d/official-lackage-repositories.list` 。
 
-完成后请不要再使用
-mintsources（自带的图形化软件源设置工具）进行任何操作，因为在操作后，无论是否有按"确定"，mintsources
-均会复写
-`/etc/apt/sources.list.d/official-lackage-repositories.list`{.interpreted-text
-role="file"} 。
-:::
 
 ## 相关链接
 

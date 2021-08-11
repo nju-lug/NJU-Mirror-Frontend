@@ -2,6 +2,15 @@ import Vue from 'vue';
 import VueRouter, { RouteConfig } from 'vue-router';
 import documentations from './documentations';
 
+documentations.push({
+  path: 'index',
+  name: 'Index',
+  component: () => import('@/components/HelpIndex.vue'),
+  meta: {
+    title: 'Help · NJU Mirror'
+  },
+});
+
 Vue.use(VueRouter);
 
 const routes: Array<RouteConfig> = [
@@ -18,10 +27,10 @@ const routes: Array<RouteConfig> = [
     name: 'Help',
     component: () => import('@/views/Help.vue'),
     children: documentations,
-    redirect: '/help/archlinux',
     meta: {
       title: 'Help · NJU Mirror',
-    }
+    },
+    redirect: '/help/index',
   },
   {
     path: '/about',

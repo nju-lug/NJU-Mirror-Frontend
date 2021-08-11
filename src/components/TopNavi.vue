@@ -6,7 +6,7 @@
     <el-menu-item>
       <el-link :underline="false" type="primary" href="/" class="logo-container">
         <img src="@/assets/logo.png" alt="Logo"/>
-        <span>NJU Mirror</span>
+        <span>{{ isMobile ? 'NJU Mirror' : 'Nanjing University Mirror' }}</span>
       </el-link>
     </el-menu-item>
 
@@ -24,7 +24,7 @@
       <template slot="title">
         <i class="el-icon-s-fold" style="font-size:28px;color: #63065f"/>
       </template>
-      <el-menu-item v-for="(item,key) in routes" :key="key"
+      <el-menu-item v-for="(item, index) in routes" :key="index"
                     :index="item.route">{{ item.name }}
       </el-menu-item>
     </el-submenu>
@@ -62,6 +62,12 @@ export default Vue.extend({
   }
 });
 </script>
+
+<style lang="less">
+.el-menu--horizontal > .el-submenu {
+  float: right;
+}
+</style>
 
 <style scoped lang="less">
 .el-col {
