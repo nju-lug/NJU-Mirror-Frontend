@@ -10,7 +10,6 @@
         <el-col :span="16">
           <el-row>
             本镜像站由
-            <el-link href="https://sci.nju.edu.cn/">人工微结构科学与技术协同创新中心</el-link>&nbsp;
             <el-link href="https://www.yaoge123.com/">yaoge123</el-link>
             维护
           </el-row>
@@ -19,7 +18,6 @@
             <el-link href="https://git.nju.edu.cn/nju-lug">NJU LUG</el-link>
             制作
           </el-row>
-          <el-row>苏ICP备10085945-1号 南信备568号</el-row>
         </el-col>
         <el-col :span="8" align="right">
           <el-row>
@@ -35,6 +33,7 @@
         </el-col>
       </el-col>
     </el-row>
+    <el-row>苏ICP备10085945-1号 南信备568号</el-row>
   </div>
 </template>
 
@@ -63,7 +62,8 @@ export default Vue.extend({
 <style scoped lang="less">
 .footer {
   height: 200px;
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
   alignment: top;
 }
 
