@@ -17,6 +17,11 @@ interface RawEntry {
   size: string,
 }
 
+interface AdditionEntry {
+  name: string,
+  inherit: string,
+}
+
 export interface SyncEntry {
   name: string,
   status: 'success' | 'failed' | 'syncing',
@@ -70,9 +75,11 @@ function parseSecs(seconds: number): string {
 }
 
 export async function fetchEntries(): Promise<Array<SyncEntry>> {
-  const res = await axios.get(serverPrefix + 'tunasync.json');
-  const data: Array<RawEntry> = res.data;
-  return data.map(value => <SyncEntry>{
+  const res1 = await axios.get(serverPrefix + 'tunasync.json');
+  const res2 = await axios.get(serverPrefix + 'addition.json');
+  const data: Array<RawEntry> = res1.data;
+
+  const entries = data.map(value => <SyncEntry>{
     name: value.name,
     status: value.status,
     path: parse(value.upstream),
@@ -80,4 +87,18 @@ export async function fetchEntries(): Promise<Array<SyncEntry>> {
     nextUpdate: parseSecs(new Date().getTime() / 1000 - value.next_schedule_ts),
     size: value.size == 'unknown' ? '未知' : value.size,
   });
+
+  const addition: Array<AdditionEntry> = res2.data;
+  const addEntries = addition.map(value => {
+    const parent = entries.find(value1 => value.inherit == value1.name);
+    return <SyncEntry>{
+      name: value.name,
+      status: parent?.status || '未知',
+      path: value.name,
+      lastUpdate: parent?.lastUpdate || '未知',
+      nextUpdate: parent?.nextUpdate || '未知',
+      size: '未知',
+    };
+  });
+  return [...entries, ...addEntries];
 }
