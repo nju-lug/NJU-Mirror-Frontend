@@ -1,4 +1,5 @@
 import axios from 'axios';
+import {serverPrefix} from '@/configs';
 
 export interface SyncEntry {
   name: string,
@@ -26,7 +27,7 @@ function parse(url: string): string {
 }
 
 export async function fetchEntries(): Promise<Array<SyncEntry>> {
-  const res = await axios.get('/.mirrorz/tunasync.json');
+  const res = await axios.get(serverPrefix + 'tunasync.json');
   const data: Array<SyncEntry> = res.data;
   return data.map(value => ({...value, path: parse(value.upstream)}));
 }

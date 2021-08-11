@@ -8,6 +8,7 @@
 import Vue from 'vue';
 import axios from 'axios';
 import marked from 'marked';
+import {serverPrefix} from '@/configs';
 
 export default Vue.extend({
   name: 'Doc',
@@ -22,7 +23,7 @@ export default Vue.extend({
   },
   methods: {
     update() {
-      axios.get('/.mirrorz/documentations/' + this.path).then(
+      axios.get(serverPrefix + 'documentations/' + this.path).then(
         res => this.help = marked(res.data),
         () => {
           this.$message.warning('No help available for this mirror');

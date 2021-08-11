@@ -1,4 +1,5 @@
 import axios from 'axios';
+import {serverPrefix} from '@/configs/common';
 
 export interface LinkItem {
   title: String,
@@ -11,11 +12,11 @@ export interface CardItem {
   links: Array<LinkItem>,
 }
 
-const esci: Promise<CardItem> = axios.get('/.mirrorz/cards/esci.json').then(
+const esci: Promise<CardItem> = axios.get(serverPrefix + 'cards/esci.json').then(
   res => new Promise(resolve => resolve(res.data)),
 );
 
-const friends: Promise<CardItem> = axios.get('/.mirrorz/cards/friends.json').then(
+const friends: Promise<CardItem> = axios.get(serverPrefix + 'cards/friends.json').then(
   res => new Promise(resolve => resolve(res.data)),
 );
 
