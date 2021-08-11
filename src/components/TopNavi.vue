@@ -6,7 +6,7 @@
     <el-menu-item>
       <el-link :underline="false" type="primary" href="/" class="logo-container">
         <img src="@/assets/logo.png" alt="Logo"/>
-        <span>Nanjing University Mirror</span>
+        <span>{{ isMobile ? 'NJU Mirror' : 'Nanjing University Mirror' }}</span>
       </el-link>
     </el-menu-item>
 

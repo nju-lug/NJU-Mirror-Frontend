@@ -18,7 +18,6 @@ const routes: Array<RouteConfig> = [
     name: 'Help',
     component: () => import('@/views/Help.vue'),
     children: documentations,
-    redirect: '/help/archlinux',
     meta: {
       title: 'Help · NJU Mirror',
     }
