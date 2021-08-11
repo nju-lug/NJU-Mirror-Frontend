@@ -18,13 +18,9 @@ i386, amd64, aarch64, armv6, mips, mips64
 
 ## 使用方法
 
-创建用户级 pkg 源目录
+创建用户级 pkg 源目录  `/usr/local/etc/pkg/repos` 
 
-:       `/usr/local/etc/pkg/repos` 
-
-新建源文件
-
->   `/usr/local/etc/pkg/repos/1.nju.conf` 
+新建源文件 `/usr/local/etc/pkg/repos/1.nju.conf` 
 
 在 `1.nju.conf`  中添加以下内容：
 
