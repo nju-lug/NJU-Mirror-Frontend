@@ -15,7 +15,8 @@
         </el-col>
       </el-row>
     </el-main>
-    <el-footer>
+    <el-footer height="200">
+      <el-divider/>
       <BottomBar/>
     </el-footer>
   </el-container>
@@ -77,7 +78,7 @@ body {
 
   .el-main {
     padding-top: 70px;
-    min-height: calc(100vh - 80px);
+    min-height: calc(100vh - 290px);
   }
 
   .el-header {
@@ -85,6 +86,8 @@ body {
     left: 0;
     top: 0;
     width: 100%;
+    text-align: center;
+    z-index: 1500;
 
     .el-menu {
       background-color: rgba(255, 255, 255, 0.8);
@@ -92,10 +95,10 @@ body {
     }
   }
 
-  .el-header, .el-footer {
-    text-align: center;
-    line-height: 60px;
-    z-index: 1500;
+  .el-footer {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: medium;
   }
 }
 
