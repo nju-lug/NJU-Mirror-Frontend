@@ -9,6 +9,7 @@ export interface LinkItem {
 
 export interface CardItem {
   title: string,
+  url?: string,
   links: Array<LinkItem>,
 }
 
@@ -27,13 +28,17 @@ const jokes = axios.get('https://git.nju.edu.cn/api/v4/projects/2412/issues').th
         title: value.title,
         url: value.web_url,
       });
-    resolve({title: 'LUG Jokes', links: links.slice(0, 5)});
+    resolve({
+      title: 'LUG Jokes',
+      url: 'https://git.nju.edu.cn/nju-lug',
+      links: links.slice(0, 5)
+    });
   }),
   err => new Promise((resolve, reject) => reject(err)),
 );
 
 export default <Array<Promise<CardItem>>>[
-  jokes,
   esci,
   friends,
+  jokes,
 ];

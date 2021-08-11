@@ -1,8 +1,8 @@
 <template>
   <el-card class="box-card">
-    <div slot="header" class="clearfix">
+    <el-link slot="header" :href="card.url || 'javascript:void(0);'">
       {{ card.title }}
-    </div>
+    </el-link>
     <div v-for="(entry, index) in card.links" :key="index" class="text item aside-link">
       <el-link :icon="entry.icon || 'el-icon-top-right'" type="info" :href="entry.url">{{ entry.title }}</el-link>
     </div>
