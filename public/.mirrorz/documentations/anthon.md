@@ -31,8 +31,7 @@ AOSC OS 内置 `apt-gen-list` 工具来开关镜像源。要使用 NJU 源，执
 
 注意目前这将关闭其它镜像源。详细用法请执行 `apt-gen-list -h` 获取。
 
-当然，也可以直接编辑 `/etc/apt/sources.list`{.interpreted-text
-role="file"} 文件。对于任一架构 `${ARCH}`，需要在
+当然，也可以直接编辑 `/etc/apt/sources.list` 文件。对于任一架构 `${ARCH}`，需要在
 `/etc/apt/sources.list`  中同时写入：
 
     deb https://mirrors.nju.edu.cn/anthon/os-${ARCH}/os3-dpkg/ /

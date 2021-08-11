@@ -21,13 +21,9 @@ Debian Old Stable, Stable, Testing, Unstable(sid)
 
 ## 使用说明
 
-::: warning
-::: title
-Warning
-:::
+**Warning**
+> 操作前请做好相应备份
 
-操作前请做好相应备份
-:::
 
 一般情况下，将 `/etc/apt/sources.list` 
 文件中 Debian 默认的源地址 `http://deb.debian.org/` 替换为
@@ -37,8 +33,7 @@ Warning
 
     sudo sed -i 's/deb.debian.org/mirrors.nju.edu.cn/g' /etc/apt/sources.list
 
-当然也可以直接编辑 `/etc/apt/sources.list`{.interpreted-text
-role="file"} 文件（需要使用 sudo）。以下是 Debian Stable 参考配置内容：
+当然也可以直接编辑 `/etc/apt/sources.list` 文件（需要使用 sudo）。以下是 Debian Stable 参考配置内容：
 
     deb http://mirrors.nju.edu.cn/debian stable main contrib non-free
     # deb-src http://mirrors.nju.edu.cn/debian stable main contrib non-free
@@ -54,14 +49,8 @@ role="file"} 文件（需要使用 sudo）。以下是 Debian Stable 参考配�
 更改完 `sources.list`  文件后请运行
 `sudo apt-get update` 更新索引以生效。
 
-::: tip
-::: title
-Tip
-:::
-
-使用 HTTPS 可以有效避免国内运营商的缓存劫持，但需要事先安装
-`apt-transport-https` (Debian Buster 及以上版本不需要)。
-:::
+**Tip**
+> 使用 HTTPS 可以有效避免国内运营商的缓存劫持，但需要事先安装`apt-transport-https` (Debian Buster 及以上版本不需要)。
 
 ## 相关链接
 
