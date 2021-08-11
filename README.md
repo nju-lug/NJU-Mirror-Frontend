@@ -12,6 +12,6 @@ Run `npm run build` to compile for production.
 
 + [ ] Connection to backend
 + [ ] Download pages
-+ [ ] SideBar news
-+ [ ] Mirror documentations
-+ [ ] Help & About page
++ [x] SideBar news
++ [x] Mirror documentations
++ [x] Help & About page
