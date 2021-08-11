@@ -29,10 +29,10 @@ i586, x86_64
 
 添加南大镜像源，以 openSUSE Leap为例
 ```
-    sudo zypper ar -fcg https://mirrors.nju.edu.cn/opensuse/distribution/leap/$releasever/repo/oss nju-oss
-    sudo zypper ar -fcg https://mirrors.nju.edu.cn/opensuse/distribution/leap/$releasever/repo/non-oss nju-non-oss
-    sudo zypper ar -fcg https://mirrors.nju.edu.cn/opensuse/update/leap/$releasever/oss nju-update-oss
-    sudo zypper ar -fcg https://mirrors.nju.edu.cn/opensuse/update/leap/$releasever/non-oss nju-update-non-oss
+    sudo zypper ar -cfg https://mirrors.nju.edu.cn/opensuse/distribution/leap/$releasever/repo/oss nju-oss
+    sudo zypper ar -cfg https://mirrors.nju.edu.cn/opensuse/distribution/leap/$releasever/repo/non-oss nju-non-oss
+    sudo zypper ar -cfg https://mirrors.nju.edu.cn/opensuse/update/leap/$releasever/oss nju-update-oss
+    sudo zypper ar -cfg https://mirrors.nju.edu.cn/opensuse/update/leap/$releasever/non-oss nju-update-non-oss
 ```
 命令中最后一个参数为每一个源指定了一个 alias（别称），可以根据个人喜好更改。
 
