@@ -33,7 +33,7 @@ const jokes = axios.get('https://git.nju.edu.cn/api/v4/projects/2412/issues').th
 );
 
 export default <Array<Promise<CardItem>>>[
-  jokes,
   esci,
   friends,
+  jokes,
 ];
