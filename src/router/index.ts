@@ -2,6 +2,15 @@ import Vue from 'vue';
 import VueRouter, {RouteConfig} from 'vue-router';
 import documentations from './documentations';
 
+documentations.push({
+  path: 'index',
+  name: 'Index',
+  component: () => import('@/components/HelpIndex.vue'),
+  meta: {
+    title: 'Help · NJU Mirror'
+  },
+});
+
 Vue.use(VueRouter);
 
 const routes: Array<RouteConfig> = [
@@ -20,7 +29,8 @@ const routes: Array<RouteConfig> = [
     children: documentations,
     meta: {
       title: 'Help · NJU Mirror',
-    }
+    },
+    redirect: '/help/index',
   },
   {
     path: '/about',
