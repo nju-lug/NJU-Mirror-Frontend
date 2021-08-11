@@ -28,16 +28,11 @@ archive.raspbian.org ( 参考 `raspbian`  )
 
 ## 使用说明
 
-::: warning
-::: title
-Warning
-:::
+**Warning**
+> 操作前请做好相应备份
 
-操作前请做好相应备份
-:::
 
-一般情况下，将 `/etc/apt/sources.list.d/raspi.list`{.interpreted-text
-role="file"} 文件中默认的源地址 `http://archive.raspberrypi.org/` 替换为
+一般情况下，将 `/etc/apt/sources.list.d/raspi.list`  文件中默认的源地址 `http://archive.raspberrypi.org/` 替换为
 `http://mirrors.nju.edu.cn/raspberrypi/` 即可。
 
 可以使用如下命令：
@@ -54,14 +49,10 @@ role="file"} 文件中默认的源地址 `http://archive.raspberrypi.org/` 替�
 更改完 `raspi.list`  文件后请运行
 `sudo apt-get update` 更新索引以生效。
 
-::: tip
-::: title
-Tip
-:::
+## Tip
 
 使用 HTTPS 可以有效避免国内运营商的缓存劫持，但需要事先安装
 `apt-transport-https`。
-:::
 
 ## 相关链接
 

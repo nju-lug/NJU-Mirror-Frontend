@@ -39,9 +39,8 @@ Alpine Linux 软件源
 更改完 `/etc/apk/repositories` 
 文件后请运行 `apk update` 更新索引以生效。
 
-## Tip
-
-使用 HTTPS 可以有效避免国内运营商的缓存劫持。
+**Tip**
+> 使用 HTTPS 可以有效避免国内运营商的缓存劫持。
 
 ## 相关链接
 

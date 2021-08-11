@@ -21,13 +21,8 @@ armhf
 
 ## 使用说明
 
-::: warning
-::: title
-Warning
-:::
-
-操作前请做好相应备份
-:::
+**Warning**
+> 操作前请做好相应备份
 
 将 `/etc/apt/sources.list` 
 文件中默认的源地址 `http://mirrordirector.raspbian.org/`
@@ -55,32 +50,22 @@ sudo）。删除原文件所有内容，用以下内容取代（以 Stretch 示�
 
 Raspbian 链接
 
-:   
+-    Raspbian 主页
+       <http://www.raspbian.org/>
 
-    Raspbian 主页
+-    文档
+       <http://www.raspbian.org/RaspbianDocumentation>
 
-    :   <http://www.raspbian.org/>
+-    Bug Tracker
+       <http://www.raspbian.org/RaspbianBugs>
 
-    文档
-
-    :   <http://www.raspbian.org/RaspbianDocumentation>
-
-    Bug Tracker
-
-    :   <http://www.raspbian.org/RaspbianBugs>
-
-    镜像列表
-
-    :   <http://www.raspbian.org/RaspbianMirrors>
+-    镜像列表
+       <http://www.raspbian.org/RaspbianMirrors>
 
 树莓派链接
 
-:   
+-    树莓派基金会主页
+       <https://www.raspberrypi.org/>
 
-    树莓派基金会主页
-
-    :   <https://www.raspberrypi.org/>
-
-    树莓派基金会论坛 Raspbian 版块
-
-    :   <https://www.raspberrypi.org/forums/viewforum.php?f=66>
+-    树莓派基金会论坛 Raspbian 版块
+       <https://www.raspberrypi.org/forums/viewforum.php?f=66>

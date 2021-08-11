@@ -24,14 +24,8 @@ FreeBSD 支持的所有正式版本
     [/releases/VM-IMAGES](http://mirrors.nju.edu.cn/freebsd/releases/VM-IMAGES)
 -   文档及资料位于 [/doc](http://mirrors.nju.edu.cn/freebsd/doc)
 
-::: warning
-::: title
-Warning
-:::
-
-pkg 和 ports 仓库已被官方移动到独立的仓库中。详见 [相关镜像](#相关镜像)
-。
-:::
+**Warning**
+> pkg 和 ports 仓库已被官方移动到独立的仓库中。详见 [相关镜像](#相关镜像)。
 
 ## 相关镜像
 
