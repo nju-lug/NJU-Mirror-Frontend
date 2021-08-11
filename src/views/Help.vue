@@ -5,9 +5,8 @@
         <h5>Mirror Name</h5>
         <el-input placeholder="Search mirror"
                   v-model="filter"
-                  style="margin-bottom: 10px;">
-          <i slot="prefix" class="el-input__icon el-icon-search"></i>
-        </el-input>
+                  prefix-icon="el-icon-search"
+                  style="margin-bottom: 10px;"/>
         <el-menu :default-active="$route.fullPath" router>
           <el-menu-item v-for="entry in show"
                         :index="'/help/' + entry.route"
@@ -45,7 +44,7 @@ export default Vue.extend({
       return this.entries.filter(value => value.name.toLowerCase().includes(this.filter.toLowerCase()));
     },
     showNavi(): boolean {
-      return !this.isMobile || this.$route.path == '/help';
+      return !this.isMobile || this.$route.path == '/help/index';
     },
   },
   methods: {
