@@ -23,7 +23,7 @@ export default Vue.extend({
       this.$router.back();
     },
     issue() {
-      window.location.href = 'https://git.nju.edu.cn/iori_ichinose/nju-mirror-frontend/-/issues';
+      window.location.href = 'https://git.nju.edu.cn/nju-lug/nju-mirror-frontend/-/issues';
     }
   },
   mounted() {
