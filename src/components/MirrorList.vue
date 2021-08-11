@@ -15,7 +15,8 @@
       </el-table-column>
       <el-table-column prop="status"
                        label="Sync Status"
-                       width="150">
+                       width="150"
+                       align="center">
         <template slot-scope="scope">
           <el-tag :type="tagType(scope.row.status)">
             <i v-if="scope.row.status === 'syncing'" class="el-icon-loading"/>
@@ -25,9 +26,9 @@
           </el-tag>
         </template>
       </el-table-column>
-      <el-table-column prop="lastUpdate" label="Last Update" width="120"/>
-      <el-table-column prop="nextUpdate" label="Next Update" width="120"/>
-      <el-table-column prop="size" label="Mirror Size" width="100"/>
+      <el-table-column prop="lastUpdate" label="Last Update" width="150" align="center"/>
+      <el-table-column prop="nextUpdate" label="Next Update" width="150" align="center"/>
+      <el-table-column prop="size" label="Mirror Size" width="150" align="center"/>
     </el-table>
   </div>
 </template>
