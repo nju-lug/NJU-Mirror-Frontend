@@ -84,6 +84,7 @@ export default Vue.extend({
   word-break: break-all;
   line-height: 20px;
   flex: 1;
+  text-align: left;
 }
 
 .fade-enter-active {

@@ -25,14 +25,9 @@
           </el-tag>
         </template>
       </el-table-column>
-      <el-table-column prop="last_update"
-                       label="Last Update"
-                       width="250">
-      </el-table-column>
-      <el-table-column prop="size"
-                       label="Mirror Size"
-                       width="100">
-      </el-table-column>
+      <el-table-column prop="lastUpdate" label="Last Update" width="120"/>
+      <el-table-column prop="nextUpdate" label="Next Update" width="120"/>
+      <el-table-column prop="size" label="Mirror Size" width="100"/>
     </el-table>
   </div>
 </template>
