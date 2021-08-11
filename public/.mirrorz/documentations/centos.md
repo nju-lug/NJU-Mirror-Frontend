@@ -16,11 +16,11 @@ x86_64, i386
 
 7, 8, 8-stream
 
+7以前的版本见 <https://mirrors.nju.edu.cn/centos-vault/>
+
 ## 使用说明
 
-首先备份 `CentOS-Base.repo` 
-
-    mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup
+首先备份 `/etc/yum.repos.d/`下的文件
 
 对于 CentOS 8，使用以下命令替换默认的配置
 ```
@@ -37,7 +37,7 @@ sudo sed -e 's|^mirrorlist=|#mirrorlist=|g' \
          /etc/yum.repos.d/CentOS-Base.repo
 ```
 
-最后运行 `sudo yum makecache` 生成缓存。
+最后运行 `sudo yum makecache`或 `sudo dnf makecache` 生成缓存。
 
 ## 相关链接
 
