@@ -97,13 +97,8 @@ AMD64 (x86_64), Intel x86
 
 ### 手动更改配置文件
 
-::: warning
-::: title
-Warning
-:::
-
-操作前请做好相应备份
-:::
+**Warning**
+> 操作前请做好相应备份
 
 一般情况下，将 `/etc/apt/sources.list` 
 文件中 Ubuntu 默认的源地址 `http://archive.ubuntu.com/` 替换为
@@ -113,22 +108,10 @@ Warning
 
     sudo sed -i 's/archive.ubuntu.com/mirrors.nju.edu.cn/g' /etc/apt/sources.list
 
-::: tip
-::: title
-Tip
-:::
+**Tip**
+>  如果你在安装时选择的语言不是英语，默认的源地址通常不是`http://archive.ubuntu.com/` ， 而是`http://<country-code>.archive.ubuntu.com/ubuntu/` ，如`http://cn.archive.ubuntu.com/ubuntu/` ，此时只需将上面的命令进行相应的替换即可，即`sudo sed -i 's/cn.archive.ubuntu.com/mirrors.nju.edu.cn/g' /etc/apt/sources.list`。
 
-  如果你在安装时选择的语言不是英语，默认的源地址通常不是
-`http://archive.ubuntu.com/` ， 而是
-`http://<country-code>.archive.ubuntu.com/ubuntu/` ，如
-`http://cn.archive.ubuntu.com/ubuntu/` ，
-此时只需将上面的命令进行相应的替换即可，即
-`sudo sed -i 's/cn.archive.ubuntu.com/mirrors.nju.edu.cn/g' /etc/apt/sources.list`
-。
-:::
-
-当然也可以直接编辑 `/etc/apt/sources.list`{.interpreted-text
-role="file"} 文件（需要使用 sudo）。以下是 Ubuntu 16.04 参考配置内容：
+当然也可以直接编辑 `/etc/apt/sources.list` 文件（需要使用 sudo）。以下是 Ubuntu 16.04 参考配置内容：
 
     # 默认注释了源码仓库，如有需要可自行取消注释
     deb https://mirrors.nju.edu.cn/ubuntu/ xenial main restricted universe multiverse
@@ -147,13 +130,8 @@ role="file"} 文件（需要使用 sudo）。以下是 Ubuntu 16.04 参考配置
 更改完 `sources.list`  文件后请运行
 `sudo apt-get update` 更新索引以生效。
 
-::: tip
-::: title
-Tip
-:::
-
-使用 HTTPS 可以有效避免国内运营商的缓存劫持。
-:::
+**Tip**
+> 使用 HTTPS 可以有效避免国内运营商的缓存劫持。
 
 ### 镜像下载
 
