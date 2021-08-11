@@ -5,7 +5,6 @@
         <h5>Mirror Name</h5>
         <el-input placeholder="Search mirror"
                   v-model="filter"
-                  @change="filterList"
                   style="margin-bottom: 10px;">
           <i slot="prefix" class="el-input__icon el-icon-search"></i>
         </el-input>
@@ -50,9 +49,6 @@ export default Vue.extend({
     },
   },
   methods: {
-    filterList(input: string) {
-      this.filter = input;
-    },
     goTop() {
       document.body.scrollTop = document.documentElement.scrollTop = 0;
     }

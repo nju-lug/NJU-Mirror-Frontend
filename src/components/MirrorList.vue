@@ -1,13 +1,11 @@
 <template>
   <div>
     <el-input placeholder="Search mirror"
-              v-model="filter"
-              @input="filterList">
+              v-model="filter">
       <i slot="prefix" class="el-input__icon el-icon-search"></i>
     </el-input>
     <el-table class="mirror-container"
-              :data="show"
-              style="width: 100%; margin-top: 10px;">
+              :data="show">
       <el-table-column prop="name"
                        label="Mirror Name"
                        min-width="200">
@@ -60,9 +58,6 @@ export default Vue.extend({
     },
   },
   methods: {
-    filterList(keyword: string) {
-      this.filter = keyword;
-    },
     tagType(status: string): string {
       switch (status) {
       case 'failed':
@@ -94,19 +89,9 @@ export default Vue.extend({
 });
 </script>
 
-<style lang="less">
-// This style can't be made scoped.
-.el-table {
-  .syncing-row {
-    background-color: #ffffe1;
-  }
-
-  .succeeded-row {
-    background-color: transparent;
-  }
-
-  .failed-row {
-    background-color: #ffe2e1;
-  }
+<style scoped lang="less">
+.mirror-container {
+  width: 100%;
+  margin-top: 10px;
 }
 </style>
