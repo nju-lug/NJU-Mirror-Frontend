@@ -64,7 +64,7 @@ function parseSecs(seconds: number): string {
 
   const years = Math.floor(months / 12);
   if (years > 99) {
-    return `很久之${suffix}`;
+    return '未知';
   }
   return `${years}年${suffix}`;
 }
@@ -78,6 +78,6 @@ export async function fetchEntries(): Promise<Array<SyncEntry>> {
     path: parse(value.upstream),
     lastUpdate: parseSecs(new Date().getTime() / 1000 - value.last_update_ts),
     nextUpdate: parseSecs(new Date().getTime() / 1000 - value.next_schedule_ts),
-    size: value.size,
+    size: value.size == 'unknown' ? '未知' : value.size,
   });
 }
