@@ -54,7 +54,7 @@ export default Vue.extend({
   },
   watch: {
     show() {
-      if (this.show.length > 0) {
+      if (this.show.length > 0 && !this.isMobile) {
         const route = '/help/' + this.show[0].route;
         route != this.$route.path && this.$router.replace(route);
       }
