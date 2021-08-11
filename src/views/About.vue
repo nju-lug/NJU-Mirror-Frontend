@@ -22,15 +22,9 @@ export default Vue.extend({
   props: {
     msg: String
   },
-  methods: {
-    redirect(url: string) {
-      window.location.href = url;
-    }
-  }
 });
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
 .index-page-container {
   img {
@@ -46,7 +40,8 @@ export default Vue.extend({
   span {
     margin-bottom: 30px;
   }
-  a+a{
+
+  a + a {
     margin-left: 10px;
   }
 }
