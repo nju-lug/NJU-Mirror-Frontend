@@ -30,8 +30,8 @@ Homebrew cask 软件仓库，提供 macOS 应用和大型二进制文件
 
 官方主页
 
-    <https://caskroom.github.io>
+  <https://caskroom.github.io>
 
 Homrbew
 
-    <http://brew.sh/>
+  <http://brew.sh/>

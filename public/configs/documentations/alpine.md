@@ -46,16 +46,16 @@ Alpine Linux 软件源
 
 官方主页
 
-    <https://www.alpinelinux.org/>
+<https://www.alpinelinux.org/>
 
 邮件列表
 
-    <https://lists.alpinelinux.org/>
+<https://lists.alpinelinux.org/>
 
 论坛
 
-    <https://forum.alpinelinux.org/forum>
+<https://forum.alpinelinux.org/forum>
 
 Wiki
 
-    <https://wiki.alpinelinux.org/>
+<https://wiki.alpinelinux.org/>

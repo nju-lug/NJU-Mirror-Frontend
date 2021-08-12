@@ -27,12 +27,12 @@ amd64, armel, armhf, i386
 
 Kali Linux 主页
 
-    <https://www.kali.org/>
+  <https://www.kali.org/>
 
 论坛
 
-    <http://forums.kali.org/>
+  <http://forums.kali.org/>
 
 文档
 
-    <https://www.kali.org/kali-linux-documentation/>
+  <https://www.kali.org/kali-linux-documentation/>

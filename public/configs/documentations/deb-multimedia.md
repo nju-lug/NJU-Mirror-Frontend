@@ -49,12 +49,12 @@ deb-multimedia-keyring
 
 官方主页
 
-    <https://deb-multimedia.org/>
+  <https://deb-multimedia.org/>
 
 邮件列表
 
-    <https://deb-multimedia.org/mailinglist>
+  <https://deb-multimedia.org/mailinglist>
 
 镜像列表
 
-    <https://deb-multimedia.org/debian-m>
+  <https://deb-multimedia.org/debian-m>

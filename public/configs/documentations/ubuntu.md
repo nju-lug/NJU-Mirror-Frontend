@@ -142,28 +142,28 @@ AMD64 (x86_64), Intel x86
 
 官方主页
 
-    <https://www.ubuntu.com/>
+  <https://www.ubuntu.com/>
 
 文档
 
-    <https://help.ubuntu.com/>
+  <https://help.ubuntu.com/>
 
 Wiki
 
-    <https://wiki.ubuntu.com/>
+  <https://wiki.ubuntu.com/>
 
 邮件列表
 
-    <https://community.ubuntu.com/contribute/support/mailinglists/>
+  <https://community.ubuntu.com/contribute/support/mailinglists/>
 
 提问
 
-    <https://askubuntu.com/>
+  <https://askubuntu.com/>
 
 论坛
 
-    <https://ubuntuforums.org/>
+  <https://ubuntuforums.org/>
 
 中文论坛
 
-    <https://forum.ubuntu.org.cn/>
+  <https://forum.ubuntu.org.cn/>

@@ -42,12 +42,12 @@ i386, amd64, aarch64, armv6, mips, mips64
 
 官方主页
 
-    <https://www.freebsd.org>
+  <https://www.freebsd.org>
 
 论坛
 
-    <https://forums.freebsd.org>
+  <https://forums.freebsd.org>
 
 文档
 
-    <https://www.freebsd.org/doc>
+  <https://www.freebsd.org/doc>

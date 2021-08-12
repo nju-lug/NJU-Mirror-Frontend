@@ -27,4 +27,4 @@ Docs](http://bundler.io/v1.5/bundle_config.html#gem-source-mirrors-1)
 
 官方主页
 
-    <https://rubygems.org/>
+  <https://rubygems.org/>

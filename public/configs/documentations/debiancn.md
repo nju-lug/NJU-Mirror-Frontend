@@ -2,7 +2,7 @@
 
 ## 地址
 
--   <https://mirrors.nju.edu.cn/debiancn/>
+- <https://mirrors.nju.edu.cn/debiancn/>
 
 ## 说明
 
@@ -36,16 +36,16 @@ Debian Unstable 用户与 Debian Testing（目前为 Buster）用户同用 buste
 
 社区主页
 
-    <https://www.debiancn.org/>
+  <https://www.debiancn.org/>
 
 仓库主页
 
-    <https://repo.debiancn.org/>
+  <https://repo.debiancn.org/>
 
 使用文档与Git仓库
 
-    <https://github.com/debiancn/repo>
+  <https://github.com/debiancn/repo>
 
 其它镜像列表
 
-    <https://github.com/debiancn/repo/issues/60>
+  <https://github.com/debiancn/repo/issues/60>

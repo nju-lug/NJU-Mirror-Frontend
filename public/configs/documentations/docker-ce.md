@@ -44,12 +44,12 @@ Docker CE 仓库镜像
 
 Docker 官网
 
-    <https://www.docker.com/>
+  <https://www.docker.com/>
 
 Docker Store
 
-    <https://store.docker.com/>
+  <https://store.docker.com/>
 
 Docker Hub
 
-    <https://hub.docker.com/>
+  <https://hub.docker.com/>

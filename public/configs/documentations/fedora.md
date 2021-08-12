@@ -92,24 +92,24 @@ x86_64, i386
 
 官方主页
 
-    <https://getfedora.org/>
+  <https://getfedora.org/>
 
 邮件列表
 
-    <https://fedoraproject.org/wiki/Communicating_and_getting_help>
+  <https://fedoraproject.org/wiki/Communicating_and_getting_help>
 
 论坛
 
-    <https://forums.fedoraforum.org/>
+  <https://forums.fedoraforum.org/>
 
 文档
 
-    <https://docs.fedoraproject.org/>
+  <https://docs.fedoraproject.org/>
 
 Wiki
 
-    <https://fedoraproject.org/wiki/>
+  <https://fedoraproject.org/wiki/>
 
 镜像列表
 
-    <https://admin.fedoraproject.org/mirrormanager>
+  <https://admin.fedoraproject.org/mirrormanager>

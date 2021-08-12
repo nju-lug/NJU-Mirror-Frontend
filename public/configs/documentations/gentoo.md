@@ -23,24 +23,24 @@ ALL
 
 官方主页
 
-    <https://www.gentoo.org/>
+  <https://www.gentoo.org/>
 
 邮件列表
 
-    <https://www.gentoo.org/main/en/lists.xml>
+  <https://www.gentoo.org/main/en/lists.xml>
 
 论坛
 
-    <https://forums.gentoo.org/>
+  <https://forums.gentoo.org/>
 
 文档
 
-    <https://www.gentoo.org/doc/en/>
+  <https://www.gentoo.org/doc/en/>
 
 Wiki
 
-    <https://wiki.gentoo.org/>
+  <https://wiki.gentoo.org/>
 
 镜像列表
 
-    <https://www.gentoo.org/main/en/mirrors-rsync.xml>
+  <https://www.gentoo.org/main/en/mirrors-rsync.xml>

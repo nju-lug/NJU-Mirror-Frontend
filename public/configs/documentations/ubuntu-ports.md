@@ -59,16 +59,16 @@ arm64, armhf, PowerPC, ppc64el, s390x
 
 Ubuntu ARM
 
-    <https://wiki.ubuntu.com/ARM>
+  <https://wiki.ubuntu.com/ARM>
 
 Ubuntu PowerPC
 
-    <https://wiki.ubuntu.com/PowerPC>
+  <https://wiki.ubuntu.com/PowerPC>
 
 Ubuntu ppc64el
 
-    <https://wiki.ubuntu.com/ppc64el>
+  <https://wiki.ubuntu.com/ppc64el>
 
 Ubuntu s390x
 
-    <https://wiki.ubuntu.com/S390X>
+  <https://wiki.ubuntu.com/S390X>

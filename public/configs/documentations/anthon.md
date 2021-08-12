@@ -53,12 +53,12 @@ AOSC OS 内置 `apt-gen-list` 工具来开关镜像源。要使用 NJU 源，执
 
 官方主页
 
-    <https://aosc.io>
+<https://aosc.io>
 
 文档
 
-    <https://github.com/AOSC-Dev/aosc-os/wiki>
+<https://github.com/AOSC-Dev/aosc-os/wiki>
 
 镜像列表
 
-    <https://aosc.io/about>
+<https://aosc.io/about>

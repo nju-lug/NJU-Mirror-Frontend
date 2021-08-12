@@ -36,12 +36,12 @@ RPM Fusion 是为 Fedora/RHEL 提供额外 RPM 软件包的第三方软件源。
 
 项目主页
 
-    <https://rpmfusion.org>
+  <https://rpmfusion.org>
 
 邮件列表
 
-    <https://lists.rpmfusion.org>
+  <https://lists.rpmfusion.org>
 
 用户配置指南（英文）
 
-    <https://rpmfusion.org/Configuration>
+  <https://rpmfusion.org/Configuration>

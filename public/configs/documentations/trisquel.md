@@ -45,8 +45,8 @@ role="file"} 文件 (需要使用 sudo), 在文件最前面添加以下条目:
 
 官方主页
 
-    <https://trisquel.info/en>
+  <https://trisquel.info/en>
 
 文档
 
-    <https://trisquel.info/en/wiki/documentation>
+  <https://trisquel.info/en/wiki/documentation>

@@ -58,8 +58,8 @@ archive.raspbian.org ( 参考 `raspbian`  )
 
 官方主页
 
-    <https://www.raspberrypi.org/>
+  <https://www.raspberrypi.org/>
 
 文档
 
-    <https://www.raspberrypi.org/documentation/>
+  <https://www.raspberrypi.org/documentation/>

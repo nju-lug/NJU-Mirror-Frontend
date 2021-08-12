@@ -33,8 +33,8 @@ i686, x86_64, ARM 相关（目前包含 armv6h/armv7h/aarch64）
 
 BlackArch 主页
 
-    <https://blackarch.org>
+  <https://blackarch.org>
 
 收录的工具列表
 
-    <https://blackarch.org/tools.html>
+  <https://blackarch.org/tools.html>
