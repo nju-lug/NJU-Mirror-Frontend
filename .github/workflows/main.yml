@@ -1,0 +1,56 @@
+name: Deploy github page
+
+# Controls when the workflow will run
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v2
+        with:
+          path: source
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14.3'
+
+      - name: Generate
+        run: |
+          cd ./source
+          npm install
+          npm run build
+      
+      - name: Backup file
+        run: |
+          cp -r ./source/dist dist
+
+      - name: Change and clean branch
+        run: |
+          cd ./source
+          ls -la
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git checkout --orphan gh-pages
+          ls -a |grep -v "\.git" |grep -v "^\.$" |grep -v "^\.\.$" |xargs rm -rf {}
+          ls -la
+
+      - name: Recover and commit
+        run: |
+          cp -r dist/* ./source
+          cd ./source
+          ls -la
+          git add .
+          current_time=`date '+%Y-%m-%d %H:%m:%S'`
+          git commit -am "Update at $current_time"
+          git push -f --set-upstream origin gh-pages
+
