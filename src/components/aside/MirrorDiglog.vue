@@ -1,14 +1,14 @@
 <template>
   <div class="dialog-container">
-    <el-button @click="show = true" type="text">Download Linux</el-button>
-    <el-dialog title="Fetch Linux" :visible.sync="show" width="400px">
+    <el-link @click="show = true" type="info" icon="el-icon-download">Download Linux</el-link>
+    <el-dialog title="Download Linux" :visible.sync="show" width="400px">
       <el-form :model="selected">
         <el-form-item label="Distro" label-width="100px" align="left">
           <el-select v-model="distro.name">
             <el-option v-for="(d, index) in distros" :value="d.name" :key="index"/>
           </el-select>
         </el-form-item>
-        <el-form-item label="Version" label-width="100px" align="left">
+        <el-form-item label="Architecture" label-width="100px" align="left">
           <el-select v-model="distro.version">
             <el-option v-for="(d, index) in selected.mirrors" :value="d.name" :key="index"/>
           </el-select>
@@ -63,3 +63,13 @@ export default Vue.extend({
   },
 });
 </script>
+
+<style scoped lang="less">
+.dialog-container {
+  text-align: left;
+
+  .dialog-footer {
+    text-align: center;
+  }
+}
+</style>

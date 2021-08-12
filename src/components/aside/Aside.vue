@@ -1,6 +1,11 @@
 <template>
   <div class="aside">
-    <MirrorDialog/>
+    <el-card class="box-card">
+      <el-row slot="header">快捷链接</el-row>
+      <el-row>
+        <MirrorDialog/>
+      </el-row>
+    </el-card>
     <AsideLink v-for="(entry, index) in linkConfig" :key="index" :entries="entry"/>
   </div>
 </template>
