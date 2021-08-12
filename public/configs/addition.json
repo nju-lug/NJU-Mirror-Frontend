@@ -14,5 +14,10 @@
   {
     "name": "mxlinux-cd",
     "inherit": "osdn"
+  },
+  {
+    "name": "dockerhub",
+    "inherit": null,
+    "route": "/help/dockerhub"
   }
 ]

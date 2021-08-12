@@ -10,7 +10,9 @@
                        label="Mirror Name"
                        min-width="200">
         <template slot-scope="scope">
-          <el-link :href="scope.row.path" :underline="false" type="primary">{{ scope.row.name }}</el-link>
+          <el-link @click="handleEntry(scope.row)" :underline="false" type="primary">
+            {{ scope.row.name }}
+          </el-link>
         </template>
       </el-table-column>
       <el-table-column prop="status"
@@ -21,7 +23,8 @@
           <el-tag :type="tagType(scope.row.status)">
             <i v-if="scope.row.status === 'syncing'" class="el-icon-loading"/>
             <i v-else-if="scope.row.status === 'failed'" class="el-icon-error"/>
-            <i v-else class="el-icon-check"/>
+            <i v-else-if="scope.row.status === 'success'" class="el-icon-check"/>
+            <i v-else class="el-icon-question"/>
             {{ scope.row.status }}
           </el-tag>
         </template>
@@ -62,8 +65,9 @@ export default Vue.extend({
         return 'success';
       case 'syncing':
         return 'warning';
+      default:
+        return 'warning';
       }
-      return 'success';
     },
     update() {
       fetchEntries().then(
@@ -73,6 +77,13 @@ export default Vue.extend({
         },
         err => this.$message.error(err.message),
       );
+    },
+    handleEntry(row: SyncEntry) {
+      if (row.route) {
+        this.$router.push(row.route);
+      } else {
+        window.location.href = row.path || `/${row.name}`;
+      }
     }
   },
   mounted() {

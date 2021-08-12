@@ -17,28 +17,20 @@ interface RawEntry {
   size: string,
 }
 
-interface AdditionEntry {
-  name: string,
-  inherit: string,
-}
 
 export interface SyncEntry {
   name: string,
-  status: 'success' | 'failed' | 'syncing',
-  path: string,
-  lastUpdate: string,
-  nextUpdate: string,
-  size: string,
+  status?: 'success' | 'failed' | 'syncing',
+  path?: string,
+  route?: string,
+  lastUpdate?: string,
+  nextUpdate?: string,
+  size?: string,
 }
 
-function parse(url: string): string {
-  const segments = url.split('/');
-  if (url.endsWith('/')) {
-    return segments[segments.length - 2];
-  }
-  return segments[segments.length - 1];
+interface AdditionEntry extends SyncEntry {
+  inherit: string | null,
 }
-
 
 function parseSecs(seconds: number): string {
   const suffix = seconds < 0 ? '后' : '前';
@@ -82,7 +74,7 @@ export async function fetchEntries(): Promise<Array<SyncEntry>> {
   const entries = data.map(value => <SyncEntry>{
     name: value.name,
     status: value.status,
-    path: parse(value.upstream),
+    path: '/' + value.name,
     lastUpdate: parseSecs(new Date().getTime() / 1000 - value.last_update_ts),
     nextUpdate: parseSecs(new Date().getTime() / 1000 - value.next_schedule_ts),
     size: value.size == 'unknown' ? '未知' : value.size,
@@ -93,11 +85,12 @@ export async function fetchEntries(): Promise<Array<SyncEntry>> {
     const parent = entries.find(value1 => value.inherit == value1.name);
     return <SyncEntry>{
       name: value.name,
-      status: parent?.status || '未知',
-      path: value.name,
-      lastUpdate: parent?.lastUpdate || '未知',
-      nextUpdate: parent?.nextUpdate || '未知',
-      size: '未知',
+      status: value.status || parent?.status || 'unknown',
+      path: value.path,
+      route: value.route,
+      lastUpdate: value.lastUpdate || parent?.lastUpdate || '未知',
+      nextUpdate: value.nextUpdate || parent?.nextUpdate || '未知',
+      size: value.size || '未知',
     };
   });
   return [...entries, ...addEntries];

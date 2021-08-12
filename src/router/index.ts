@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import VueRouter, { RouteConfig } from 'vue-router';
+import VueRouter, {RouteConfig} from 'vue-router';
 import documentations from './documentations';
 
 documentations.push({
@@ -62,6 +62,7 @@ router.onError(() => {
 
 router.beforeEach((to, from, next) => {
   document.title = to.meta?.title || 'NJU Mirror';
+  document.body.scrollTop = document.documentElement.scrollTop = 0;
   next();
 });
 

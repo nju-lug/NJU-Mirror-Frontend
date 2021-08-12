@@ -10,8 +10,7 @@
         <el-menu :default-active="$route.fullPath" router>
           <el-menu-item v-for="entry in show"
                         :index="'/help/' + entry.route"
-                        :key="entry.name"
-                        @click="goTop">
+                        :key="entry.name">
             <span slot="title">{{ entry.name }}</span>
           </el-menu-item>
         </el-menu>
@@ -46,11 +45,6 @@ export default Vue.extend({
     showNavi(): boolean {
       return !this.isMobile || this.$route.path == '/help/index';
     },
-  },
-  methods: {
-    goTop() {
-      document.body.scrollTop = document.documentElement.scrollTop = 0;
-    }
   },
   watch: {
     show() {
