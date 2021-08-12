@@ -2,6 +2,7 @@
 'use strict';
 
 const path = require('path');
+
 function resolve(dir) {
   return path.join(__dirname, dir);
 }
@@ -15,7 +16,7 @@ module.exports = {
       return args;
     });
     // split chunks optimization
-    config.when(process.env.NODE_ENV === 'production', config => 
+    config.when(process.env.NODE_ENV === 'production', config =>
       config.optimization.splitChunks({
         chunks: 'all',
         cacheGroups: {
@@ -40,5 +41,6 @@ module.exports = {
         }
       }),
     );
-  }
+  },
+  assetsDir: 'static',
 };
