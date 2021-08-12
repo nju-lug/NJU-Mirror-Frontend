@@ -7,7 +7,7 @@
       <a href="https://git.nju.edu.cn/nju-lug" target="_blank" rel="noopener">
         <el-button icon="el-icon-male">NJU LUG</el-button>
       </a>
-      <a href="https://git.nju.edu.cn/iori_ichinose/nju-mirror-frontend" target="_blank" rel="noopener">
+      <a href="https://git.nju.edu.cn/nju-lug/nju-mirror-frontend" target="_blank" rel="noopener">
         <el-button icon="el-icon-paperclip">Source Code</el-button>
       </a>
     </el-row>

@@ -21,7 +21,7 @@
         </el-col>
         <el-col :span="8" align="right">
           <el-row>
-            <el-link icon="el-icon-link" href="https://git.nju.edu.cn/iori_ichinose/nju-mirror-frontend/-/issues">
+            <el-link icon="el-icon-link" href="https://git.nju.edu.cn/nju-lug/nju-mirror-frontend/-/issues">
               反馈Bug
             </el-link>
           </el-row>
