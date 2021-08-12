@@ -10,7 +10,7 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
+import Vue, { PropType } from 'vue';
 import {CardItem} from '@/configs';
 
 export default Vue.extend({
@@ -21,10 +21,10 @@ export default Vue.extend({
     };
   },
   props: {
-    entries: Promise,
+    entries: Promise as PropType<Promise<CardItem>>,
   },
   mounted() {
-    (this.entries as Promise<CardItem>).then(
+    this.entries.then(
       res => this.card = res,
       err => {
         this.$message.warning(err.message);

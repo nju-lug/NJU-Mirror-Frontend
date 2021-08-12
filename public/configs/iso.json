@@ -1,0 +1,11 @@
+[
+  {
+    "name": "ArchLinux",
+    "mirrors": [
+      {
+        "name": "x86",
+        "url": "https://www.baidu.com"
+      }
+    ]
+  }
+]

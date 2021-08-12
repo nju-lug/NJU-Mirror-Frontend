@@ -1,5 +1,6 @@
 <template>
   <div class="aside">
+    <MirrorDialog/>
     <AsideLink v-for="(entry, index) in linkConfig" :key="index" :entries="entry"/>
   </div>
 </template>
@@ -8,13 +9,14 @@
 import Vue from 'vue';
 import {linkConfig} from '@/configs';
 import AsideLink from './Card.vue';
+import MirrorDialog from '@/components/aside/MirrorDiglog.vue';
 
 export default Vue.extend({
   name: 'Aside',
   data() {
     return {linkConfig};
   },
-  components: {AsideLink},
+  components: {MirrorDialog, AsideLink},
 });
 </script>
 
