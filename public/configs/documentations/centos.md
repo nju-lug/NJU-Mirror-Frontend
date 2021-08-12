@@ -43,24 +43,24 @@ sudo sed -e 's|^mirrorlist=|#mirrorlist=|g' \
 
 官方主页
 
-:   <https://www.centos.org/>
+    <https://www.centos.org/>
 
 邮件列表
 
-:   <https://www.centos.org/modules/tinycontent/index.php?id=16>
+    <https://www.centos.org/modules/tinycontent/index.php?id=16>
 
 论坛
 
-:   <https://www.centos.org/modules/newbb/>
+    <https://www.centos.org/modules/newbb/>
 
 文档
 
-:   <https://www.centos.org/docs/>
+    <https://www.centos.org/docs/>
 
 Wiki
 
-:   <https://wiki.centos.org/>
+    <https://wiki.centos.org/>
 
 镜像列表
 
-:   <https://www.centos.org/modules/tinycontent/index.php?id=32>
+    <https://www.centos.org/modules/tinycontent/index.php?id=32>

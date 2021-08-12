@@ -29,8 +29,8 @@ Homebrew 核心软件仓库
 
 官方主页
 
-:   <http://brew.sh/>
+    <http://brew.sh/>
 
 brew 文档
 
-:   <http://docs.brew.sh/>
+    <http://docs.brew.sh/>

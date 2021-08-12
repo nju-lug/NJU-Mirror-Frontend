@@ -69,28 +69,28 @@ sudo zypper ar -cfg 'https://mirrors.nju.edu.cn/opensuse/tumbleweed/repo/non-oss
 
 官方主页
 
-:   <https://www.opensuse.org/>
+    <https://www.opensuse.org/>
 
 邮件列表
 
-:   <https://en.opensuse.org/Communicate/Mailinglists>
+    <https://en.opensuse.org/Communicate/Mailinglists>
 
 论坛
 
-:   <https://forums.opensuse.org/>
+    <https://forums.opensuse.org/>
 
 中文论坛
 
-:   <https://forum.suse.org.cn/>
+    <https://forum.suse.org.cn/>
 
 Wiki
 
-:   <https://en.opensuse.org/>
+    <https://en.opensuse.org/>
 
 中文 Wiki
 
-:   <https://zh.opensuse.org/>
+    <https://zh.opensuse.org/>
 
 文档
 
-:   <https://en.opensuse.org/Documentation>
+    <https://en.opensuse.org/Documentation>

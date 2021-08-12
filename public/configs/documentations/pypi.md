@@ -41,8 +41,8 @@ PyPI(pip) 软件源
 
 pip
 
-:   <https://pip.pypa.io/>
+    <https://pip.pypa.io/>
 
 bandersnatch
 
-:   <https://pypi.python.org/pypi/bandersnatch>
+    <https://pypi.python.org/pypi/bandersnatch>

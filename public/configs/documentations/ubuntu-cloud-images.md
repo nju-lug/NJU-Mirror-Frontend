@@ -30,4 +30,4 @@ AMD64(x86_64), Intel x86, arm64, armhf, PowerPC, ppc64el, s390x
 
 Ubuntu Cloud Guest
 
-:   <https://help.ubuntu.com/community/UEC/Images>
+    <https://help.ubuntu.com/community/UEC/Images>

@@ -32,16 +32,16 @@ i686, x86_64
 
 官方主页
 
-:   <https://www.manjaro.org/>
+    <https://www.manjaro.org/>
 
 邮件列表
 
-:   <https://lists.manjaro.org/mailman/listinfo>
+    <https://lists.manjaro.org/mailman/listinfo>
 
 论坛
 
-:   <https://forum.manjaro.org/>
+    <https://forum.manjaro.org/>
 
 Wiki
 
-:   <https://wiki.manjaro.org/>
+    <https://wiki.manjaro.org/>

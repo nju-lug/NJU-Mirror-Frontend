@@ -54,12 +54,12 @@ i386，amd64
 
 官方主页
 
-:   <https://www.linuxmint.com/>
+    <https://www.linuxmint.com/>
 
 论坛
 
-:   <https://forums.linuxmint.com/index.php>
+    <https://forums.linuxmint.com/index.php>
 
 文档
 
-:   <https://linuxmint.com/documentation.php>
+    <https://linuxmint.com/documentation.php>

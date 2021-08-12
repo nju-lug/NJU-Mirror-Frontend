@@ -31,4 +31,4 @@ Kylin(优麒麟), Ubuntu Studio, Xbuntu(XFCE)，请到相应目录下载 ISO 镜
 
 Ubuntu Base
 
-:   <https://wiki.ubuntu.com/Base>
+    <https://wiki.ubuntu.com/Base>

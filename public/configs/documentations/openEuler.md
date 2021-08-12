@@ -56,4 +56,4 @@ openEuler源包含多个版本，假定您需要使用openEuler-20.09版本，�
 
 官方主页
 
-:   <https://openeuler.org/zh/>
+    <https://openeuler.org/zh/>
