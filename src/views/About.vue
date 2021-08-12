@@ -1,6 +1,6 @@
 <template>
   <div class="index-page-container">
-    <img src="@/assets/index-logo.jpg" alt="logo-index"/>
+    <img src="@/assets/logo.png" alt="logo-index"/>
     <h1>NJU Open Source Mirror</h1>
     <h5>Made with <i class="el-icon-male"/> by NJU LUG</h5>
     <el-row>
@@ -31,8 +31,8 @@ export default Vue.extend({
     border-radius: 35px;
     width: 200px;
     height: 200px;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, .3); // add box-shadow rule
-    -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, .3);
+    //box-shadow: 5px 5px 5px rgba(0, 0, 0, .3); // add box-shadow rule
+    //-webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, .3);
     margin-top: 60px;
     margin-bottom: 30px;
   }
