@@ -42,8 +42,8 @@ Homebrew 预编译二进制软件包
 
 官方主页
 
-:   <http://brew.sh/>
+  <http://brew.sh/>
 
 Bottles 介绍
 
-:   <http://docs.brew.sh/Bottles.html>
+  <http://docs.brew.sh/Bottles.html>

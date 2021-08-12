@@ -53,12 +53,12 @@ Hackage 镜像
 
 官方主页
 
-:   <https://hackage.haskell.org/>
+  <https://hackage.haskell.org/>
 
 Cabal
 
-:   <https://www.haskell.org/cabal/>
+  <https://www.haskell.org/cabal/>
 
 Stack
 
-:   <https://docs.haskellstack.org/en/stable/README/>
+  <https://docs.haskellstack.org/en/stable/README/>

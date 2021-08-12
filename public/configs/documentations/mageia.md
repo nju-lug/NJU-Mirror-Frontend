@@ -206,24 +206,24 @@ enabled 值为 1，即：
 
 官方主页
 
-:   <https://www.mageia.org/>
+  <https://www.mageia.org/>
 
 邮件列表
 
-:   <https://www.mageia.org/mailman/>
+  <https://www.mageia.org/mailman/>
 
 论坛
 
-:   <https://forums.mageia.org/>
+  <https://forums.mageia.org/>
 
 文档
 
-:   <https://www.mageia.org/en/doc/>
+  <https://www.mageia.org/en/doc/>
 
 Wiki
 
-:   <https://wiki.mageia.org/>
+  <https://wiki.mageia.org/>
 
 镜像列表
 
-:   <https://mirrors.mageia.org/>
+  <https://mirrors.mageia.org/>

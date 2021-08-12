@@ -44,8 +44,8 @@ unreachable"，将源地址中的 `mirrors.nju.edu.cn` 替换为
 
 MariaDB 官网
 
-:   <https://mariadb.org/>
+  <https://mariadb.org/>
 
 MariaDB Repository Configuration Tool
 
-:   <https://downloads.mariadb.org/mariadb/repositories>
+  <https://downloads.mariadb.org/mariadb/repositories>

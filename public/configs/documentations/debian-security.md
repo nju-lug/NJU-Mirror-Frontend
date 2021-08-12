@@ -48,8 +48,8 @@ role="file"} 文件（需要使用 sudo）。以下是 Debian Stable 参考配�
 
 官方主页
 
-:   <https://www.debian.org/security/>
+  <https://www.debian.org/security/>
 
 Debian 安全追踪网
 
-:   <https://security-tracker.debian.org/tracker/>
+  <https://security-tracker.debian.org/tracker/>

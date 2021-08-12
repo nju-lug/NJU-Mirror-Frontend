@@ -24,8 +24,8 @@ Stackage 镜像
 
 官方主页
 
-:   <https://www.stackage.org/>
+  <https://www.stackage.org/>
 
 Stack
 
-:   <https://docs.haskellstack.org/en/stable/README/>
+  <https://docs.haskellstack.org/en/stable/README/>

@@ -35,8 +35,8 @@ Enterprise Linux (RHEL), CentOS, Scientific Linux (SL), Oracle Linux
 
 WIKI
 
-:   <http://fedoraproject.org/wiki/EPEL>
+  <http://fedoraproject.org/wiki/EPEL>
 
 FAQ
 
-:   <http://fedoraproject.org/wiki/EPEL/faq>
+  <http://fedoraproject.org/wiki/EPEL/faq>

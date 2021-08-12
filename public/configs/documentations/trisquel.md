@@ -18,13 +18,13 @@ Trisquel 支持的所有架构.
 
 ## 使用说明
 
-::: warning
-::: title
+ :: warning
+ :: title
 Warning
-:::
+ ::
 
 操作前请做好相应备份.
-:::
+ ::
 
 Trisquel 使用 APT 软件包管理系统，故其软件源使用方法与 Ubuntu 或 Debian
 等很相似。
@@ -45,8 +45,8 @@ role="file"} 文件 (需要使用 sudo), 在文件最前面添加以下条目:
 
 官方主页
 
-:   <https://trisquel.info/en>
+  <https://trisquel.info/en>
 
 文档
 
-:   <https://trisquel.info/en/wiki/documentation>
+  <https://trisquel.info/en/wiki/documentation>

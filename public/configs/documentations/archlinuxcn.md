@@ -28,8 +28,8 @@ Arch Linux 中文社区仓库是由 Arch Linux
 
 Arch Linux 中文社区主页
 
-:   <https://www.archlinuxcn.org>
+  <https://www.archlinuxcn.org>
 
 Arch Linux 中文社区仓库 / 镜像加速源介绍
 
-:   <https://www.archlinuxcn.org/archlinux-cn-repo-and-mirror/>
+  <https://www.archlinuxcn.org/archlinux-cn-repo-and-mirror/>

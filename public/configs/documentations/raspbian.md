@@ -51,21 +51,21 @@ sudo）。删除原文件所有内容，用以下内容取代（以 Stretch 示�
 Raspbian 链接
 
 -    Raspbian 主页
-       <http://www.raspbian.org/>
+     <http://www.raspbian.org/>
 
 -    文档
-       <http://www.raspbian.org/RaspbianDocumentation>
+     <http://www.raspbian.org/RaspbianDocumentation>
 
 -    Bug Tracker
-       <http://www.raspbian.org/RaspbianBugs>
+     <http://www.raspbian.org/RaspbianBugs>
 
 -    镜像列表
-       <http://www.raspbian.org/RaspbianMirrors>
+     <http://www.raspbian.org/RaspbianMirrors>
 
 树莓派链接
 
 -    树莓派基金会主页
-       <https://www.raspberrypi.org/>
+     <https://www.raspberrypi.org/>
 
 -    树莓派基金会论坛 Raspbian 版块
-       <https://www.raspberrypi.org/forums/viewforum.php?f=66>
+     <https://www.raspberrypi.org/forums/viewforum.php?f=66>

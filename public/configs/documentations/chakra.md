@@ -23,12 +23,12 @@ x86_64
 
 官方主页
 
-:   <https://chakralinux.org/home/>
+  <https://chakralinux.org/home/>
 
 论坛
 
-:   <https://chakralinux.org/forum/>
+  <https://chakralinux.org/forum/>
 
 Wiki
 
-:   <https://chakralinux.org/wiki/>
+  <https://chakralinux.org/wiki/>

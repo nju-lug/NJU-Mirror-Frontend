@@ -56,20 +56,20 @@ Debian Old Stable, Stable, Testing, Unstable(sid)
 
 官方主页
 
-:   <https://www.debian.org/>
+  <https://www.debian.org/>
 
 邮件列表
 
-:   <https://www.debian.org/MailingLists/>
+  <https://www.debian.org/MailingLists/>
 
 Wiki
 
-:   <https://wiki.debian.org/>
+  <https://wiki.debian.org/>
 
 文档
 
-:   <https://www.debian.org/doc/>
+  <https://www.debian.org/doc/>
 
 镜像列表
 
-:   <https://www.debian.org/mirror/list>
+  <https://www.debian.org/mirror/list>

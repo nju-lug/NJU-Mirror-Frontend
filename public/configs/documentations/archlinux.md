@@ -26,16 +26,16 @@ i686, x86_64
 
 官方主页
 
-:   <https://www.archlinux.org/>
+  <https://www.archlinux.org/>
 
 邮件列表
 
-:   <https://www.archlinux.org/mailman/listinfo/>
+  <https://www.archlinux.org/mailman/listinfo/>
 
 论坛
 
-:   <https://bbs.archlinux.org/>
+  <https://bbs.archlinux.org/>
 
 Wiki
 
-:   <https://wiki.archlinux.org/>
+  <https://wiki.archlinux.org/>
