@@ -37,20 +37,18 @@ jobs:
       - name: Change and clean branch
         run: |
           cd ./source
-          ls -la
           git config user.name github-actions
           git config user.email github-actions@github.com
           git checkout --orphan gh-pages
-          ls -a |grep -v "\.git" |grep -v "^\.$" |grep -v "^\.\.$" |xargs rm -rf {}
-          ls -la
+          ls -a |grep -v "\.git$" |grep -v "^\.$" |grep -v "^\.\.$" |xargs rm -rf {}
 
       - name: Recover and commit
         run: |
           cp -r dist/* ./source
           cd ./source
-          ls -la
+          touch "CNAME"
+          echo "m.dwxh.ml" > CNAME
           git add .
           current_time=`date '+%Y-%m-%d %H:%m:%S'`
           git commit -am "Update at $current_time"
           git push -f --set-upstream origin gh-pages
-

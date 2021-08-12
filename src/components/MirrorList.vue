@@ -13,6 +13,9 @@
           <el-link @click="handleEntry(scope.row)" :underline="false" type="primary">
             {{ scope.row.name }}
           </el-link>
+          <el-tooltip class="item" effect="dark" :content="`${scope.row.name} 帮助文档`" placement="right-end">
+            <el-link icon="el-icon-question" v-if="hasHelp(scope.row)" @click="handleHelp(scope.row)"/>
+          </el-tooltip>
         </template>
       </el-table-column>
       <el-table-column prop="status"
@@ -38,7 +41,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import {SyncEntry, fetchEntries} from '@/configs';
+import {SyncEntry, fetchEntries, docConfig} from '@/configs';
 
 export default Vue.extend({
   name: 'MirrorList',
@@ -84,7 +87,13 @@ export default Vue.extend({
       } else {
         window.location.href = row.path || `/${row.name}`;
       }
-    }
+    },
+    hasHelp(row: SyncEntry) {
+      return docConfig.find(value => value.name == row.name);
+    },
+    handleHelp(row: SyncEntry) {
+      this.$router.push(`/help/${row.name}`);
+    },
   },
   mounted() {
     this.update();

@@ -33,7 +33,7 @@ export default Vue.extend({
       );
     },
     goBack() {
-      this.$router.push('/help/index');
+      this.$router.back();
     },
   },
   watch: {
