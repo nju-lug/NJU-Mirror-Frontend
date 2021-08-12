@@ -2,6 +2,7 @@
   <el-menu :default-active="active"
            mode="horizontal"
            active-text-color="#63065f"
+           menu-trigger="click"
            router>
     <el-menu-item>
       <el-link :underline="false" type="primary" href="/" class="logo-container">
