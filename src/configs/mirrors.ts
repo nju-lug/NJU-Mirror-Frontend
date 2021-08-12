@@ -61,7 +61,7 @@ function parseSecs(seconds: number): string {
 
   const years = Math.floor(months / 12);
   if (years > 99) {
-    return '未知';
+    return '-';
   }
   return `${years}年${suffix}`;
 }
@@ -77,7 +77,7 @@ export async function fetchEntries(): Promise<Array<SyncEntry>> {
     path: '/' + value.name,
     lastUpdate: parseSecs(new Date().getTime() / 1000 - value.last_update_ts),
     nextUpdate: parseSecs(new Date().getTime() / 1000 - value.next_schedule_ts),
-    size: value.size == 'unknown' ? '未知' : value.size,
+    size: value.size == 'unknown' ? '-' : value.size,
   });
 
   const addition: Array<AdditionEntry> = res2.data;
@@ -88,9 +88,9 @@ export async function fetchEntries(): Promise<Array<SyncEntry>> {
       status: value.status || parent?.status || 'unknown',
       path: value.path,
       route: value.route,
-      lastUpdate: value.lastUpdate || parent?.lastUpdate || '未知',
-      nextUpdate: value.nextUpdate || parent?.nextUpdate || '未知',
-      size: value.size || '未知',
+      lastUpdate: value.lastUpdate || parent?.lastUpdate || '-',
+      nextUpdate: value.nextUpdate || parent?.nextUpdate || '-',
+      size: value.size || '-',
     };
   });
   return [...entries, ...addEntries];
