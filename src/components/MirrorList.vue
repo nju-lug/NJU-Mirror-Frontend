@@ -114,7 +114,8 @@ export default Vue.extend({
   th.is-leaf{ // 去掉表头的横线
     border: none;
   }
-  &::before{
+
+  &::before {
     // 去掉最下面的那一条横线
     height: 0;
   }

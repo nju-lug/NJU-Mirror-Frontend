@@ -19,7 +19,7 @@ const routes: Array<RouteConfig> = [
     name: 'Mirrors',
     component: () => import('@/views/Mirrors.vue'),
     meta: {
-      title: 'NJU Mirror',
+      title: 'Mirrors · NJU Mirror',
     }
   },
   {

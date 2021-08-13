@@ -36,7 +36,7 @@ function parseSecs(seconds: number): string {
   const suffix = seconds < 0 ? '后' : '前';
   seconds = Math.floor(Math.abs(seconds));
   if (seconds < 60) {
-    return `${seconds} s ${suffix}`;
+    return `${seconds}秒${suffix}`;
   }
 
   const minutes = Math.floor(seconds / 60);
