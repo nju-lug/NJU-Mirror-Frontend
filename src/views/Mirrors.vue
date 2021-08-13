@@ -2,7 +2,6 @@
   <div class="mirrors-page">
     <h1>Mirror List</h1>
     <MirrorList/>
-    <el-backtop></el-backtop>
   </div>
 </template>
 
