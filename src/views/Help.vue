@@ -2,7 +2,7 @@
   <div class="help-page">
     <el-row>
       <el-col :span="isMobile ? 24 : 6" v-show="showNavi">
-        <h5>Mirror Name</h5>
+        <h3>Mirror Name</h3>
         <el-input placeholder="Search mirror"
                   v-model="filter"
                   prefix-icon="el-icon-search"

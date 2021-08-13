@@ -3,7 +3,7 @@
     <el-header>
       <TopNavi/>
     </el-header>
-    <el-main>
+    <el-main class="main-container">
       <el-row>
         <el-col :span="showAside ? 18 : 24">
           <transition name="fade">
@@ -77,7 +77,7 @@ body {
   max-width: 1200px;
 
   .el-main {
-    padding-top: 70px;
+    padding-top: 60px;
     min-height: calc(100vh - 290px);
   }
 

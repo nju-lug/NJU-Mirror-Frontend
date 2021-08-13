@@ -9,12 +9,6 @@ function resolve(dir) {
 
 module.exports = {
   chainWebpack(config) {
-    const ga = process.env.VUE_APP_GA;
-    // 通过 html-webpack-plugin注入到 index.html之中
-    config.plugin('html').tap(args => {
-      args[0].ga = ga;
-      return args;
-    });
     // split chunks optimization
     config.when(process.env.NODE_ENV === 'production', config =>
       config.optimization.splitChunks({
