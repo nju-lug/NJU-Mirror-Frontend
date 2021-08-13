@@ -5,6 +5,7 @@
       <i slot="prefix" class="el-input__icon el-icon-search"></i>
     </el-input>
     <el-table class="mirror-container"
+              :cell-style="{padding: '8px 0 0 0'}"
               :data="show">
       <el-table-column prop="name"
                        label="Mirror Name"
@@ -23,7 +24,7 @@
                        width="150"
                        align="center">
         <template slot-scope="scope">
-          <el-tag :type="tagType(scope.row.status)">
+          <el-tag :type="tagType(scope.row.status)" style="width: 80px">
             <i v-if="scope.row.status === 'syncing'" class="el-icon-loading"/>
             <i v-else-if="scope.row.status === 'failed'" class="el-icon-error"/>
             <i v-else-if="scope.row.status === 'success'" class="el-icon-check"/>
@@ -105,9 +106,17 @@ export default Vue.extend({
 });
 </script>
 
-<style scoped lang="less">
+<style lang="less">
 .mirror-container {
   width: 100%;
   margin-top: 10px;
+  td{
+    // 去掉单元格的横线
+    border: none;
+  }
+  &::before{
+    // 去掉最下面的那一条横线
+    height: 0;
+  }
 }
 </style>
