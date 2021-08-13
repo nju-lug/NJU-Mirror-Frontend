@@ -110,11 +110,13 @@ export default Vue.extend({
 .mirror-container {
   width: 100%;
   margin-top: 10px;
-  td{
+
+  td {
     // 去掉单元格的横线
     border: none;
   }
-  &::before{
+
+  &::before {
     // 去掉最下面的那一条横线
     height: 0;
   }
