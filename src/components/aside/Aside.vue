@@ -1,7 +1,7 @@
 <template>
   <div class="aside">
     <el-card class="box-card">
-      <el-row slot="header">快捷链接</el-row>
+      <el-row slot="header">快捷下载</el-row>
       <el-row>
         <MirrorDialog/>
       </el-row>
@@ -48,5 +48,9 @@ export default Vue.extend({
 .box-card {
   padding: 10px;
   margin: 18px;
+}
+
+.aside{
+  text-align: left;
 }
 </style>

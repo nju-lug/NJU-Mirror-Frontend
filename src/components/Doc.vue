@@ -1,6 +1,6 @@
 <template>
   <div>
-    <el-page-header @back="goBack" :content="name"/>
+    <el-page-header class="doc-header" @back="goBack" :content="name"/>
     <div v-html="help" class="markdown-body"/>
   </div>
 </template>
@@ -48,6 +48,10 @@ export default Vue.extend({
 </script>
 
 <style scoped lang="less">
+.doc-header{
+  margin-top: 10px;   // padding to mirror name header
+  margin-left: 20px; // padding to markdown-body
+}
 .markdown-body {
   text-align: left;
   padding: 20px;
