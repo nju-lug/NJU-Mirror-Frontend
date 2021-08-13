@@ -33,6 +33,14 @@ const routes: Array<RouteConfig> = [
     redirect: '/help/index',
   },
   {
+    path: '/download',
+    name: 'Download',
+    component: () => import('@/views/Download.vue'),
+    meta: {
+      title: 'Download · NJU Mirror',
+    }
+  },
+  {
     path: '/about',
     name: 'About',
     component: () => import('@/views/About.vue'),
