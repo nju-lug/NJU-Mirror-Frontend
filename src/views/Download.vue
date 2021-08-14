@@ -2,7 +2,7 @@
   <div class="download-page">
     <el-row>
       <el-col :span="isMobile ? 24 : 6" v-show="showNavi">
-        <h3>Mirror Name</h3>
+        <h3>Content Name</h3>
         <el-input placeholder="Search content"
                   v-model="filter"
                   prefix-icon="el-icon-search"
@@ -49,28 +49,24 @@
 <script lang="ts">
 import axios from 'axios';
 import Vue from 'vue';
-
-interface ISOContent {
-  distro: string,
-  category: 'os' | 'app' | 'font',
-  urls: Array<{ name: string, url: string }>
-}
+import type {ISOContent} from '@/configs';
 
 export default Vue.extend({
   name: 'Download',
   data() {
     return {
       filter: '',
-      contents: [] as Array<ISOContent>,
     };
   },
   mounted() {
     axios.get('/configs/iso.json').then(
-      res => this.contents = res.data,
+      res => this.$store.commit('updateISO', res.data),
     );
-    console.log(this.$route);
   },
   computed: {
+    contents(): Array<ISOContent> {
+      return this.$store.state.isoContents;
+    },
     show(): { apps: Array<ISOContent>, os: Array<ISOContent>, fonts: Array<ISOContent> } {
       return {
         apps: this.contents.filter(value => value.category == 'app' &&
