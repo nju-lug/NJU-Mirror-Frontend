@@ -1,15 +1,15 @@
 <template>
   <div>
     <el-input placeholder="Search mirror"
-              v-model="filter">
-      <i slot="prefix" class="el-input__icon el-icon-search"></i>
-    </el-input>
+              v-model="filter"
+              prefix-icon="el-icon-search"/>
     <el-table class="mirror-container"
               :cell-style="{padding: '4px'}"
-              :data="show">
+              :data="show"
+              :lazy="true">
       <el-table-column prop="name"
                        label="Mirror Name"
-                       min-width="200">
+                       min-width="170">
         <template slot-scope="scope">
           <el-link @click="handleEntry(scope.row)" :underline="false" type="primary">
             {{ scope.row.name }}
@@ -24,18 +24,15 @@
                        width="150"
                        align="center">
         <template slot-scope="scope">
-          <el-tag :type="tagType(scope.row.status)" style="width: 80px;text-align:left">
-            <i v-if="scope.row.status === 'syncing'" class="el-icon-loading"/>
-            <i v-else-if="scope.row.status === 'failed'" class="el-icon-error"/>
-            <i v-else-if="scope.row.status === 'success'" class="el-icon-check"/>
-            <i v-else class="el-icon-question"/>
+          <el-tag :type="tagType(scope.row.status)">
+            <i :class="iconType(scope.row.status)"/>
             {{ scope.row.status }}
           </el-tag>
         </template>
       </el-table-column>
-      <el-table-column prop="lastUpdate" label="Last Update" width="150" align="center"/>
-      <el-table-column prop="nextUpdate" label="Next Update" width="150" align="center"/>
-      <el-table-column prop="size" label="Mirror Size" width="150" align="center"/>
+      <el-table-column v-if="!isMobile" prop="lastUpdate" label="Last Update" width="150" align="center"/>
+      <el-table-column v-if="!isMobile" prop="nextUpdate" label="Next Update" width="150" align="center"/>
+      <el-table-column v-if="!isMobile" prop="size" label="Mirror Size" width="150" align="center"/>
     </el-table>
   </div>
 </template>
@@ -48,7 +45,7 @@ export default Vue.extend({
   name: 'MirrorList',
   data() {
     return {
-      timer_: 0, // issue
+      timer_: 0,
       entries: Array<SyncEntry>(),
       filter: '',
     };
@@ -61,7 +58,10 @@ export default Vue.extend({
     },
     docConfig(): Array<DocItem> {
       return this.$store.state.docConfig;
-    }
+    },
+    isMobile(): boolean {
+      return this.$store.state.isMobile;
+    },
   },
   methods: {
     tagType(status: string): string {
@@ -70,19 +70,26 @@ export default Vue.extend({
         return 'danger';
       case 'success':
         return 'success';
-      case 'syncing':
-        return 'warning';
       default:
         return 'warning';
       }
     },
+    iconType(status: string): string {
+      switch (status) {
+      case 'failed':
+        return 'el-icon-error';
+      case 'success':
+        return 'el-icon-check';
+      case 'syncing':
+        return 'el-icon-loading';
+      default:
+        return 'el-icon-question';
+      }
+    },
     update() {
       fetchEntries().then(
-        res => {
-          this.entries = res;
-          this.entries.sort((a, b) => a.name.localeCompare(b.name));
-        },
-        err => this.$message.error(err.message),
+        res => this.entries = res.sort((a, b) => a.name.localeCompare(b.name)),
+        () => this.$message.error('Unable to fetch mirrors'),
       );
     },
     handleEntry(row: SyncEntry) {
@@ -101,11 +108,11 @@ export default Vue.extend({
   },
   mounted() {
     this.update();
-    this.timer_ = setInterval(() => this.update(), 60000);
+    this.timer_ = setInterval(() => this.update(), 120000);
   },
   beforeDestroy() {
     clearInterval(this.timer_);
-  }
+  },
 });
 </script>
 
@@ -122,6 +129,11 @@ export default Vue.extend({
   &::before {
     // 去掉最下面的那一条横线
     height: 0;
+  }
+
+  .el-tag {
+    width: 80px;
+    text-align: center;
   }
 }
 </style>

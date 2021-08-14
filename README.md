@@ -10,7 +10,7 @@ Run `npm run build` to compile for production.
 
 ## TODOs
 
-+ [ ] Connection to backend
++ [x] Connection to backend
 + [ ] Download pages
 + [x] SideBar news
 + [x] Mirror documentations
