@@ -28,8 +28,13 @@ export interface SyncEntry {
   size?: string,
 }
 
+export interface ISOUrl {
+  name: string,
+  url: string,
+}
+
 export interface ISOContent {
   distro: string,
   category: 'os' | 'app' | 'font',
-  urls: Array<{ name: string, url: string }>
+  urls: Array<ISOUrl>
 }

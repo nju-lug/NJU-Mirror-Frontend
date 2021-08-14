@@ -22,7 +22,7 @@
               <i class="el-icon-s-open"/>
               <span>Fonts {{ show.fonts.length }}</span>
             </template>
-            <el-menu-item v-for="entry in show.fonts" :index="`/download/fonts/${entry.distro}`" :key="entry.distro">
+            <el-menu-item v-for="entry in show.fonts" :index="`/download/font/${entry.distro}`" :key="entry.distro">
               {{ entry.distro }}
             </el-menu-item>
           </el-submenu>
@@ -31,7 +31,7 @@
               <i class="el-icon-s-goods"/>
               <span>Apps {{ show.apps.length }}</span>
             </template>
-            <el-menu-item v-for="entry in show.apps" :index="`/download/apps/${entry.distro}`" :key="entry.distro">
+            <el-menu-item v-for="entry in show.apps" :index="`/download/app/${entry.distro}`" :key="entry.distro">
               {{ entry.distro }}
             </el-menu-item>
           </el-submenu>
