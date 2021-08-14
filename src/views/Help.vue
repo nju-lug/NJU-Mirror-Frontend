@@ -7,7 +7,7 @@
                   v-model="filter"
                   prefix-icon="el-icon-search"
                   style="margin-bottom: 10px;"/>
-        <el-menu :default-active="$route.fullPath" router>
+        <el-menu :default-active="decodeURI($route.path)" router>
           <el-menu-item v-for="entry in show"
                         :index="'/help/' + entry.route"
                         :key="entry.name">
@@ -45,7 +45,7 @@ export default Vue.extend({
     },
     isMobile(): boolean {
       return this.$store.state.isMobile;
-    }
+    },
   },
   watch: {
     show() {
@@ -53,7 +53,7 @@ export default Vue.extend({
         const route = '/help/' + this.show[0].route;
         route != this.$route.path && this.$router.replace(route);
       }
-    }
+    },
   },
 });
 </script>

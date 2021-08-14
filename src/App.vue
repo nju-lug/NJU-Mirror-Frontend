@@ -60,7 +60,6 @@ export default Vue.extend({
   },
   watch: {
     isMobile(newValue: boolean) {
-      // pubsub.publish('updateWidth', newValue);
       this.$store.commit('updateWidth', newValue);
     },
   },
