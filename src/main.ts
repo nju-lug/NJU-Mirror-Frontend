@@ -5,6 +5,7 @@ import '@/assets/theme/index.css';
 import App from '@/App.vue';
 import router from '@/router';
 import VueAnalytics from 'vue-analytics';
+import store from '@/store';
 
 // GA初始化
 if (process.env.VUE_APP_GA) {
@@ -18,5 +19,6 @@ Vue.config.productionTip = false;
 
 new Vue({
   router,
+  store,
   render: h => h(App),
 }).$mount('#app');

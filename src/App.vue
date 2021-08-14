@@ -25,7 +25,6 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import pubsub from 'pubsub-js';
 
 import TopNavi from '@/components/TopNavi.vue';
 import BottomBar from '@/components/BottomBar.vue';
@@ -55,7 +54,8 @@ export default Vue.extend({
   },
   watch: {
     isMobile(newValue: boolean) {
-      pubsub.publish('updateWidth', newValue);
+      // pubsub.publish('updateWidth', newValue);
+      this.$store.commit('updateWidth', newValue);
     },
   },
 });
