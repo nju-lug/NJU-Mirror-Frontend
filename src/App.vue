@@ -46,7 +46,7 @@ export default Vue.extend({
       return (path == '/' || path == '/about') && this.screenWidth > 1000;
     },
     isMobile(): boolean {
-      return this.screenWidth < 680;
+      return this.screenWidth < 750;
     },
   },
   mounted() {

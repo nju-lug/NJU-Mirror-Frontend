@@ -6,7 +6,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    isMobile: document.body.clientWidth < 680,
+    isMobile: document.body.clientWidth < 750,
     docConfig: [] as Array<DocItem>,
     isoContents: [] as Array<ISOContent>,
   },

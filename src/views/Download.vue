@@ -78,7 +78,7 @@ export default Vue.extend({
       };
     },
     showNavi(): boolean {
-      return !this.isMobile || this.$route.path == '/help/index';
+      return !this.isMobile || this.$route.path == '/download/index';
     },
     isMobile(): boolean {
       return this.$store.state.isMobile;

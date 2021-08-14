@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Download {{ $route.params.title }}</h1>
+    <el-page-header class="download-header" @back="$router.back()" :content="`Download ${this.$route.params.title}`"/>
     <el-table class="download-container"
               :show-header="false"
               :cell-style="{padding: '4px'}"
@@ -33,9 +33,15 @@ export default Vue.extend({
 </script>
 
 <style lang="less">
+.download-header {
+  margin-top: 10px; // padding to mirror name header
+  margin-left: 20px; // padding to markdown-body
+}
+
 .download-container {
   width: 100%;
-  margin: 20px;
+  margin-top: 20px;
+  margin-left: 10px;
 
   td, th.is-leaf {
     border: none;
