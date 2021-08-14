@@ -26,28 +26,23 @@ export default Vue.extend({
       return (this.$store.state.docConfig as Array<DocItem>).find(value => value.name == this.name)?.path;
     }
   },
-  methods: {
-    update() {
-      if (this.path == undefined) {
-        this.$message.warning('No such mirror');
-        this.help = `Sorry, but mirror ${this.name} is not included`;
-        return;
-      }
-      axios.get(serverPrefix + 'documentations/' + this.path).then(
-        res => this.help = marked(res.data),
-        () => {
-          this.$message.warning('No help available for this mirror');
-          this.help = 'No help available';
-        },
-      );
-    },
-  },
-  mounted() {
-    this.update();
-  },
   watch: {
-    name() {
-      this.update();
+    path: {
+      immediate: true,
+      handler() {
+        if (this.path == undefined) {
+          this.$message.warning('No such mirror');
+          this.help = `Sorry, but mirror ${this.name} is not included`;
+          return;
+        }
+        axios.get(serverPrefix + 'documentations/' + this.path).then(
+          res => this.help = marked(res.data),
+          () => {
+            this.$message.warning('No help available for this mirror');
+            this.help = 'No help available';
+          }
+        );
+      },
     },
   },
 });
