@@ -1,6 +1,6 @@
 <template>
   <div>
-    <el-page-header class="doc-header" @back="goBack" :content="name"/>
+    <el-page-header class="doc-header" @back="$router.back()" :content="name"/>
     <div v-html="help" class="markdown-body"/>
   </div>
 </template>
@@ -9,21 +9,30 @@
 import Vue from 'vue';
 import axios from 'axios';
 import marked from 'marked';
-import {serverPrefix} from '@/configs';
+import {serverPrefix, DocItem} from '@/configs';
 
 export default Vue.extend({
   name: 'Doc',
-  props: {
-    name: String,
-    path: String,
-  },
   data() {
     return {
       help: 'Loading...',
     };
   },
+  computed: {
+    name(): string {
+      return this.$route.params.distro;
+    },
+    path(): string | undefined {
+      return (this.$store.state.docConfig as Array<DocItem>).find(value => value.name == this.name)?.path;
+    }
+  },
   methods: {
     update() {
+      if (this.path == undefined) {
+        this.$message.warning('No such mirror');
+        this.help = `Sorry, but mirror ${this.name} is not included`;
+        return;
+      }
       axios.get(serverPrefix + 'documentations/' + this.path).then(
         res => this.help = marked(res.data),
         () => {
@@ -32,26 +41,24 @@ export default Vue.extend({
         },
       );
     },
-    goBack() {
-      this.$router.back();
-    },
-  },
-  watch: {
-    path() {
-      this.update();
-    }
   },
   mounted() {
     this.update();
-  }
+  },
+  watch: {
+    name() {
+      this.update();
+    },
+  },
 });
 </script>
 
 <style scoped lang="less">
-.doc-header{
-  margin-top: 10px;   // padding to mirror name header
+.doc-header {
+  margin-top: 10px; // padding to mirror name header
   margin-left: 20px; // padding to markdown-body
 }
+
 .markdown-body {
   text-align: left;
   padding: 20px;

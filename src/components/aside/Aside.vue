@@ -1,11 +1,5 @@
 <template>
   <div class="aside">
-    <el-card class="box-card">
-      <el-row slot="header">快捷下载</el-row>
-      <el-row>
-        <MirrorDialog/>
-      </el-row>
-    </el-card>
     <AsideLink v-for="(entry, index) in linkConfig" :key="index" :entries="entry"/>
   </div>
 </template>
@@ -14,14 +8,13 @@
 import Vue from 'vue';
 import {linkConfig} from '@/configs';
 import AsideLink from './Card.vue';
-import MirrorDialog from '@/components/aside/MirrorDiglog.vue';
 
 export default Vue.extend({
   name: 'Aside',
   data() {
     return {linkConfig};
   },
-  components: {MirrorDialog, AsideLink},
+  components: {AsideLink},
 });
 </script>
 

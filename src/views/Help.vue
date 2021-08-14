@@ -26,25 +26,26 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import {docConfig, DocItem} from '@/configs';
-import pubsub from 'pubsub-js';
+import {DocItem} from '@/configs';
 
 export default Vue.extend({
   name: 'Help',
   data() {
     return {
       filter: '',
-      isMobile: document.body.clientWidth < 600,
-      entries: docConfig,
     };
   },
   computed: {
     show(): Array<DocItem> {
-      return this.entries.filter(value => value.name.toLowerCase().includes(this.filter.toLowerCase()));
+      // ts bug
+      return (this.$store.state.docConfig as Array<DocItem>).filter(value => value.name.toLowerCase().includes(this.filter.toLowerCase()));
     },
     showNavi(): boolean {
       return !this.isMobile || this.$route.path == '/help/index';
     },
+    isMobile(): boolean {
+      return this.$store.state.isMobile;
+    }
   },
   watch: {
     show() {
@@ -53,14 +54,6 @@ export default Vue.extend({
         route != this.$route.path && this.$router.replace(route);
       }
     }
-  },
-  mounted() {
-    pubsub.subscribe('updateWidth', (_: any, value: boolean) => {
-      this.isMobile = value;
-    });
-  },
-  beforeDestroy() {
-    pubsub.unsubscribe('updateWidth');
   },
 });
 </script>

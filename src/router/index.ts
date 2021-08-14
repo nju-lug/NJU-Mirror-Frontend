@@ -1,15 +1,5 @@
 import Vue from 'vue';
 import VueRouter, {RouteConfig} from 'vue-router';
-import documentations from './documentations';
-
-documentations.push({
-  path: 'index',
-  name: 'Index',
-  component: () => import('@/components/HelpIndex.vue'),
-  meta: {
-    title: 'Help · NJU Mirror'
-  },
-});
 
 Vue.use(VueRouter);
 
@@ -26,7 +16,21 @@ const routes: Array<RouteConfig> = [
     path: '/help',
     name: 'Help',
     component: () => import('@/views/Help.vue'),
-    children: documentations,
+    children: [
+      {
+        path: 'index',
+        name: 'Index',
+        component: () => import('@/components/HelpIndex.vue'),
+        meta: {
+          title: 'Help · NJU Mirror'
+        },
+      },
+      {
+        name: 'Doc',
+        path: ':distro',
+        component: () => import('@/components/Doc.vue'),
+      },
+    ],
     meta: {
       title: 'Help · NJU Mirror',
     },

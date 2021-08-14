@@ -33,13 +33,11 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import pubsub from 'pubsub-js';
 
 export default Vue.extend({
   name: 'TopNavi',
   data() {
     return {
-      isMobile: document.body.clientWidth < 600,
       routes: [
         {route: '/', name: 'Mirrors'},
         {route: '/download', name: 'Download'},
@@ -52,15 +50,10 @@ export default Vue.extend({
     active(): string {
       return '/' + this.$route.path.split('/')[1];
     },
+    isMobile(): boolean {
+      return this.$store.state.isMobile;
+    }
   },
-  mounted() {
-    pubsub.subscribe('updateWidth', (_: any, value: boolean) => {
-      this.isMobile = value;
-    });
-  },
-  beforeDestroy() {
-    pubsub.unsubscribe('updateWidth');
-  }
 });
 </script>
 
