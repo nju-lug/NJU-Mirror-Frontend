@@ -39,23 +39,14 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import pubsub from 'pubsub-js';
 
 export default Vue.extend({
   name: 'BottomBar',
-  data() {
-    return {
-      isMobile: document.body.clientWidth < 600,
-    };
-  },
-  mounted() {
-    pubsub.subscribe('updateWidth', (_: any, value: boolean) => {
-      this.isMobile = value;
-    });
-  },
-  beforeDestroy() {
-    pubsub.unsubscribe('updateWidth');
-  },
+  computed: {
+    isMobile(): boolean {
+      return this.$store.state.isMobile;
+    }
+  }
 });
 </script>
 
