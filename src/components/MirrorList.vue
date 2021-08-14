@@ -42,7 +42,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import {SyncEntry, fetchEntries, docConfig} from '@/configs';
+import {SyncEntry, fetchEntries, DocItem} from '@/configs';
 
 export default Vue.extend({
   name: 'MirrorList',
@@ -59,6 +59,9 @@ export default Vue.extend({
         value => value.name.toLowerCase().includes(this.filter.toLowerCase())
       );
     },
+    docConfig(): Array<DocItem> {
+      return this.$store.state.docConfig;
+    }
   },
   methods: {
     tagType(status: string): string {
@@ -90,7 +93,7 @@ export default Vue.extend({
       }
     },
     hasHelp(row: SyncEntry) {
-      return docConfig.find(value => value.name == row.name);
+      return this.docConfig.find(value => value.name == row.name);
     },
     handleHelp(row: SyncEntry) {
       this.$router.push(`/help/${row.name}`);
@@ -110,8 +113,9 @@ export default Vue.extend({
 .mirror-container {
   width: 100%;
   margin-top: 10px;
+
   td, // 去掉单元格的横线
-  th.is-leaf{ // 去掉表头的横线
+  th.is-leaf { // 去掉表头的横线
     border: none;
   }
 

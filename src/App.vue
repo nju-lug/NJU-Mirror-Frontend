@@ -29,6 +29,8 @@ import Vue from 'vue';
 import TopNavi from '@/components/TopNavi.vue';
 import BottomBar from '@/components/BottomBar.vue';
 import Aside from '@/components/aside/Aside.vue';
+import axios from 'axios';
+import {DocItem} from '@/configs';
 
 export default Vue.extend({
   name: 'App',
@@ -51,6 +53,10 @@ export default Vue.extend({
     window.onresize = () => {
       this.screenWidth = document.body.clientWidth;
     };
+    axios.get('/configs/documentations/index.json').then(
+      res => this.$store.commit('changeConfig', res.data as Array<DocItem>),
+      err => this.$message.warning(`Unable to fetch help: ${err}`),
+    );
   },
   watch: {
     isMobile(newValue: boolean) {

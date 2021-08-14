@@ -26,19 +26,19 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import {docConfig, DocItem} from '@/configs';
+import {DocItem} from '@/configs';
 
 export default Vue.extend({
   name: 'Help',
   data() {
     return {
       filter: '',
-      entries: docConfig,
     };
   },
   computed: {
     show(): Array<DocItem> {
-      return this.entries.filter(value => value.name.toLowerCase().includes(this.filter.toLowerCase()));
+      // ts bug
+      return (this.$store.state.docConfig as Array<DocItem>).filter(value => value.name.toLowerCase().includes(this.filter.toLowerCase()));
     },
     showNavi(): boolean {
       return !this.isMobile || this.$route.path == '/help/index';
