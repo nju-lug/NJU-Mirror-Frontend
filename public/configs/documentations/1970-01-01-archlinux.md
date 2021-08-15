@@ -15,7 +15,7 @@ Server = https://mirror.nju.edu.cn/archlinux/$repo/os/$arch
 ```
 sudo pacman -Syy
 ```
-
+<!--
 ## Arch Linux Rollback Machine使用帮助
 
 因为 Arch Linux 的软件仓库和 iso 列表是不维护旧版本的，在少数情况下可能会需要安装旧版本的软件或系统，
@@ -24,3 +24,4 @@ sudo pacman -Syy
 Arch Linux Rollback Machine的使用方法请参照 [wiki](https://wiki.archlinux.org/index.php/Arch_Linux_Archive)。
 
 **需要注意的是，TUNA的Rollback Machine的目录结构与wiki中的目录结构并不相同，配置时请自行替代。**
+-->
