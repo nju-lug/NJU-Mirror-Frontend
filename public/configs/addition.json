@@ -1,5 +1,9 @@
 [
   {
+    "name": "garuda-linux",
+    "inherit": "osdn"
+  },
+  {
     "name": "kernel",
     "inherit": "kernel.org"
   },
