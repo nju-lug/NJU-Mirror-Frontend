@@ -12,6 +12,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
+import axios from 'axios';
 
 export default Vue.extend({
   name: 'Error',
@@ -28,6 +29,7 @@ export default Vue.extend({
   },
   mounted() {
     this.$message.error('Unable to reach the page you required');
+    axios.get(this.$route.path).then();
   }
 });
 </script>
