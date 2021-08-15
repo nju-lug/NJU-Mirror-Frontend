@@ -59,8 +59,11 @@ export default Vue.extend({
     );
   },
   watch: {
-    isMobile(newValue: boolean) {
-      this.$store.commit('updateWidth', newValue);
+    isMobile: {
+      immediate: true,
+      handler(newValue: boolean) {
+        this.$store.commit('updateWidth', newValue);
+      },
     },
   },
 });
