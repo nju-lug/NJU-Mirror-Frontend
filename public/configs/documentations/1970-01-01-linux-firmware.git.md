@@ -19,6 +19,6 @@ git remote add tuna https://mirror.nju.edu.cn/git/linux-firmware.git
 git remote set-url origin https://mirror.nju.edu.cn/git/linux-firmware.git
 ```
 
-将默认上游设置为 TUNA 镜像。
+将默认上游设置为 NJU 镜像。
 
 

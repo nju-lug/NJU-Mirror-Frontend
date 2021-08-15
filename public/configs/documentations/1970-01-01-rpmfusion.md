@@ -9,7 +9,7 @@
 sudo yum install --nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 ```
 
-或者如下直接用 TUNA 镜像中的 rpm 包：
+或者如下直接用 NJU 镜像中的 rpm 包：
 
 ```
 sudo yum install --nogpgcheck https://mirror.nju.edu.cn/rpmfusion/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirror.nju.edu.cn/rpmfusion/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
@@ -17,7 +17,7 @@ sudo yum install --nogpgcheck https://mirror.nju.edu.cn/rpmfusion/free/fedora/rp
 
 注意：没有将当前用户设为管理员的用户，需要将 `sudo CMD` 替换为 `su -c 'CMD'`，并输入 root 密码。
 
-### 修改链接指向 TUNA 镜像
+### 修改链接指向 NJU 镜像
 
 安装成功后，修改 `/etc/yum.repos.d/` 目录下以 `rpmfusion` 开头，以 `.repo` 结尾的文件。具体而言，需要将文件中的 `baseurl=` 开头的行等号后面链接中的 `http://download1.rpmfusion.org/` 替换为 `https://mirror.nju.edu.cn/rpmfusion/`，替换后的文件类似如下：
 
