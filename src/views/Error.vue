@@ -28,8 +28,9 @@ export default Vue.extend({
     }
   },
   mounted() {
-    this.$message.error('Unable to reach the page you required');
-    axios.get(this.$route.path).then();
-  }
+    axios.get(this.$route.path).then(
+      err => this.$message.error(err.message),
+    );
+  },
 });
 </script>
