@@ -12,7 +12,7 @@ const friends: Promise<CardItem> = axios.get(serverPrefix + 'cards/friends.json'
 );
 
 const jokes = axios.get('https://git.nju.edu.cn/api/v4/projects/2412/issues').then(
-  res => new Promise(resolve => {
+  res => new Promise<CardItem>(resolve => {
     const links = (res.data as Array<{ title: string, web_url: string }>).map(
       value => <LinkItem>{
         title: value.title.replace(/\d+$/g, ''),
@@ -24,7 +24,6 @@ const jokes = axios.get('https://git.nju.edu.cn/api/v4/projects/2412/issues').th
       links: links.slice(0, 5),
     });
   }),
-  err => new Promise((resolve, reject) => reject(err)),
 );
 
 export default <Array<Promise<CardItem>>>[

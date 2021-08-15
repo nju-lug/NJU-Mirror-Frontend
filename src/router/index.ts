@@ -19,7 +19,7 @@ const routes: Array<RouteConfig> = [
     children: [
       {
         path: 'index',
-        name: 'Index',
+        name: 'HelpIndex',
         component: () => import('@/components/HelpIndex.vue'),
         meta: {
           title: 'Help · NJU Mirror',
@@ -46,7 +46,7 @@ const routes: Array<RouteConfig> = [
     children: [
       {
         path: 'index',
-        name: 'Index',
+        name: 'DownloadIndex',
         component: () => import('@/components/HelpIndex.vue'),
         meta: {
           title: 'Download · NJU Mirror',
