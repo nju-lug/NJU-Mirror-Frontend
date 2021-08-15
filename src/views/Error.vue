@@ -29,7 +29,8 @@ export default Vue.extend({
   },
   mounted() {
     axios.get(this.$route.path).then(
-      err => this.$message.error(err.message),
+      () => undefined,
+      err => this.$message.error(err),
     );
   },
 });
