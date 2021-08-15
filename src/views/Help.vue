@@ -63,14 +63,15 @@ export default Vue.extend({
   display: flex;
   align-items: center;
   padding-right: 20px;
-}
+  height: 40px;
 
-.el-menu-item span {
-  white-space: normal;
-  word-break: break-all;
-  line-height: 20px;
-  flex: 1;
-  text-align: left;
+  span {
+    white-space: normal;
+    word-break: break-all;
+    line-height: 20px;
+    flex: 1;
+    text-align: left;
+  }
 }
 
 .fade-enter-active {

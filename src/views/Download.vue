@@ -108,7 +108,7 @@ export default Vue.extend({
   display: flex;
   align-items: center;
   padding-right: 20px;
-  height: 35px;
+  height: 40px;
 
   span {
     white-space: normal;
