@@ -38,3 +38,9 @@ export interface ISOContent {
   category: 'os' | 'app' | 'font',
   urls: Array<ISOUrl>
 }
+
+export interface NewsEntry {
+  name: string,
+  time: number,
+  content: string,
+}
