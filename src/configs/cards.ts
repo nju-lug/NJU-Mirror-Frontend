@@ -1,17 +1,7 @@
 import axios from 'axios';
 import {serverPrefix} from '@/configs/common';
+import type {CardItem, LinkItem} from './common';
 
-export interface LinkItem {
-  title: String,
-  url: String,
-  icon?: string,
-}
-
-export interface CardItem {
-  title: string,
-  url?: string,
-  links: Array<LinkItem>,
-}
 
 const esci: Promise<CardItem> = axios.get(serverPrefix + 'cards/esci.json').then(
   res => new Promise(resolve => resolve(res.data)),

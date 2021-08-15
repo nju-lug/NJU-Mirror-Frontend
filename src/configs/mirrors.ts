@@ -1,5 +1,6 @@
 import axios from 'axios';
-import {serverPrefix} from '@/configs/index';
+import {serverPrefix} from './common';
+import type {SyncEntry} from './common';
 
 interface RawEntry {
   name: string,
@@ -15,17 +16,6 @@ interface RawEntry {
   next_schedule_ts: number,
   upstream: string,
   size: string,
-}
-
-
-export interface SyncEntry {
-  name: string,
-  status?: 'success' | 'failed' | 'syncing',
-  path?: string,
-  route?: string,
-  lastUpdate?: string,
-  nextUpdate?: string,
-  size?: string,
 }
 
 interface AdditionEntry extends SyncEntry {
