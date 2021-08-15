@@ -8,6 +8,10 @@
     "inherit": "kernel.org"
   },
   {
+    "name": "linuxlite-cd",
+    "inherit": "osdn"
+  },
+  {
     "name": "manjaro-arm-cd",
     "inherit": "osdn"
   },
