@@ -8,7 +8,7 @@ mirrorid: archlinuxarm
 
 编辑 /etc/pacman.d/mirrorlist， 在文件的最顶端添加：
 ```
-Server = https://{{ site.hostname }}/archlinuxarm/$arch/$repo
+Server = https://mirror.nju.edu.cn/archlinuxarm/$arch/$repo
 ```
 
 更新软件包缓存：

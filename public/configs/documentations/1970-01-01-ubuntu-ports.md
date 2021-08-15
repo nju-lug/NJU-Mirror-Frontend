@@ -29,18 +29,18 @@ TUNA 的软件源镜像。
 {% raw %}
 <script id="apt-template" type="x-tmpl-markup">
 # 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
-deb https://{%endraw%}{{ site.hostname }}{%raw%}/ubuntu-ports/ {{release_name}} main restricted universe multiverse
-# deb-src https://{%endraw%}{{ site.hostname }}{%raw%}/ubuntu-ports/ {{release_name}} main restricted universe multiverse
-deb https://{%endraw%}{{ site.hostname }}{%raw%}/ubuntu-ports/ {{release_name}}-updates main restricted universe multiverse
-# deb-src https://{%endraw%}{{ site.hostname }}{%raw%}/ubuntu-ports/ {{release_name}}-updates main restricted universe multiverse
-deb https://{%endraw%}{{ site.hostname }}{%raw%}/ubuntu-ports/ {{release_name}}-backports main restricted universe multiverse
-# deb-src https://{%endraw%}{{ site.hostname }}{%raw%}/ubuntu-ports/ {{release_name}}-backports main restricted universe multiverse
-deb https://{%endraw%}{{ site.hostname }}{%raw%}/ubuntu-ports/ {{release_name}}-security main restricted universe multiverse
-# deb-src https://{%endraw%}{{ site.hostname }}{%raw%}/ubuntu-ports/ {{release_name}}-security main restricted universe multiverse
+deb https://{%endraw%}mirror.nju.edu.cn{%raw%}/ubuntu-ports/ {{release_name}} main restricted universe multiverse
+# deb-src https://{%endraw%}mirror.nju.edu.cn{%raw%}/ubuntu-ports/ {{release_name}} main restricted universe multiverse
+deb https://{%endraw%}mirror.nju.edu.cn{%raw%}/ubuntu-ports/ {{release_name}}-updates main restricted universe multiverse
+# deb-src https://{%endraw%}mirror.nju.edu.cn{%raw%}/ubuntu-ports/ {{release_name}}-updates main restricted universe multiverse
+deb https://{%endraw%}mirror.nju.edu.cn{%raw%}/ubuntu-ports/ {{release_name}}-backports main restricted universe multiverse
+# deb-src https://{%endraw%}mirror.nju.edu.cn{%raw%}/ubuntu-ports/ {{release_name}}-backports main restricted universe multiverse
+deb https://{%endraw%}mirror.nju.edu.cn{%raw%}/ubuntu-ports/ {{release_name}}-security main restricted universe multiverse
+# deb-src https://{%endraw%}mirror.nju.edu.cn{%raw%}/ubuntu-ports/ {{release_name}}-security main restricted universe multiverse
 
 # 预发布软件源，不建议启用
-# deb https://{%endraw%}{{ site.hostname }}{%raw%}/ubuntu-ports/ {{release_name}}-proposed main restricted universe multiverse
-# deb-src https://{%endraw%}{{ site.hostname }}{%raw%}/ubuntu-ports/ {{release_name}}-proposed main restricted universe multiverse
+# deb https://{%endraw%}mirror.nju.edu.cn{%raw%}/ubuntu-ports/ {{release_name}}-proposed main restricted universe multiverse
+# deb-src https://{%endraw%}mirror.nju.edu.cn{%raw%}/ubuntu-ports/ {{release_name}}-proposed main restricted universe multiverse
 </script>
 {% endraw %}
 

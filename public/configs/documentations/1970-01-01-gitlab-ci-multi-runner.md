@@ -7,7 +7,7 @@ mirrorid: gitlab-ci-multi-runner
 ## Gitlab CI Multi Runner 镜像使用帮助
 
 **注意: gitlab-ci-multi-runner 已停止更新。** 如果你需要安装版本 10 及以上的
-Runner，由于官方名称发生变化，请前往 [gitlab-runner帮助页面](https://{{ site.hostname }}/help/gitlab-runner/)。
+Runner，由于官方名称发生变化，请前往 [gitlab-runner帮助页面](https://mirror.nju.edu.cn/help/gitlab-runner/)。
 
 
 ### Debian/Ubuntu 用户
@@ -50,7 +50,7 @@ sudo apt-get install gitlab-ci-multi-runner
 
 {% raw %}
 <script id="apt-template" type="x-tmpl-markup">
-deb {{if os_name|equals>ubuntu}}https{{else}}http{{/if}}://{%endraw%}{{ site.hostname }}{%raw%}/gitlab-ci-multi-runner/{{os_name}} {{release_name}} main
+deb {{if os_name|equals>ubuntu}}https{{else}}http{{/if}}://{%endraw%}mirror.nju.edu.cn{%raw%}/gitlab-ci-multi-runner/{{os_name}} {{release_name}} main
 </script>
 {%endraw%}
 
@@ -90,7 +90,7 @@ sudo yum install gitlab-ci-multi-runner
 <script id="yum-template" type="x-tmpl-markup">
 [gitlab-ci-multi-runner]
 name=gitlab-ci-multi-runner
-baseurl=https://{%endraw%}{{ site.hostname }}{%raw%}/gitlab-ci-multi-runner/yum/{{release_name}}
+baseurl=https://{%endraw%}mirror.nju.edu.cn{%raw%}/gitlab-ci-multi-runner/yum/{{release_name}}
 repo_gpgcheck=0
 gpgcheck=0
 enabled=1

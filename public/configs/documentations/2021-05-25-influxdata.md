@@ -42,7 +42,7 @@ curl -s https://repos.influxdata.com/influxdb.key | sudo apt-key add -
 
 {% raw %}
 <script id="apt-template" type="x-tmpl-markup">
-deb https://{%endraw%}{{ site.hostname }}{%raw%}/influxdata/{{os_name}}/ {{release_name}} stable
+deb https://{%endraw%}mirror.nju.edu.cn{%raw%}/influxdata/{{os_name}}/ {{release_name}} stable
 </script>
 {%endraw%}
 
@@ -78,10 +78,10 @@ sudo apt install influxdb
 <script id="yum-template" type="x-tmpl-markup">
 [influxdb]
 name = InfluxDB Repository - RHEL $releasever
-baseurl=https://{%endraw%}{{ site.hostname }}{%raw%}/influxdata/yum/{{release_name}}
+baseurl=https://{%endraw%}mirror.nju.edu.cn{%raw%}/influxdata/yum/{{release_name}}
 enabled=1
 gpgcheck=1
-gpgkey = https://{%endraw%}{{ site.hostname }}{%raw%}/influxdata/influxdb.key
+gpgkey = https://{%endraw%}mirror.nju.edu.cn{%raw%}/influxdata/influxdb.key
 </script>
 {% endraw %}
 

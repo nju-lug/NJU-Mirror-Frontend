@@ -47,7 +47,7 @@ sudo apt-get install gitlab-runner
 
 {% raw %}
 <script id="apt-template" type="x-tmpl-markup">
-deb {{if os_name|equals>ubuntu}}https{{else}}http{{/if}}://{%endraw%}{{ site.hostname }}{%raw%}/gitlab-runner/{{os_name}} {{release_name}} main
+deb {{if os_name|equals>ubuntu}}https{{else}}http{{/if}}://{%endraw%}mirror.nju.edu.cn{%raw%}/gitlab-runner/{{os_name}} {{release_name}} main
 </script>
 {%endraw%}
 
@@ -58,7 +58,7 @@ deb {{if os_name|equals>ubuntu}}https{{else}}http{{/if}}://{%endraw%}{{ site.hos
 ```
 [gitlab-runner]
 name=gitlab-runner
-baseurl=https://{{ site.hostname }}/gitlab-runner/yum/el$releasever-$basearch/
+baseurl=https://mirror.nju.edu.cn/gitlab-runner/yum/el$releasever-$basearch/
 repo_gpgcheck=0
 gpgcheck=0
 enabled=1

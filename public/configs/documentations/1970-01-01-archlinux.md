@@ -8,7 +8,7 @@ mirrorid: archlinux
 
 编辑 /etc/pacman.d/mirrorlist， 在文件的最顶端添加：
 ```
-Server = https://{{ site.hostname }}/archlinux/$repo/os/$arch
+Server = https://mirror.nju.edu.cn/archlinux/$repo/os/$arch
 ```
 
 更新软件包缓存：

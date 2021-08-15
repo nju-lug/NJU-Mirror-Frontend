@@ -8,7 +8,7 @@ mirrorid: AdoptOpenJDK
 
 ### Windows/macOS 用户
 
-打开[下载页面](https://{{ site.hostname }}/AdoptOpenJDK/)，选择所需的版本，下载独立安装包。
+打开[下载页面](https://mirror.nju.edu.cn/AdoptOpenJDK/)，选择所需的版本，下载独立安装包。
 
 ### Debian/Ubuntu 用户
 
@@ -49,7 +49,7 @@ sudo apt-get update
 
 {% raw %}
 <script id="apt-template" type="x-tmpl-markup">
-deb {{if os_name|equals>ubuntu}}https{{else}}http{{/if}}://{%endraw%}{{ site.hostname }}{%raw%}/AdoptOpenJDK/deb {{release_name}} main
+deb {{if os_name|equals>ubuntu}}https{{else}}http{{/if}}://{%endraw%}mirror.nju.edu.cn{%raw%}/AdoptOpenJDK/deb {{release_name}} main
 </script>
 {%endraw%}
 
@@ -60,7 +60,7 @@ deb {{if os_name|equals>ubuntu}}https{{else}}http{{/if}}://{%endraw%}{{ site.hos
 ```
 [AdoptOpenJDK]
 name=AdoptOpenJDK
-baseurl=https://{{ site.hostname }}/AdoptOpenJDK/rpm/centos$releasever-$basearch/
+baseurl=https://mirror.nju.edu.cn/AdoptOpenJDK/rpm/centos$releasever-$basearch/
 enabled=1
 gpgcheck=1
 gpgkey=https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public

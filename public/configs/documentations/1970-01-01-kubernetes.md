@@ -43,7 +43,7 @@ $ curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key a
 
 {% raw %}
 <script id="apt-template" type="x-tmpl-markup">
-deb https://{%endraw%}{{ site.hostname }}{%raw%}/kubernetes/apt kubernetes-{{release_name}} main
+deb https://{%endraw%}mirror.nju.edu.cn{%raw%}/kubernetes/apt kubernetes-{{release_name}} main
 </script>
 {%endraw%}
 
@@ -55,10 +55,10 @@ deb https://{%endraw%}{{ site.hostname }}{%raw%}/kubernetes/apt kubernetes-{{rel
 ```
 [kubernetes]
 name=kubernetes
-baseurl=https://{{ site.hostname }}/kubernetes/yum/repos/kubernetes-el7-$basearch
+baseurl=https://mirror.nju.edu.cn/kubernetes/yum/repos/kubernetes-el7-$basearch
 enabled=1
 ```
 
 ### Minikube
 
-请到 [minikube 镜像](https://{{ site.hostname }}/github-release/kubernetes/minikube/LatestRelease/) 下载。
+请到 [minikube 镜像](https://mirror.nju.edu.cn/github-release/kubernetes/minikube/LatestRelease/) 下载。

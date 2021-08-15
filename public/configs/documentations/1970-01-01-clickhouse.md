@@ -13,7 +13,7 @@ mirrorid: clickhouse
 新建 `/etc/apt/sources.list.d/clickhouse.list`，内容为
 
 ```
-deb https://{{ site.hostname }}/clickhouse/deb/stable/ main/
+deb https://mirror.nju.edu.cn/clickhouse/deb/stable/ main/
 ```
 
 
@@ -24,6 +24,6 @@ deb https://{{ site.hostname }}/clickhouse/deb/stable/ main/
 ```
 [repo.yandex.ru_clickhouse_rpm_stable_x86_64]
 name=clickhouse stable
-baseurl=https://{{ site.hostname }}/clickhouse/rpm/stable/x86_64
+baseurl=https://mirror.nju.edu.cn/clickhouse/rpm/stable/x86_64
 enabled=1
 ```
