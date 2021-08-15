@@ -20,7 +20,7 @@
     "inherit": "osdn"
   },
   {
-    "name": "mxlinux-cd",
+    "name": "mxlinux-isos",
     "inherit": "osdn"
   },
   {
