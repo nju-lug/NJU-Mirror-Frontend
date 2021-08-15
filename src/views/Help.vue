@@ -7,7 +7,7 @@
                   v-model="filter"
                   prefix-icon="el-icon-search"
                   style="margin-bottom: 10px;"/>
-        <el-menu :default-active="$route.fullPath" router>
+        <el-menu :default-active="decodeURI($route.path)" router>
           <el-menu-item v-for="entry in show"
                         :index="'/help/' + entry.route"
                         :key="entry.name">
@@ -45,7 +45,7 @@ export default Vue.extend({
     },
     isMobile(): boolean {
       return this.$store.state.isMobile;
-    }
+    },
   },
   watch: {
     show() {
@@ -53,7 +53,7 @@ export default Vue.extend({
         const route = '/help/' + this.show[0].route;
         route != this.$route.path && this.$router.replace(route);
       }
-    }
+    },
   },
 });
 </script>
@@ -63,14 +63,15 @@ export default Vue.extend({
   display: flex;
   align-items: center;
   padding-right: 20px;
-}
+  height: 40px;
 
-.el-menu-item span {
-  white-space: normal;
-  word-break: break-all;
-  line-height: 20px;
-  flex: 1;
-  text-align: left;
+  span {
+    white-space: normal;
+    word-break: break-all;
+    line-height: 20px;
+    flex: 1;
+    text-align: left;
+  }
 }
 
 .fade-enter-active {

@@ -1,7 +1,15 @@
 [
   {
+    "name": "garuda-linux",
+    "inherit": "osdn"
+  },
+  {
     "name": "kernel",
     "inherit": "kernel.org"
+  },
+  {
+    "name": "linuxlite-cd",
+    "inherit": "osdn"
   },
   {
     "name": "manjaro-arm-cd",
@@ -12,7 +20,7 @@
     "inherit": "osdn"
   },
   {
-    "name": "mxlinux-cd",
+    "name": "mxlinux-isos",
     "inherit": "osdn"
   },
   {

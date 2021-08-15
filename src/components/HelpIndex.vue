@@ -1,6 +1,6 @@
 <template>
   <h1>
-    Select to view help.
+    Select to view items.
   </h1>
 </template>
 

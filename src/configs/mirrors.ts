@@ -1,5 +1,7 @@
 import axios from 'axios';
-import {serverPrefix} from '@/configs/index';
+import {serverPrefix} from './common';
+import type {SyncEntry} from './common';
+import moment from 'moment';
 
 interface RawEntry {
   name: string,
@@ -17,53 +19,8 @@ interface RawEntry {
   size: string,
 }
 
-
-export interface SyncEntry {
-  name: string,
-  status?: 'success' | 'failed' | 'syncing',
-  path?: string,
-  route?: string,
-  lastUpdate?: string,
-  nextUpdate?: string,
-  size?: string,
-}
-
 interface AdditionEntry extends SyncEntry {
   inherit: string | null,
-}
-
-function parseSecs(seconds: number): string {
-  const suffix = seconds < 0 ? '后' : '前';
-  seconds = Math.floor(Math.abs(seconds));
-  if (seconds < 60) {
-    return `${seconds}秒${suffix}`;
-  }
-
-  const minutes = Math.floor(seconds / 60);
-  if (minutes < 60) {
-    return `${minutes}分钟${suffix}`;
-  }
-
-  const hours = Math.floor(minutes / 60);
-  if (hours < 24) {
-    return `${hours}小时${suffix}`;
-  }
-
-  const days = Math.floor(hours / 24);
-  if (days < 30) {
-    return `${days}天${suffix}`;
-  }
-
-  const months = Math.floor(days / 30);
-  if (months < 12) {
-    return `${months}个月${suffix}`;
-  }
-
-  const years = Math.floor(months / 12);
-  if (years > 99) {
-    return '-';
-  }
-  return `${years}年${suffix}`;
 }
 
 export async function fetchEntries(): Promise<Array<SyncEntry>> {
@@ -75,8 +32,8 @@ export async function fetchEntries(): Promise<Array<SyncEntry>> {
     name: value.name,
     status: value.status,
     path: '/' + value.name,
-    lastUpdate: parseSecs(new Date().getTime() / 1000 - value.last_update_ts),
-    nextUpdate: parseSecs(new Date().getTime() / 1000 - value.next_schedule_ts),
+    lastUpdate: value.last_update_ts > 0 ? moment.unix(value.last_update_ts).fromNow() : '-',
+    nextUpdate: value.next_schedule_ts > 0 ? moment.unix(value.next_schedule_ts).toNow() : '-',
     size: value.size == 'unknown' ? '-' : value.size,
   });
 
