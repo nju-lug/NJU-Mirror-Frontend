@@ -16,8 +16,8 @@ wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | sudo 
 再选择你的 Debian/Ubuntu 版本，文本框中内容写进 `/etc/apt/sources.list.d/AdoptOpenJDK.list`
 
 ```
-deb http://mirrors.tuna.tsinghua.edu.cn/AdoptOpenJDK/deb buster main # Debian 10(Buster)
-deb https://mirrors.tuna.tsinghua.edu.cn/AdoptOpenJDK/deb focal main # Ubuntu 20.04
+deb http://mirror.nju.edu.cn/AdoptOpenJDK/deb buster main # Debian 10(Buster)
+deb https://mirror.nju.edu.cn/AdoptOpenJDK/deb focal main # Ubuntu 20.04
 ```
 再执行
 
