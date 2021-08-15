@@ -1,8 +1,3 @@
----
-category: help
-layout: help
-mirrorid: nodesource
----
 
 ## Nodesource 镜像使用帮助
 

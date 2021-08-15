@@ -1,8 +1,3 @@
----
-category: help
-layout: help
-mirrorid: voidlinux
----
 
 # Voidlinux 镜像使用帮助
 

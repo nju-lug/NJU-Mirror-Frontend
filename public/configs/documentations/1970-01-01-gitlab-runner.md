@@ -1,8 +1,3 @@
----
-category: help
-layout: help
-mirrorid: gitlab-runner
----
 
 ## Gitlab Runner 镜像使用帮助
 

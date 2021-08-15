@@ -1,8 +1,3 @@
----
-category: help
-layout: help
-mirrorid: rpmfusion
----
 
 ## RPMFusion 镜像使用帮助
 

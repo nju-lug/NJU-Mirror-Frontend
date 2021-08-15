@@ -1,8 +1,3 @@
----
-category: help
-layout: help
-mirrorid: nodejs-release
----
 
 ## Nodejs Release 镜像使用帮助
 

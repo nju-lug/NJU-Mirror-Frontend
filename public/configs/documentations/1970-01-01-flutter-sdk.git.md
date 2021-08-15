@@ -1,8 +1,3 @@
----
-category: help
-layout: help
-mirrorid: flutter-sdk.git
----
 
 ## Flutter SDK 源码镜像使用帮助
 

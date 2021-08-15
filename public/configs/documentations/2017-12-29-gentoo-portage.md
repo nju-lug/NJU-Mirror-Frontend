@@ -1,8 +1,3 @@
----
-category: help
-layout: help
-mirrorid: gentoo-portage
----
 
 ## [Gentoo Linux](https://www.gentoo.org/) 的镜像配置方法如下：
 

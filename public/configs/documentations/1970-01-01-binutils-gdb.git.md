@@ -1,8 +1,3 @@
----
-category: help
-layout: help
-mirrorid: binutils-gdb.git
----
 
 ## GNU Binutils 和 GDB 等项目 Git 镜像使用帮助
 

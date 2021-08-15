@@ -1,8 +1,3 @@
----
-category: help
-layout: help
-mirrorid: packagist
----
 
 ## PHP 包仓库 Packagist 索引镜像使用帮助
 

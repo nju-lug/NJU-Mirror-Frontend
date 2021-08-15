@@ -1,8 +1,3 @@
----
-category: help
-layout: help
-mirrorid: centos-vault
----
 
 ## centos-vault 镜像使用帮助
 

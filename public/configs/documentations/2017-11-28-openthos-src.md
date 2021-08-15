@@ -1,8 +1,3 @@
----
-category: help
-layout: help
-mirrorid: openthos-src
----
 
 # OpenTHOS 源代码镜像使用帮助
 

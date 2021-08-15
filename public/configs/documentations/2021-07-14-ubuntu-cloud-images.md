@@ -1,8 +1,3 @@
----
-category: help
-layout: help
-mirrorid: ubuntu-cloud-images
----
 
 ubuntu-cloud-images 镜像使用指南
 ===================

@@ -1,8 +1,3 @@
----
-category: help
-layout: help
-mirrorid: gitlab-ci-multi-runner
----
 
 ## Gitlab CI Multi Runner 镜像使用帮助
 

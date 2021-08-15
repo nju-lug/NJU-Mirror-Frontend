@@ -1,9 +1,4 @@
 ---
-layout: help
-category: help
-mirrorid: chromiumos
-permalink: /help/chromiumos/
----
 
 ## Chromium OS 镜像使用帮助
 

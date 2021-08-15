@@ -1,8 +1,3 @@
----
-category: help
-layout: help
-mirrorid: julia-releases
----
 
 ## Julia 二进制安装程序
 

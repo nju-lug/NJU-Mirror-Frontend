@@ -1,8 +1,3 @@
----
-category: help
-layout: help
-mirrorid: virtualbox
----
 
 # VirtualBox 镜像使用帮助
 

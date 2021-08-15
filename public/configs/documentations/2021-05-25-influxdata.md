@@ -1,8 +1,3 @@
----
-category: help
-layout: help
-mirrorid: influxdata
----
 
 ## Influxdata 镜像帮助
 

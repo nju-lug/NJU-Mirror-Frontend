@@ -1,9 +1,4 @@
 ---
-layout: help
-category: help
-mirrorid: lineageOS
-permalink: /help/lineageOS/
----
 
 ## lineageOS 源代码镜像使用帮助
 

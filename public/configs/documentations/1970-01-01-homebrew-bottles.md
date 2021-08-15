@@ -1,8 +1,3 @@
----
-category: help
-layout: help
-mirrorid: homebrew-bottles
----
 
 ## Homebrew-bottles 镜像使用帮助
 

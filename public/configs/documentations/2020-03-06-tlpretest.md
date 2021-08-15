@@ -1,8 +1,3 @@
----
-category: help
-layout: help
-mirrorid: tlpretest
----
 
 tlpretest 镜像使用帮助
 ===================

@@ -1,8 +1,3 @@
----
-category: help
-layout: help
-mirrorid: llvm-project.git
----
 
 ## LLVM Git 源码仓库镜像使用帮助
 

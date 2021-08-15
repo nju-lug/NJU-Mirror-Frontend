@@ -1,8 +1,3 @@
----
-layout: help
-category: help
-mirrorid: CocoaPods
----
 
 ## CocoaPods 镜像使用帮助
 

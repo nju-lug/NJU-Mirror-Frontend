@@ -1,9 +1,4 @@
 ---
-layout: help
-category: help
-mirrorid: lineage-rom
-permalink: /help/lineage-rom/
----
 
 ## Lineage 介绍
 

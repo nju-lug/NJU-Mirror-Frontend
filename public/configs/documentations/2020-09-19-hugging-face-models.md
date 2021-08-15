@@ -1,8 +1,3 @@
----
-category: help
-layout: help
-mirrorid: hugging-face-models
----
 
 ## Hugging Face Model Hub 预训练模型镜像使用帮助
 

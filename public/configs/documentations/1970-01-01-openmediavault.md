@@ -1,8 +1,3 @@
----
-category: help
-layout: help
-mirrorid: OpenMediaVault
----
 
 ## OpenMediaVault 镜像使用帮助
 

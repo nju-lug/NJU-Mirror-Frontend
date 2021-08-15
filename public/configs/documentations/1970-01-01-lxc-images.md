@@ -1,8 +1,3 @@
----
-category: help
-layout: help
-mirrorid: lxc-images
----
 
 ## LXC Images 镜像帮助
 

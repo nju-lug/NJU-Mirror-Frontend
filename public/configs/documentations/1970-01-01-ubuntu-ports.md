@@ -1,8 +1,3 @@
----
-category: help
-layout: help
-mirrorid: ubuntu-ports
----
 
 Ubuntu Ports 镜像使用帮助
 ===================

@@ -1,8 +1,3 @@
----
-category: help
-layout: help
-mirrorid: linux-firmware.git
----
 
 ## Linux 固件仓库 Git 镜像使用帮助
 

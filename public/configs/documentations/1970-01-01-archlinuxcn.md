@@ -1,8 +1,3 @@
----
-category: help
-layout: help
-mirrorid: archlinuxcn
----
 
 ## ArchlinuxCN 镜像使用帮助
 

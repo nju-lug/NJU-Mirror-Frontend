@@ -1,8 +1,3 @@
----
-category: help
-layout: help
-mirrorid: clickhouse
----
 
 ## Clickhouse 镜像使用帮助
 

@@ -1,8 +1,3 @@
----
-category: help
-layout: help
-mirrorid: linuxbrew-bottles
----
 
 ## Linuxbrew-bottles 镜像使用帮助
 

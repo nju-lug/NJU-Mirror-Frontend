@@ -1,8 +1,3 @@
----
-category: help
-layout: help
-mirrorid: linuxmint
----
 
 ## Linux Mint 镜像使用帮助
 

@@ -1,8 +1,3 @@
----
-category: help
-layout: help
-mirrorid: bioconductor
----
 
 [Bioconductor](https://www.bioconductor.org) 镜像使用帮助
 ===================

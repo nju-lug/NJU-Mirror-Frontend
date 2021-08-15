@@ -1,8 +1,3 @@
----
-category: help
-layout: help
-mirrorid: archlinuxarm
----
 
 ## Arch Linux ARM 软件仓库镜像使用帮助
 

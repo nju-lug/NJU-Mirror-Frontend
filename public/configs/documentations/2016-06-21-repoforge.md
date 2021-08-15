@@ -1,8 +1,3 @@
----
-category: help
-layout: help
-mirrorid: repoforge
----
 
 # Repoforge (原Rpmforge) 镜像使用帮助
 

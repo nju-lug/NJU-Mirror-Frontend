@@ -1,8 +1,3 @@
----
-category: help
-layout: help
-mirrorid: centos-altarch
----
 
 ## centos-altarch 镜像使用帮助
 
