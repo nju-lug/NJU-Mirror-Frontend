@@ -1,247 +1,512 @@
 [
   {
+    "name": "AUR",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "AUR"
+  },
+  {
+    "name": "CPAN",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "CPAN"
+  },
+  {
+    "name": "CRAN",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "CRAN"
+  },
+  {
+    "name": "CTAN",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "CTAN"
+  },
+  {
+    "name": "CocoaPods",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "CocoaPods"
+  },
+  {
+    "name": "adoptopenjdk",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "adoptopenjdk"
+  },
+  {
     "name": "alpine",
-    "path": "alpine.md",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
     "route": "alpine"
   },
   {
     "name": "anaconda",
-    "path": "anaconda.md",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
     "route": "anaconda"
   },
   {
     "name": "anthon",
-    "path": "anthon.md",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
     "route": "anthon"
   },
   {
-    "name": "raspberrypi",
-    "path": "archive.raspberrypi.org.md",
-    "route": "raspberrypi"
+    "name": "aosp",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "aosp"
   },
   {
-    "name": "archlinuxcn",
-    "path": "archlinuxcn.md",
-    "route": "archlinuxcn"
+    "name": "arch4edu",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "arch4edu"
   },
   {
     "name": "archlinux",
-    "path": "archlinux.md",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
     "route": "archlinux"
   },
   {
-    "name": "blackarch",
-    "path": "blackarch.md",
-    "route": "blackarch"
+    "name": "archlinuxarm",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "archlinuxarm"
   },
   {
-    "name": "brew.git",
-    "path": "brew.git.md",
-    "route": "brew.git"
+    "name": "archlinuxcn",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "archlinuxcn"
+  },
+  {
+    "name": "bananian",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "bananian"
+  },
+  {
+    "name": "binutils-gdb.git",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "binutils-gdb.git"
+  },
+  {
+    "name": "bioconductor",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "bioconductor"
   },
   {
     "name": "centos",
-    "path": "centos.md",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
     "route": "centos"
   },
   {
-    "name": "chakra",
-    "path": "chakra.md",
-    "route": "chakra"
+    "name": "centos-altarch",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "centos-altarch"
   },
   {
-    "name": "debian-cd",
-    "path": "debian-cd.md",
-    "route": "debian-cd"
+    "name": "centos-vault",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "centos-vault"
   },
   {
-    "name": "debiancn",
-    "path": "debiancn.md",
-    "route": "debiancn"
+    "name": "ceph",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "ceph"
+  },
+  {
+    "name": "chef",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "chef"
+  },
+  {
+    "name": "chromiumos",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "chromiumos"
+  },
+  {
+    "name": "clickhouse",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "clickhouse"
+  },
+  {
+    "name": "crates.io-index.git",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "crates.io-index.git"
+  },
+  {
+    "name": "cygwin",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "cygwin"
+  },
+  {
+    "name": "dart-pub",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "dart-pub"
   },
   {
     "name": "debian",
-    "path": "debian.md",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
     "route": "debian"
   },
   {
-    "name": "debian-security",
-    "path": "debian-security.md",
-    "route": "debian-security"
-  },
-  {
-    "name": "deb-multimedia",
-    "path": "deb-multimedia.md",
-    "route": "deb-multimedia"
-  },
-  {
     "name": "docker-ce",
-    "path": "docker-ce.md",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
     "route": "docker-ce"
   },
   {
-    "name": "dockerhub",
-    "path": "dockerhub.md",
-    "route": "dockerhub"
+    "name": "elpa",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "elpa"
+  },
+  {
+    "name": "elrepo",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "elrepo"
   },
   {
     "name": "epel",
-    "path": "epel.md",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
     "route": "epel"
   },
   {
+    "name": "fdroid",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "fdroid"
+  },
+  {
     "name": "fedora",
-    "path": "fedora.md",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
     "route": "fedora"
   },
   {
-    "name": "freebsd",
-    "path": "freebsd.md",
-    "route": "freebsd"
+    "name": "flutter",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "flutter"
   },
   {
-    "name": "freebsd-pkg",
-    "path": "freebsd-pkg.md",
-    "route": "freebsd-pkg"
+    "name": "flutter-sdk.git",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "flutter-sdk.git"
   },
   {
-    "name": "freebsd-ports",
-    "path": "freebsd-ports.md",
-    "route": "freebsd-ports"
-  },
-  {
-    "name": "gentoo",
-    "path": "gentoo.md",
-    "route": "gentoo"
+    "name": "gcc.git",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "gcc.git"
   },
   {
     "name": "gentoo-portage",
-    "path": "gentoo-portage.md",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
     "route": "gentoo-portage"
   },
   {
+    "name": "gentoo-portage.git",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "gentoo-portage.git"
+  },
+  {
+    "name": "gentoo-prefix",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "gentoo-prefix"
+  },
+  {
+    "name": "git-repo",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "git-repo"
+  },
+  {
+    "name": "gitlab-ce",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "gitlab-ce"
+  },
+  {
+    "name": "gitlab-ci-multi-runner",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "gitlab-ci-multi-runner"
+  },
+  {
+    "name": "gitlab-runner",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "gitlab-runner"
+  },
+  {
+    "name": "glibc.git",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "glibc.git"
+  },
+  {
+    "name": "grafana",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "grafana"
+  },
+  {
     "name": "hackage",
-    "path": "hackage.md",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
     "route": "hackage"
   },
   {
+    "name": "homebrew",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "homebrew"
+  },
+  {
     "name": "homebrew-bottles",
-    "path": "homebrew-bottles.md",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
     "route": "homebrew-bottles"
   },
   {
-    "name": "homebrew-cask.git",
-    "path": "homebrew-cask.git.md",
-    "route": "homebrew-cask.git"
+    "name": "hugging-face-models",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "hugging-face-models"
   },
   {
-    "name": "homebrew-core.git",
-    "path": "homebrew-core.git.md",
-    "route": "homebrew-core.git"
+    "name": "influxdata",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "influxdata"
   },
   {
-    "name": "kali",
-    "path": "kali.md",
-    "route": "kali"
+    "name": "julia",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "julia"
+  },
+  {
+    "name": "julia-releases",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "julia-releases"
+  },
+  {
+    "name": "kicad",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "kicad"
+  },
+  {
+    "name": "kubernetes",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "kubernetes"
+  },
+  {
+    "name": "lineage-rom",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "lineage-rom"
+  },
+  {
+    "name": "lineageos",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "lineageos"
+  },
+  {
+    "name": "linux-firmware.git",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "linux-firmware.git"
+  },
+  {
+    "name": "linux-next.git",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "linux-next.git"
+  },
+  {
+    "name": "linux-stable.git",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "linux-stable.git"
+  },
+  {
+    "name": "linux.git",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "linux.git"
+  },
+  {
+    "name": "linuxbrew-bottles",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "linuxbrew-bottles"
   },
   {
     "name": "linuxmint",
-    "path": "linuxmint.md",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
     "route": "linuxmint"
   },
   {
-    "name": "mageia",
-    "path": "mageia.md",
-    "route": "mageia"
+    "name": "llvm",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "llvm"
   },
   {
-    "name": "manjaro",
-    "path": "manjaro.md",
-    "route": "manjaro"
+    "name": "llvm-project.git",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "llvm-project.git"
+  },
+  {
+    "name": "lxc-images",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "lxc-images"
   },
   {
     "name": "mariadb",
-    "path": "mariadb.md",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
     "route": "mariadb"
   },
   {
-    "name": "openEuler",
-    "path": "openEuler.md",
-    "route": "openEuler"
+    "name": "mongodb",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "mongodb"
+  },
+  {
+    "name": "msys2",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "msys2"
+  },
+  {
+    "name": "mysql",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "mysql"
+  },
+  {
+    "name": "nix",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "nix"
+  },
+  {
+    "name": "nodejs-release",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "nodejs-release"
+  },
+  {
+    "name": "nodesource",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "nodesource"
+  },
+  {
+    "name": "openmediavault",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "openmediavault"
   },
   {
     "name": "opensuse",
-    "path": "opensuse.md",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
     "route": "opensuse"
   },
   {
+    "name": "openthos-src",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "openthos-src"
+  },
+  {
+    "name": "openwrt",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "openwrt"
+  },
+  {
+    "name": "packagist",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "packagist"
+  },
+  {
+    "name": "proxmox",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "proxmox"
+  },
+  {
+    "name": "pybombs",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "pybombs"
+  },
+  {
     "name": "pypi",
-    "path": "pypi.md",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
     "route": "pypi"
   },
   {
+    "name": "qemu.git",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "qemu.git"
+  },
+  {
+    "name": "qubesos",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "qubesos"
+  },
+  {
     "name": "raspbian",
-    "path": "raspbian.md",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
     "route": "raspbian"
   },
   {
+    "name": "repo-ck",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "repo-ck"
+  },
+  {
+    "name": "repoforge",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "repoforge"
+  },
+  {
+    "name": "ros",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "ros"
+  },
+  {
+    "name": "ros2",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "ros2"
+  },
+  {
     "name": "rpmfusion",
-    "path": "rpmfusion.md",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
     "route": "rpmfusion"
   },
   {
     "name": "rubygems",
-    "path": "rubygems.md",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
     "route": "rubygems"
   },
   {
-    "name": "rust-crates",
-    "path": "rust-crates.md",
-    "route": "rust-crates"
+    "name": "rudder",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "rudder"
   },
   {
-    "name": "rust-static",
-    "path": "rust-static.md",
-    "route": "rust-static"
+    "name": "rustup",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "rustup"
+  },
+  {
+    "name": "solus",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "solus"
   },
   {
     "name": "stackage",
-    "path": "stackage.md",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
     "route": "stackage"
   },
   {
-    "name": "trisquel",
-    "path": "trisquel.md",
-    "route": "trisquel"
+    "name": "tensorflow",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "tensorflow"
   },
   {
-    "name": "ubuntu-cdimage",
-    "path": "ubuntu-cdimage.md",
-    "route": "ubuntu-cdimage"
+    "name": "termux",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "termux"
   },
   {
-    "name": "ubuntu-cloud-images",
-    "path": "ubuntu-cloud-images.md",
-    "route": "ubuntu-cloud-images"
+    "name": "tlpretest",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "tlpretest"
   },
   {
     "name": "ubuntu",
-    "path": "ubuntu.md",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
     "route": "ubuntu"
   },
   {
-    "name": "ubuntu-old-releases",
-    "path": "ubuntu-old-releases.md",
-    "route": "ubuntu-old-releases"
+    "name": "ubuntu-cloud-images",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "ubuntu-cloud-images"
   },
   {
     "name": "ubuntu-ports",
-    "path": "ubuntu-ports.md",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
     "route": "ubuntu-ports"
   },
   {
-    "name": "ubuntu-releases",
-    "path": "ubuntu-releases.md",
-    "route": "ubuntu-releases"
-  }
+    "name": "virtualbox",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "virtualbox"
+  },
+  {
+    "name": "voidlinux",
+    "path": "2021-07-14-ubuntu-cloud-images.md",
+    "route": "voidlinux"
+  },
 ]
