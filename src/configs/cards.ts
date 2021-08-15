@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {serverPrefix} from '@/configs/common';
+import {serverPrefix} from './common';
 import type {CardItem, LinkItem} from './common';
 
 
@@ -15,13 +15,13 @@ const jokes = axios.get('https://git.nju.edu.cn/api/v4/projects/2412/issues').th
   res => new Promise(resolve => {
     const links = (res.data as Array<{ title: string, web_url: string }>).map(
       value => <LinkItem>{
-        title: value.title,
+        title: value.title.replace(/\d+$/g, ''),
         url: value.web_url,
       });
     resolve({
       title: 'LUG Jokes',
-      url: 'https://git.nju.edu.cn/nju-lug',
-      links: links.slice(0, 5)
+      url: 'https://git.nju.edu.cn/nju-lug/lug-joke-collection',
+      links: links.slice(0, 5),
     });
   }),
   err => new Promise((resolve, reject) => reject(err)),
