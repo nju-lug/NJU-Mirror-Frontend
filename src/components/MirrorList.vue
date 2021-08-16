@@ -30,8 +30,8 @@
           </el-tag>
         </template>
       </el-table-column>
-      <el-table-column v-if="!isMobile" prop="lastUpdate" label="Last Update" width="150" align="center"/>
-      <el-table-column v-if="!isMobile" prop="nextUpdate" label="Next Update" width="150" align="center"/>
+      <el-table-column v-if="!isMobile" prop="lastUpdate" label="Last Update" width="170" align="center"/>
+      <el-table-column v-if="!isMobile" prop="nextUpdate" label="Next Update" width="170" align="center"/>
       <el-table-column v-if="!isMobile" prop="size" label="Mirror Size" width="150" align="center"/>
     </el-table>
   </div>
