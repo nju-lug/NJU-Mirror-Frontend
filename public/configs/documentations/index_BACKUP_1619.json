@@ -141,6 +141,7 @@
   },
   {
     "name": "docker-hub",
+<<<<<<< HEAD
     "path": "2021-08-16-docker-hub.md",
     "route": "docker-hub"
   },
@@ -153,6 +154,10 @@
     "name": "elrepo",
     "path": "1970-01-01-elrepo.md",
     "route": "elrepo"
+=======
+    "path": "docker-hub.md",
+    "route": "docker-hub"
+>>>>>>> e074f70df8a01d1cb32b33738dded6ffb1cd504a
   },
   {
     "name": "epel",
@@ -288,6 +293,16 @@
     "name": "linux-firmware.git",
     "path": "1970-01-01-linux-firmware.git.md",
     "route": "linux-firmware.git"
+  },
+  {
+    "name": "linux-next.git",
+    "path": "1970-01-01-linux-next.git.md",
+    "route": "linux-next.git"
+  },
+  {
+    "name": "linux-stable.git",
+    "path": "1970-01-01-linux-stable.git.md",
+    "route": "linux-stable.git"
   },
   {
     "name": "linux.git",
