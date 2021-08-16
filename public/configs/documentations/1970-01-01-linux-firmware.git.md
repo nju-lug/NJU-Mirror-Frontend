@@ -7,7 +7,7 @@
 git clone https://mirror.nju.edu.cn/linux-firmware.git
 ```
 
-若要将 tuna mirror 加入已有仓库，可在已有仓库中运行
+若要将 NJU mirror 加入已有仓库，可在已有仓库中运行
 
 ```
 git remote add nju https://mirror.nju.edu.cn/linux-firmware.git
