@@ -33,7 +33,7 @@ export async function fetchEntries(): Promise<Array<SyncEntry>> {
     status: value.status,
     path: '/' + value.name,
     lastUpdate: value.last_update_ts > 0 ? moment.unix(value.last_update_ts).fromNow() : '-',
-    nextUpdate: value.next_schedule_ts > 0 ? moment.unix(value.next_schedule_ts).toNow() : '-',
+    nextUpdate: value.next_schedule_ts > 0 ? moment.unix(value.next_schedule_ts).fromNow() : '-',
     size: value.size == 'unknown' ? '-' : value.size,
   });
 
