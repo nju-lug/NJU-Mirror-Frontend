@@ -24,9 +24,9 @@
     "inherit": "osdn"
   },
   {
-    "name": "Docker Hub",
+    "name": "docker-hub",
     "inherit": null,
-    "status":"success",
-    "route": "/help/dockerhub"
+    "status":"cache",
+    "route": "/help/docker-hub"
   }
 ]
