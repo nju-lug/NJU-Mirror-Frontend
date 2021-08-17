@@ -15,7 +15,7 @@ curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 chmod a+x ~/bin/repo
 ```
 
-或者使用tuna的[git-repo镜像](https://mirror.nju.edu.cn/help/git-repo/)
+或者使用[git-repo镜像](https://mirror.nju.edu.cn/help/git-repo/)
 
 #### 下载代码
 
@@ -57,7 +57,7 @@ repo init -u https://mirror.nju.edu.cn/git/chromiumos/chromiumos/manifest
 替换为
 
 ```
-"https://mirror.nju.edu.cn/git/AOSP"
+"https://mirror.nju.edu.cn/git/aosp"
 ```
 
 
