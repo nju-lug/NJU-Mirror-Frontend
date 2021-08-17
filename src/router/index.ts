@@ -90,10 +90,6 @@ const router = new VueRouter({
   routes
 });
 
-router.onError(() => {
-  window.location.replace('/err');
-});
-
 router.beforeEach((to, from, next) => {
   document.title = to.meta?.title || 'NJU Mirror';
   document.body.scrollTop = document.documentElement.scrollTop = 0;
