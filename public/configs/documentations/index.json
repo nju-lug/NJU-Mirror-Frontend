@@ -295,6 +295,16 @@
     "route": "linux.git"
   },
   {
+    "name": "linux-next.git",
+    "path": "1970-01-01-linux.git.md",
+    "route": "linux.git"
+  },
+  {
+    "name": "linux-stable.git",
+    "path": "1970-01-01-linux.git.md",
+    "route": "linux.git"
+  },
+  {
     "name": "linuxbrew-bottles",
     "path": "1970-01-01-linuxbrew-bottles.md",
     "route": "linuxbrew-bottles"
