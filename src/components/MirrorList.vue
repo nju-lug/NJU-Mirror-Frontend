@@ -81,6 +81,8 @@ export default Vue.extend({
       case 'failed':
         return 'el-icon-error';
       case 'success':
+      case 'cache':
+      case 'proxy':
         return 'el-icon-check';
       case 'syncing':
         return 'el-icon-loading';
