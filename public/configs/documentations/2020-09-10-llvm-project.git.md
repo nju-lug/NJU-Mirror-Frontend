@@ -7,18 +7,18 @@
 https://github.com/llvm/llvm-project.git
 ```
 
-可以直接使用 `git clone https://mirror.nju.edu.cn/llvm-project.git` 来克隆。由于仓库体积均较大，执行`git clone`可能需要较长时间，并且没有进度提示，请耐心等候。
+可以直接使用 `git clone https://mirror.nju.edu.cn/git/llvm-project.git` 来克隆。由于仓库体积均较大，执行`git clone`可能需要较长时间，并且没有进度提示，请耐心等候。
 
 若要将 NJU mirror 加入已有代码库，可在已有仓库中运行：
 
 ```
-git remote add nju https://mirror.nju.edu.cn/llvm-project.git
+git remote add nju https://mirror.nju.edu.cn/git/llvm-project.git
 ```
 
 或运行：
 
 ```
-git remote set-url origin https://mirror.nju.edu.cn/llvm-project.git
+git remote set-url origin https://mirror.nju.edu.cn/git/llvm-project.git
 ```
 
 将默认上游设置为 NJU 镜像。
