@@ -5,7 +5,7 @@
     <el-row>
       <el-button @click="backward" icon="el-icon-back">Backward</el-button>
       <el-button @click="home" icon="el-icon-house">Home</el-button>
-      <el-button @click="issue" icon="el-icon-message">Report bug</el-button>
+      <el-button @click="issue" icon="el-icon-edit-outline">Report bug</el-button>
     </el-row>
   </div>
 </template>
@@ -24,7 +24,7 @@ export default Vue.extend({
       this.$router.back();
     },
     issue() {
-      window.location.href = 'mailto:git+nju-lug-nju-mirror-frontend-2901-issue-@yaoge123.cn';
+      window.location.href = 'https://github.com/nju-lug/NJU-Mirror-Issue';
     }
   },
   mounted() {
