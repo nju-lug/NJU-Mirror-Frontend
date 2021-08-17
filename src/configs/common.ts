@@ -20,7 +20,7 @@ export interface CardItem {
 
 export interface SyncEntry {
   name: string,
-  status?: 'success' | 'failed' | 'syncing',
+  status?: string,
   path?: string,
   route?: string,
   lastUpdate?: string,

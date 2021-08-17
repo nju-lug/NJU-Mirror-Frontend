@@ -69,6 +69,8 @@ export default Vue.extend({
       case 'failed':
         return 'danger';
       case 'success':
+      case 'cache':
+      case 'proxy':
         return 'success';
       default:
         return 'warning';
