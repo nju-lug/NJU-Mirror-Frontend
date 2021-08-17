@@ -275,13 +275,8 @@
     "route": "kubernetes"
   },
   {
-    "name": "lineage-rom",
-    "path": "1970-01-01-lineage-rom.md",
-    "route": "lineage-rom"
-  },
-  {
     "name": "lineageos",
-    "path": "1970-01-01-lineageos.md",
+    "path": "1970-01-01-lineage-rom.md",
     "route": "lineageos"
   },
   {
@@ -410,9 +405,9 @@
     "route": "qemu.git"
   },
   {
-    "name": "qubesos",
+    "name": "qubes",
     "path": "2019-05-03-qubesos.md",
-    "route": "qubesos"
+    "route": "qubes"
   },
   {
     "name": "raspbian",
