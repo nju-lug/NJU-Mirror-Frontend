@@ -38,17 +38,23 @@ export async function fetchEntries(): Promise<Array<SyncEntry>> {
   });
 
   const addition: Array<AdditionEntry> = res2.data;
-  const addEntries = addition.map(value => {
-    const parent = entries.find(value1 => value.inherit == value1.name);
-    return <SyncEntry>{
-      name: value.name,
-      status: value.status || parent?.status || 'unknown',
-      path: value.path,
-      route: value.route,
-      lastUpdate: value.lastUpdate || parent?.lastUpdate || '-',
-      nextUpdate: value.nextUpdate || parent?.nextUpdate || '-',
-      size: value.size || '-',
-    };
-  });
+  const addEntries = [];
+  for (const entry of addition) {
+    const o = entries.findIndex(value => value.name == entry.name);
+    if (o != -1) {
+      entries[o] = {...entries[o], ...entry};
+      continue;
+    }
+    const parent = entries.find(value => entry.inherit == value.name);
+    addEntries.push(<SyncEntry>{
+      name: entry.name,
+      status: entry.status || parent?.status || 'unknown',
+      path: entry.path,
+      route: entry.route,
+      lastUpdate: entry.lastUpdate || parent?.lastUpdate || '-',
+      nextUpdate: entry.nextUpdate || parent?.nextUpdate || '-',
+      size: entry.size || '-',
+    });
+  }
   return [...entries, ...addEntries];
 }
