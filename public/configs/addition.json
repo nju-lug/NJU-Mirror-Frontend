@@ -118,5 +118,23 @@
     "inherit": null,
     "status":"cache",
     "route": "/help/docker-hub"
+  },
+  {
+    "name": "go",
+    "inherit": null,
+    "status":"cache",
+    "path": "https://repo.nju.edu.cn/repository/go/"
+  },
+  {
+    "name": "maven",
+    "inherit": null,
+    "status":"cache",
+    "path": "https://repo.nju.edu.cn/repository/maven/"
+  },
+  {
+    "name": "npm",
+    "inherit": null,
+    "status":"cache",
+    "path": "https://repo.nju.edu.cn/repository/npm/"
   }
 ]
