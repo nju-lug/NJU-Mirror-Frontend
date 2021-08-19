@@ -33,6 +33,7 @@ deb https://mirror.nju.edu.cn/kubernetes/apt kubernetes-{{release_name}} main
 
 ### RHEL/CentOS 用户
 
+以 CentOS 7 为例，
 新建 `/etc/yum.repos.d/kubernetes.repo`，内容为：
 
 ```

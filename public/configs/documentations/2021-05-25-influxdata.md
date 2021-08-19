@@ -36,14 +36,14 @@ sudo apt install influxdb
 以 CentOS 8 为例，
 新建 `/etc/yum.repos.d/influxdb.repo`，内容为
 
-``
+```
 [influxdb]
 name = InfluxDB Repository - RHEL $releasever
 baseurl=https://mirror.nju.edu.cn/influxdata/yum/el8-x86_64
 enabled=1
 gpgcheck=1
 gpgkey = https://mirror.nju.edu.cn/influxdata/influxdb.key
-``
+```
 再执行
 
 ```shell
