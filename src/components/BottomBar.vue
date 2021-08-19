@@ -18,12 +18,33 @@
             <el-link href="https://git.nju.edu.cn/nju-lug">NJU LUG</el-link>
             制作
           </el-row>
+          <el-row>
+            部分文档参考自
+            <el-link href="https://github.com/tuna/mirror-web">tuna</el-link>
+            并同样以GPLv2协议开源
+          </el-row>
         </el-col>
         <el-col :span="8" align="right">
           <el-row>
-            <el-link icon="el-icon-message" href="mailto:git+nju-lug-nju-mirror-frontend-2901-issue-@yaoge123.cn">
-              反馈Bug
-            </el-link>
+            <el-dropdown trigger="click" @command="redirect">
+              <span class="el-dropdown-link">
+                <i class="el-icon-message"/>
+                反馈问题
+                <i class="el-icon-arrow-down el-icon--right"/>
+              </span>
+              <el-dropdown-menu slot="dropdown">
+                <el-dropdown-item icon="el-icon-edit-outline"
+                                  command="https://github.com/nju-lug/NJU-Mirror-Issue">
+                  镜像Bug
+                </el-dropdown-item>
+                <el-dropdown-item icon="el-icon-edit-outline"
+                                  command="https://github.com/nju-lug/NJU-Mirror-Frontend/issues">
+                  前端Bug
+                </el-dropdown-item>
+              </el-dropdown-menu>
+            </el-dropdown>
+          </el-row>
+          <el-row>
           </el-row>
           <el-row>
             <el-link icon="el-icon-male" href="https://git.nju.edu.cn/nju-lug">
@@ -45,6 +66,12 @@ export default Vue.extend({
   computed: {
     isMobile(): boolean {
       return this.$store.state.isMobile;
+    }
+  },
+  methods: {
+    redirect(url: string) {
+      console.log(url);
+      window.location.href = url;
     }
   }
 });
@@ -69,5 +96,13 @@ span {
 
 .el-row {
   margin-bottom: 10px;
+}
+
+.el-dropdown-link {
+  cursor: pointer;
+}
+
+.el-icon-arrow-down {
+  font-size: 12px;
 }
 </style>
