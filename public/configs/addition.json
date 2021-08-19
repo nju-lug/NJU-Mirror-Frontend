@@ -24,9 +24,117 @@
     "inherit": "osdn"
   },
   {
-    "name": "Docker Hub",
+    "name": "FreeCAD",
+    "inherit": "github-release",
+    "path": "/github-release/FreeCAD/FreeCAD/"
+  },
+  {
+    "name": "stellarium",
+    "inherit": "github-release",
+    "path": "/github-release/Stellarium/stellarium/"
+  },
+  {
+    "name": "vscodium",
+    "inherit": "github-release",
+    "path": "/github-release/VSCodium/vscodium/"
+  },
+  {
+    "name": "etcher",
+    "inherit": "github-release",
+    "path": "/github-release/balena-io/etcher/"
+  },
+  {
+    "name": "cmder",
+    "inherit": "github-release",
+    "path": "/github-release/cmderdev/cmder/"
+  },
+  {
+    "name": "miniforge",
+    "inherit": "github-release",
+    "path": "/github-release/conda-forge/miniforge/"
+  },
+  {
+    "name": "git-for-windows",
+    "inherit": "github-release",
+    "path": "/github-release/git-for-windows/git/"
+  },
+  {
+    "name": "harbor",
+    "inherit": "github-release",
+    "path": "/github-release/goharbor/harbor/"
+  },
+  {
+    "name": "googlefonts",
+    "inherit": "github-release",
+    "path": "/github-release/googlefonts/"
+  },
+  {
+    "name": "minikube",
+    "inherit": "github-release",
+    "path": "/github-release/kubernetes/minikube/"
+  },
+  {
+    "name": "KataGo",
+    "inherit": "github-release",
+    "path": "/github-release/lightvector/KataGo/"
+  },
+  {
+    "name": "llvm-binary",
+    "inherit": "github-release",
+    "path": "/github-release/llvm/llvm-project/"
+  },
+  {
+    "name": "obs-studio",
+    "inherit": "github-release",
+    "path": "/github-release/obsproject/obs-studio/"
+  },
+  {
+    "name": "orchestrator",
+    "inherit": "github-release",
+    "path": "/github-release/openark/orchestrator/"
+  },
+  {
+    "name": "rufus",
+    "inherit": "github-release",
+    "path": "/github-release/pbatard/rufus/"
+  },
+  {
+    "name": "prometheus",
+    "inherit": "github-release",
+    "path": "/github-release/prometheus/"
+  },
+  {
+    "name": "rust-analyzer",
+    "inherit": "github-release",
+    "path": "/github-release/rust-analyzer/rust-analyzer/"
+  },
+  {
+    "name": "texstudio",
+    "inherit": "github-release",
+    "path": "/github-release/texstudio-org/texstudio/"
+  },
+  {
+    "name": "docker-hub",
     "inherit": null,
-    "status":"success",
+    "status":"cache",
     "route": "/help/dockerhub"
+  },
+  {
+    "name": "go",
+    "inherit": null,
+    "status":"cache",
+    "path": "https://repo.nju.edu.cn/repository/go/"
+  },
+  {
+    "name": "maven",
+    "inherit": null,
+    "status":"cache",
+    "path": "https://repo.nju.edu.cn/repository/maven/"
+  },
+  {
+    "name": "npm",
+    "inherit": null,
+    "status":"cache",
+    "path": "https://repo.nju.edu.cn/repository/npm/"
   }
 ]
