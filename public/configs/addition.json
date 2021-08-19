@@ -114,6 +114,118 @@
     "path": "/github-release/texstudio-org/texstudio/"
   },
   {
+    "name": "aosp",
+    "path": "/git/aosp"
+  },
+  {
+    "name": "binutils-gdb.git",
+    "path": "/git/binutils-gdb.git"
+  },
+  {
+    "name": "boost.git",
+    "path": "/git/boost.git"
+  },
+  {
+    "name": "brew.git",
+    "path": "/git/brew.git"
+  },
+  {
+    "name": "CMake.git",
+    "path": "/git/CMake.git"
+  },
+  {
+    "name": "CocoaPods",
+    "path": "/git/CocoaPods"
+  },
+  {
+    "name": "crates.io-index.git",
+    "path": "/git/crates.io-index.git"
+  },
+  {
+    "name": "emacs.git",
+    "path": "/git/emacs.git"
+  },
+  {
+    "name": "flutter-sdk.git",
+    "path": "/git/flutter-sdk.git"
+  },
+  {
+    "name": "gcc.git",
+    "path": "/git/gcc.git"
+  },
+  {
+    "name": "gentoo-portage.git",
+    "path": "/git/gentoo-portage.git"
+  },
+  {
+    "name": "git-repo",
+    "path": "/git/git-repo"
+  },
+  {
+    "name": "glibc.git",
+    "path": "/git/glibc.git"
+  },
+  {
+    "name": "hdf5.git",
+    "path": "/git/hdf5.git"
+  },
+  {
+    "name": "homebrew",
+    "path": "/git/homebrew"
+  },
+  {
+    "name": "homebrew-cask.git",
+    "path": "/git/homebrew-cask.git"
+  },
+  {
+    "name": "homebrew-cask-versions.git",
+    "path": "/git/homebrew-cask-versions.git"
+  },
+  {
+    "name": "homebrew-core.git",
+    "path": "/git/homebrew-core.git"
+  },
+  {
+    "name": "linuxbrew-core.git",
+    "path": "/git/linuxbrew-core.git"
+  },
+  {
+    "name": "linux-firmware.git",
+    "path": "/git/linux-firmware.git"
+  },
+  {
+    "name": "linux.git",
+    "path": "/git/linux.git"
+  },
+  {
+    "name": "linux-next.git",
+    "path": "/git/linux-next.git"
+  },
+  {
+    "name": "linux-stable.git",
+    "path": "/git/linux-stable.git"
+  },
+  {
+    "name": "llvm",
+    "path": "/git/llvm"
+  },
+  {
+    "name": "llvm-project.git",
+    "path": "/git/llvm-project.git"
+  },
+  {
+    "name": "nixpkgs.git",
+    "path": "/git/nixpkgs.git"
+  },
+  {
+    "name": "open-mpi.git",
+    "path": "/git/open-mpi.git"
+  },
+  {
+    "name": "qemu.git",
+    "path": "/git/qemu.git"
+  },
+  {
     "name": "docker-hub",
     "inherit": null,
     "status":"cache",
