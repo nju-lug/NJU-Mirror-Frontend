@@ -1,8 +1,3 @@
----
-category: help
-layout: help
-mirrorid: nodesource
----
 
 ## Nodesource 镜像使用帮助
 
@@ -21,6 +16,6 @@ curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
 
 编辑 `/etc/apt/sources.list.d/nodesource.list`，把
 `https://deb.nodesource.com/node/` 替换为
-`https://{{ site.hostname }}/nodesource/deb/` 即可。
+`https://mirror.nju.edu.cn/nodesource/deb/` 即可。
 
-如果是 `https://deb.nodesource.com/node_10.x/` ，则改为 `https://{{ site.hostname }}/nodesource/deb_10.x/` 。
+如果是 `https://deb.nodesource.com/node_10.x/` ，则改为 `https://mirror.nju.edu.cn/nodesource/deb_10.x/` 。

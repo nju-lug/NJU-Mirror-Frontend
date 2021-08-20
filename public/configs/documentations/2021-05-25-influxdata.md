@@ -1,8 +1,3 @@
----
-category: help
-layout: help
-mirrorid: influxdata
----
 
 ## Influxdata 镜像帮助
 
@@ -18,34 +13,19 @@ curl -s https://repos.influxdata.com/influxdb.key | sudo apt-key add -
 
 将下方文本框中的内容写入 `/etc/apt/sources.list.d/influxdb.list`
 
-<form class="form-inline">
-<div class="form-group">
-	<label>你的 Debian / Ubuntu 版本: </label>
-	<select class="form-control release-select" data-template="#apt-template" data-target="#apt-content">
-		<option data-os="debian" data-release="jessie">Debian 8 (Jessie)</option>
-		<option data-os="debian" data-release="stretch">Debian 9 (Stretch)</option>
-		<option data-os="debian" data-release="buster">Debian 10 (Buster)</option>
-		<option data-os="ubuntu" data-release="trusty">Ubuntu 14.04 LTS</option>
-		<option data-os="ubuntu" data-release="xenial">Ubuntu 16.04 LTS</option>
-		<option data-os="ubuntu" data-release="bionic">Ubuntu 18.04 LTS</option>		
-		<option data-os="ubuntu" data-release="focal" selected>Ubuntu 20.04 LTS</option>
-</select>
-</div>
-</form>
+|  版本 | {{os_name}} | {{release_name}} | 
+| :----: | :----: | :----: |
+| Debian 8   | debian |  jessie         | 
+| Debian 9   | debian |  stretch        | 
+| Debian 10  | debian |  buster         | 
+| Ubuntu 14.04 LTS | ubuntu | trusty |
+| Ubuntu 16.04 LTS | ubuntu | xenial |
+| Ubuntu 18.04 LTS | ubuntu | bionic |
+| Ubuntu 20.04 LTS | ubuntu | focal |
 
-<p></p>
-<pre>
-<code id="apt-content">
-</code>
-</pre>
-
-
-{% raw %}
-<script id="apt-template" type="x-tmpl-markup">
-deb https://{%endraw%}{{ site.hostname }}{%raw%}/influxdata/{{os_name}}/ {{release_name}} stable
-</script>
-{%endraw%}
-
+```
+deb https://mirror.nju.edu.cn/influxdata/{{os_name}}/ {{release_name}} stable
+```
 即可安装相关软件，如：
 
 ```shell
@@ -53,38 +33,17 @@ sudo apt install influxdb
 ```
 
 ### Centos / Redhat 用户
-
+以 CentOS 8 为例，
 新建 `/etc/yum.repos.d/influxdb.repo`，内容为
 
-<form class="form-inline">
-<div class="form-group">
-	<label>你的 CentOS / RHEL 版本: </label>
-	<select class="form-control release-select" data-template="#yum-template" data-target="#yum-content">
-		<option data-release="el6-x86_64">6</option>
-		<option data-release="el7-x86_64">7</option>
-		<option data-release="el8-x86_64">8 / Stream</option>
-	</select>
-</div>
-</form>
-
-<p></p>
-<pre>
-<code id="yum-content">
-</code>
-</pre>
-
-
-{% raw %}
-<script id="yum-template" type="x-tmpl-markup">
+```
 [influxdb]
 name = InfluxDB Repository - RHEL $releasever
-baseurl=https://{%endraw%}{{ site.hostname }}{%raw%}/influxdata/yum/{{release_name}}
+baseurl=https://mirror.nju.edu.cn/influxdata/yum/el8-x86_64
 enabled=1
 gpgcheck=1
-gpgkey = https://{%endraw%}{{ site.hostname }}{%raw%}/influxdata/influxdb.key
-</script>
-{% endraw %}
-
+gpgkey = https://mirror.nju.edu.cn/influxdata/influxdb.key
+```
 再执行
 
 ```shell

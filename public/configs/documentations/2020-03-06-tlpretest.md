@@ -1,8 +1,3 @@
----
-category: help
-layout: help
-mirrorid: tlpretest
----
 
 tlpretest 镜像使用帮助
 ===================
@@ -14,7 +9,7 @@ tlpretest 是 TeX Live 在官方镜像之外发布的测试版本，详情可见
 在命令行中执行：
 
 ```
-tlmgr option repository https://{{ site.hostname }}/tlpretest
+tlmgr option repository https://mirror.nju.edu.cn/tlpretest
 ```
 
 即可永久更改镜像源。
@@ -22,7 +17,7 @@ tlmgr option repository https://{{ site.hostname }}/tlpretest
 如果只需要临时切换，可以用如下命令：
 
 ```
-tlmgr update --all --repository https://{{ site.hostname }}/tlpretest
+tlmgr update --all --repository https://mirror.nju.edu.cn/tlpretest
 ```
 
 其中的 `update --all` 指令可根据需要修改。

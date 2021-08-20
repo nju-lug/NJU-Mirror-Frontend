@@ -1,8 +1,3 @@
----
-category: help
-layout: help
-mirrorid: OpenMediaVault
----
 
 ## OpenMediaVault 镜像使用帮助
 
@@ -15,14 +10,14 @@ Open Media Vault 是一款基于 Debian 的 NAS 操作系统，本站提供 Open
 登录到已经部署的 Open Media Vault 使用如下命令可以替换 Open Media Vault 镜像源。
 
 ```bash
-omv-env set OMV_APT_REPOSITORY_URL "https://{{ site.hostname }}/OpenMediaVault/public"
-omv-env set OMV_APT_ALT_REPOSITORY_URL "https://{{ site.hostname }}/OpenMediaVault/packages"
-omv-env set OMV_APT_KERNEL_BACKPORTS_REPOSITORY_URL "https://{{ site.hostname }}/debian"
-omv-env set OMV_APT_SECURITY_REPOSITORY_URL "https://{{ site.hostname }}/debian-security"
+omv-env set OMV_APT_REPOSITORY_URL "https://mirror.nju.edu.cn/OpenMediaVault/public"
+omv-env set OMV_APT_ALT_REPOSITORY_URL "https://mirror.nju.edu.cn/OpenMediaVault/packages"
+omv-env set OMV_APT_KERNEL_BACKPORTS_REPOSITORY_URL "https://mirror.nju.edu.cn/debian"
+omv-env set OMV_APT_SECURITY_REPOSITORY_URL "https://mirror.nju.edu.cn/debian-security"
 # 如果你有安装 omv-extras 则需要运行如下命令更改源
-omv-env set OMV_EXTRAS_APT_REPOSITORY_URL "https://{{ site.hostname }}/OpenMediaVault/openmediavault-plugin-developers"
-omv-env set OMV_DOCKER_APT_REPOSITORY_URL "https://{{ site.hostname }}/docker-ce/linux/debian"
-omv-env set OMV_PROXMOX_APT_REPOSITORY_URL "https://{{ site.hostname }}/proxmox/debian"
+omv-env set OMV_EXTRAS_APT_REPOSITORY_URL "https://mirror.nju.edu.cn/OpenMediaVault/openmediavault-plugin-developers"
+omv-env set OMV_DOCKER_APT_REPOSITORY_URL "https://mirror.nju.edu.cn/docker-ce/linux/debian"
+omv-env set OMV_PROXMOX_APT_REPOSITORY_URL "https://mirror.nju.edu.cn/proxmox/debian"
 # 使得环境变量更改生效
 omv-salt stage run all
 ```
@@ -38,15 +33,15 @@ omv-salt stage run all
 
 ```bash
 cat <<EOF > /etc/apt/sources.list.d/openmediavault.list
-deb https://{{ site.hostname }}/OpenMediaVault/public usul main
-deb https://{{ site.hostname }}/OpenMediaVault/packages usul main
+deb https://mirror.nju.edu.cn/OpenMediaVault/public usul main
+deb https://mirror.nju.edu.cn/OpenMediaVault/packages usul main
 ## Uncomment the following line to add software from the proposed repository.
-# deb https://{{ site.hostname }}/OpenMediaVault/public usul-proposed main
-# deb https://{{ site.hostname }}/OpenMediaVault/packages usul-proposed main
+# deb https://mirror.nju.edu.cn/OpenMediaVault/public usul-proposed main
+# deb https://mirror.nju.edu.cn/OpenMediaVault/packages usul-proposed main
 ## This software is not part of OpenMediaVault, but is offered by third-party
 ## developers as a service to OpenMediaVault users.
-# deb https://{{ site.hostname }}/OpenMediaVault/public usul partner
-# deb https://{{ site.hostname }}/OpenMediaVault/packages usul partner
+# deb https://mirror.nju.edu.cn/OpenMediaVault/public usul partner
+# deb https://mirror.nju.edu.cn/OpenMediaVault/packages usul partner
 EOF
 ```
 

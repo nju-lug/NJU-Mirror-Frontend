@@ -1,8 +1,3 @@
----
-category: help
-layout: help
-mirrorid: kubernetes
----
 
 ## Kubernetes 镜像使用帮助
 
@@ -22,43 +17,32 @@ $ curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key a
 新建 `/etc/apt/sources.list.d/kubernetes.list`，内容为
 
 
-<form class="form-inline">
-<div class="form-group">
-	<label>你的Debian版本: </label>
-	<select class="form-control release-select" data-template="#apt-template" data-target="#apt-content">
-		<option data-os="ubuntu" data-release="trusty">Ubuntu 14.04 LTS</option>
-		<option data-os="ubuntu" data-release="xenial">Ubuntu 16.04 LTS</option>
-		<option data-os="debian" data-release="jessie">Debian 8 (Jessie)</option>
-		<option data-os="debian" data-release="stretch" selected>Debian 9 (Stretch)</option>
-</select>
-</div>
-</form>
+```
+deb https://mirror.nju.edu.cn/kubernetes/apt kubernetes-{{release_name}} main
+```
 
-<p></p>
-<pre>
-<code id="apt-content">
-</code>
-</pre>
-
-
-{% raw %}
-<script id="apt-template" type="x-tmpl-markup">
-deb https://{%endraw%}{{ site.hostname }}{%raw%}/kubernetes/apt kubernetes-{{release_name}} main
-</script>
-{%endraw%}
-
+|  版本 | {{os_name}} | {{release_name}} | 
+| :----: | :----: | :----: |
+| Debian 8   | debian |  jessie         | 
+| Debian 9   | debian |  stretch        | 
+| Debian 10  | debian |  buster         | 
+| Ubuntu 14.04 LTS | ubuntu | trusty |
+| Ubuntu 16.04 LTS | ubuntu | xenial |
+| Ubuntu 18.04 LTS | ubuntu | bionic |
+| Ubuntu 20.04 LTS | ubuntu | focal |
 
 ### RHEL/CentOS 用户
 
+以 CentOS 7 为例，
 新建 `/etc/yum.repos.d/kubernetes.repo`，内容为：
 
 ```
 [kubernetes]
 name=kubernetes
-baseurl=https://{{ site.hostname }}/kubernetes/yum/repos/kubernetes-el7-$basearch
+baseurl=https://mirror.nju.edu.cn/kubernetes/yum/repos/kubernetes-el7-$basearch
 enabled=1
 ```
 
 ### Minikube
 
-请到 [minikube 镜像](https://{{ site.hostname }}/github-release/kubernetes/minikube/LatestRelease/) 下载。
+请到 [minikube 镜像](https://mirror.nju.edu.cn/github-release/kubernetes/minikube/LatestRelease/) 下载。

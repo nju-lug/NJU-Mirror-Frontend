@@ -229,7 +229,7 @@
     "name": "docker-hub",
     "inherit": null,
     "status":"cache",
-    "route": "/help/dockerhub"
+    "route": "/help/docker-hub"
   },
   {
     "name": "go",

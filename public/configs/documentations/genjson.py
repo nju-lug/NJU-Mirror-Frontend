@@ -16,7 +16,7 @@ for name in names:
     file = docs[name]
     print('  {')
     print('    "name": "%s",' % name)
-    print('    "path": "%s",' % path)
+    print('    "path": "%s",' % file)
     print('    "route": "%s"' % route)
     print('  },')
 print(']')

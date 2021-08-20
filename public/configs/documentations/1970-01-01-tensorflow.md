@@ -1,8 +1,3 @@
----
-category: help
-layout: help
-mirrorid: tensorflow
----
 
 # TensorFlow 镜像使用帮助
 

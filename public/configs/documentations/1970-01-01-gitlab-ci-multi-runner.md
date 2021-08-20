@@ -1,13 +1,8 @@
----
-category: help
-layout: help
-mirrorid: gitlab-ci-multi-runner
----
 
 ## Gitlab CI Multi Runner 镜像使用帮助
 
 **注意: gitlab-ci-multi-runner 已停止更新。** 如果你需要安装版本 10 及以上的
-Runner，由于官方名称发生变化，请前往 [gitlab-runner帮助页面](https://{{ site.hostname }}/help/gitlab-runner/)。
+Runner，由于官方名称发生变化，请前往 [gitlab-runner帮助页面](https://mirror.nju.edu.cn/help/gitlab-runner/)。
 
 
 ### Debian/Ubuntu 用户
@@ -22,23 +17,19 @@ curl https://packages.gitlab.com/gpg.key 2> /dev/null | sudo apt-key add - &>/de
 
 再选择你的 Debian/Ubuntu 版本，文本框中内容写进 `/etc/apt/sources.list.d/gitlab-ci-multi-runner.list`
 
-<form class="form-inline">
-<div class="form-group">
-	<label>你的Debian/Ubuntu版本: </label>
-	<select class="form-control release-select" data-template="#apt-template" data-target="#apt-content">
-		<option data-os="debian" data-release="jessie">Debian 8 (Jessie)</option>
-		<option data-os="debian" data-release="stretch" selected>Debian 9 (Stretch)</option>
-		<option data-os="ubuntu" data-release="trusty">Ubuntu 14.04 LTS</option>
-		<option data-os="ubuntu" data-release="xenial">Ubuntu 16.04 LTS</option>
-	</select>
-</div>
-</form>
+|  版本 | {{os_name}} | {{release_name}} | 
+| :----: | :----: | :----: |
+| Debian 8   | debian |  jessie         | 
+| Debian 9   | debian |  stretch        | 
+| Debian 10  | debian |  buster         | 
+| Ubuntu 14.04 LTS | ubuntu | trusty |
+| Ubuntu 16.04 LTS | ubuntu | xenial |
+| Ubuntu 18.04 LTS | ubuntu | bionic |
 
-<p></p>
-<pre>
-<code id="apt-content">
-</code>
-</pre>
+```
+deb http://mirror.nju.edu.cn/gitlab-ci-multi-runner/{{os_name}} {{release_name}} main
+```
+### CentOS/RHEL
 
 
 安装 gitlab-ci-multi-runner:
@@ -47,14 +38,6 @@ curl https://packages.gitlab.com/gpg.key 2> /dev/null | sudo apt-key add - &>/de
 sudo apt-get update
 sudo apt-get install gitlab-ci-multi-runner
 ```
-
-{% raw %}
-<script id="apt-template" type="x-tmpl-markup">
-deb {{if os_name|equals>ubuntu}}https{{else}}http{{/if}}://{%endraw%}{{ site.hostname }}{%raw%}/gitlab-ci-multi-runner/{{os_name}} {{release_name}} main
-</script>
-{%endraw%}
-
-### CentOS/RHEL
 
 本镜像仅支持 x86-64 架构。
 
@@ -90,7 +73,7 @@ sudo yum install gitlab-ci-multi-runner
 <script id="yum-template" type="x-tmpl-markup">
 [gitlab-ci-multi-runner]
 name=gitlab-ci-multi-runner
-baseurl=https://{%endraw%}{{ site.hostname }}{%raw%}/gitlab-ci-multi-runner/yum/{{release_name}}
+baseurl=https://{%endraw%}mirror.nju.edu.cn{%raw%}/gitlab-ci-multi-runner/yum/{{release_name}}
 repo_gpgcheck=0
 gpgcheck=0
 enabled=1

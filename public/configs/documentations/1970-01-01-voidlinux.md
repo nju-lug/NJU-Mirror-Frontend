@@ -1,8 +1,3 @@
----
-category: help
-layout: help
-mirrorid: voidlinux
----
 
 # Voidlinux 镜像使用帮助
 
@@ -11,7 +6,7 @@ mirrorid: voidlinux
 ```
 # mkdir -p /etc/xbps.d
 # cp /usr/share/xbps.d/*-repository-*.conf /etc/xbps.d/
-# sed -i 's|https://alpha.de.repo.voidlinux.org|https://{{ site.hostname }}/voidlinux|g' /etc/xbps.d/*-repository-*.conf
+# sed -i 's|https://alpha.de.repo.voidlinux.org|https://mirror.nju.edu.cn/voidlinux|g' /etc/xbps.d/*-repository-*.conf
 ```
 
 之后可用 `xbps-query -L` 检查是否正确替换。
