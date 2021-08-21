@@ -218,6 +218,10 @@
     "path": "/git/nixpkgs.git"
   },
   {
+    "name": "ohmyzsh.git",
+    "path": "/git/ohmyzsh.git"
+  },
+  {
     "name": "open-mpi.git",
     "path": "/git/open-mpi.git"
   },
