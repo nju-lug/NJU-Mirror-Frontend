@@ -1,6 +1,5 @@
 
-tlpretest 镜像使用帮助
-===================
+## tlpretest 镜像使用帮助
 
 tlpretest 是 TeX Live 在官方镜像之外发布的测试版本，详情可见 [官方介绍](https://www.tug.org/texlive/pretest.html)。
 

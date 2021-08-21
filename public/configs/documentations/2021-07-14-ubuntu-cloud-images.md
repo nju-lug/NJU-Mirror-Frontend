@@ -1,6 +1,5 @@
 
-ubuntu-cloud-images 镜像使用指南
-===================
+## ubuntu-cloud-images 镜像使用指南
 
 收录官方的云 Ubuntu 镜像，由 Canonical 定制，提供 Ubuntu 认证镜像，可 Openstack、LXD 等的公共云上运行。
 
