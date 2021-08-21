@@ -1,10 +1,8 @@
----
-
 ## Chromium OS 镜像使用帮助
 
 > Chromium OS is an open-source project that aims to build an operating system that provides a fast, simple, and more secure computing experience for people who spend most of their time on the web.
 
-#### 准备工作
+### 准备工作
 
 下载 repo 工具:
 
@@ -17,7 +15,7 @@ chmod a+x ~/bin/repo
 
 或者使用[git-repo镜像](https://mirror.nju.edu.cn/help/git-repo/)
 
-#### 下载代码
+### 下载代码
 
 建立工作目录:
 
@@ -59,7 +57,6 @@ repo init -u https://mirror.nju.edu.cn/git/chromiumos/chromiumos/manifest
 ```
 "https://mirror.nju.edu.cn/git/aosp"
 ```
-
 
 即可。
 

@@ -1,4 +1,3 @@
-
 ## Julia 二进制安装程序
 
 Julia 是一个全新的以科学计算为核心的通用编程语言，其二进制程序可以到 <https://mirror.nju.edu.cn/julia-releases/bin/> 下载。
@@ -9,7 +8,7 @@ Julia 是一个全新的以科学计算为核心的通用编程语言，其二�
 尽管一些包管理工具（例如 `apt`, `pacman`, `conda`, `choco`) 中提供有 Julia，但是这些工具或多或少都存在一些由二进制
 依赖导致的问题，因此官方推荐的方式是根据自己的使用平台下载相应的二进制程序，然后通过解压的方式进行手动安装。
 
-## Julia 一键安装
+### Julia 一键安装
 
 对于习惯命令行的用户而言，[jill.py](https://github.com/johnnychen94/jill.py) 是一个社区维护的全平台下一键安装
 Julia 的命令行工具。

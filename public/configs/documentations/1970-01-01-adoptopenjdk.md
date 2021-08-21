@@ -1,9 +1,8 @@
-
 ## AdoptOpenJDK 镜像使用帮助
 
 ### Windows/macOS 用户
 
-打开[下载页面](https://mirror.nju.edu.cn/AdoptOpenJDK/)，选择所需的版本，下载独立安装包。
+打开 [下载页面](https://mirror.nju.edu.cn/AdoptOpenJDK/) ，选择所需的版本，下载独立安装包。
 
 ### Debian/Ubuntu 用户
 
@@ -19,6 +18,7 @@ wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | sudo 
 deb http://mirror.nju.edu.cn/AdoptOpenJDK/deb buster main # Debian 10(Buster)
 deb https://mirror.nju.edu.cn/AdoptOpenJDK/deb focal main # Ubuntu 20.04
 ```
+
 再执行
 
 ```

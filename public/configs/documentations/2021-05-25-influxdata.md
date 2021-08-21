@@ -1,4 +1,3 @@
-
 ## Influxdata 镜像帮助
 
 本目录是 `influxdb` ， `telegraf` 等时序型数据库的相关组件的镜像软件源。

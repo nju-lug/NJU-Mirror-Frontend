@@ -1,20 +1,19 @@
-
-# VirtualBox 镜像使用帮助
+## VirtualBox 镜像使用帮助
 
 [Oracle Virtualbox](https://www.virtualbox.org/) VirtualBox 是一款开源虚拟机软件。由德国 Innotek 公司开发，Sun Microsystems 公司出品。使用Qt编写，在 Sun 被 Oracle 收购后正式更名成 Oracle VM VirtualBox。采用 GPL 协议开源。
 
-## Microsoft Windows
+### Microsoft Windows
 
 [点击下载 Windows 最新版](https://mirror.nju.edu.cn/virtualbox/virtualbox-Win-latest.exe)
 
 
-## Macintosh OS X
+### Macintosh OS X
 
 [点击下载 OS X 最新版](https://mirror.nju.edu.cn/virtualbox/virtualbox-osx-latest.dmg)
 
-# Linux
+### Linux
 
-## 通过编译好的二进制包安装
+#### 通过编译好的二进制包安装
 
 访问该镜像下最新的目录（例如`5.0.24`），找到名为<发行版名称>~<发行代号>~<架构> 的文件。
 如 `virtualbox-5.0_5.0.24-108355~Ubuntu~xenial_i386.deb` 下载安装即可。
@@ -30,9 +29,9 @@
 
 如果您所使用的发行版不在上述列表之内，请下载通用的`run`文件（例如`VirtualBox-5.0.24-108355-Linux_x86.run`），然后使用 `chmod +x` 给予执行权限后，直接安装即可。
 
-### 通过包管理器安装
+#### 通过包管理器安装
 
-#### Debian / Ubuntu 用户
+##### Debian / Ubuntu 用户
 
 首先信任 Virtualbox 的 GPG 公钥：
 
@@ -83,7 +82,7 @@ sudo apt-get update
 sudo apt-get install virtualbox-5.0
 ```
 
-### RHEL/CentOS 用户
+##### RHEL/CentOS 用户
 
 
 新建 `/etc/yum.repos.d/virtualbox.repo`，内容为

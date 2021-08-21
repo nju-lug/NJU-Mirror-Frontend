@@ -1,4 +1,3 @@
-
 ## Lineage 介绍
 
 Lineage OS 是全球最大的 Android 发行版之一，前身是 Cyanogenmod。

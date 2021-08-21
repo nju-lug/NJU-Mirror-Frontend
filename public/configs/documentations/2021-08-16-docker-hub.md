@@ -1,6 +1,5 @@
 ## Docker Hub 源使用帮助
 
-
 ### Linux
 
 在配置文件 `/etc/docker/daemon.json` 中加入：
@@ -20,5 +19,3 @@
 3. 打开 \"Advanced\" 选项卡
 4. 在 \"Registry mirrors\" 中添加 `https://docker.nju.edu.cn/`
 5. 点击下方的 \"Restart\" 按钮
-
-

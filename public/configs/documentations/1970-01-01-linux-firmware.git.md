@@ -1,4 +1,3 @@
-
 ## Linux 固件仓库 Git 镜像使用帮助
 
 如需克隆 Linux 固件仓库，使用
@@ -20,5 +19,3 @@ git remote set-url origin https://mirror.nju.edu.cn/git/linux-firmware.git
 ```
 
 将默认上游设置为 NJU 镜像。
-
-

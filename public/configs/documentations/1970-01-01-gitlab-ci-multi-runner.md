@@ -1,9 +1,7 @@
-
 ## Gitlab CI Multi Runner 镜像使用帮助
 
 **注意: gitlab-ci-multi-runner 已停止更新。** 如果你需要安装版本 10 及以上的
 Runner，由于官方名称发生变化，请前往 [gitlab-runner帮助页面](https://mirror.nju.edu.cn/help/gitlab-runner/)。
-
 
 ### Debian/Ubuntu 用户
 
@@ -15,7 +13,7 @@ Runner，由于官方名称发生变化，请前往 [gitlab-runner帮助页面](
 curl https://packages.gitlab.com/gpg.key 2> /dev/null | sudo apt-key add - &>/dev/null
 ```
 
-再选择你的 Debian/Ubuntu 版本，文本框中内容写进 `/etc/apt/sources.list.d/gitlab-ci-multi-runner.list`
+根据你的 Debian/Ubuntu 版本，文本框中内容写进 `/etc/apt/sources.list.d/gitlab-ci-multi-runner.list`
 
 |  版本 | {{os_name}} | {{release_name}} | 
 | :----: | :----: | :----: |
@@ -29,8 +27,8 @@ curl https://packages.gitlab.com/gpg.key 2> /dev/null | sudo apt-key add - &>/de
 ```
 deb http://mirror.nju.edu.cn/gitlab-ci-multi-runner/{{os_name}} {{release_name}} main
 ```
-### CentOS/RHEL
 
+### CentOS/RHEL
 
 安装 gitlab-ci-multi-runner:
 

@@ -1,7 +1,6 @@
-
 ## [Gentoo Linux](https://www.gentoo.org/) 的镜像配置方法如下：
 
-### Gentoo Portage 镜像配置：
+### Gentoo Portage 镜像配置
 
 #### `rsync` 方式
 

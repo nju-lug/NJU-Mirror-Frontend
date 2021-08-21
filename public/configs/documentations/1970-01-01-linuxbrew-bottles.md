@@ -1,7 +1,7 @@
-
 ## Linuxbrew-bottles 镜像使用帮助
 
-**注:该镜像是 Linuxbrew 二进制预编译包的镜像。本镜像站同时提供 Linuxbrew 的 formula 索引的镜像（即 `brew update` 时所更新内容），请参考 [Linuxbrew 镜像使用帮助](https://mirror.nju.edu.cn/help/homebrew/)。**
+**注:该镜像是 Linuxbrew 二进制预编译包的镜像。本镜像站同时提供 Linuxbrew 的 formula 索引的镜像（即 `brew update`
+时所更新内容），请参考 [Linuxbrew 镜像使用帮助](https://mirror.nju.edu.cn/help/homebrew/) 。**
 
 ### 临时替换
 

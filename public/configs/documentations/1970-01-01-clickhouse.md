@@ -1,16 +1,12 @@
-
 ## Clickhouse 镜像使用帮助
 
-
 ### Debian/Ubuntu 用户
-
 
 新建 `/etc/apt/sources.list.d/clickhouse.list`，内容为
 
 ```
 deb https://mirror.nju.edu.cn/clickhouse/deb/stable/ main/
 ```
-
 
 ### RHEL/CentOS 用户
 

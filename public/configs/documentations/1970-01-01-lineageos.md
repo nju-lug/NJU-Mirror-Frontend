@@ -1,5 +1,3 @@
----
-
 ## lineageOS 源代码镜像使用帮助
 
 **注意: 本镜像是 lineageOS 源代码的镜像，如果是希望下载lineage的rom，请访问 <https://mirror.nju.edu.cn/help/lineage-rom/>。**
@@ -35,49 +33,55 @@ repo init -u https://mirror.nju.edu.cn/git/lineageOS/LineageOS/android.git -b cm
 打开`.repo/manifest.xml`，将
 
 ```xml
-  <remote  name="github"
-           fetch=".."
-           review="review.lineageos.org" />
+
+<remote name="github"
+        fetch=".."
+        review="review.lineageos.org"/>
 
 ```
 
 改成
 
 ```xml
-  <remote  name="github"
-           fetch="https://github.com/" />
 
-  <remote  name="lineage"
-           fetch="https://mirror.nju.edu.cn/git/lineageOS/"
-           review="review.lineageos.org" />
+<remote name="github"
+        fetch="https://github.com/"/>
+
+<remote name="lineage"
+        fetch="https://mirror.nju.edu.cn/git/lineageOS/"
+        review="review.lineageos.org"/>
 ```
 
 将
 
 ```xml
-  <remote  name="aosp"
-           fetch="https://android.googlesource.com"
+
+<remote name="aosp"
+        fetch="https://android.googlesource.com"
 ```
 
 改成
 
 ```xml
-  <remote  name="aosp"
-           fetch="https://mirror.nju.edu.cn/git/AOSP"
+
+<remote name="aosp"
+        fetch="https://mirror.nju.edu.cn/git/AOSP"
 ```
 
 将
 
 ```xml
-  <default revision="..."
-           remote="github"
+
+<default revision="..."
+         remote="github"
 ```
 
 改成
 
 ```xml
-  <default revision="..."
-           remote="lineage"
+
+<default revision="..."
+         remote="lineage"
 ```
 
 同步源码树（以后只需执行这条命令来同步）：
@@ -87,5 +91,5 @@ repo sync
 ```
 
 ### 异常处理
-	
+
 1. 部分仓库例如`Lineage_framework_base`同步的时候会出现bundle错误，这时候可以使用命令`repo sync --no-clone-bundle`进行同步就没有问题了

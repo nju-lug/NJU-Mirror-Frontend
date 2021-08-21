@@ -1,5 +1,4 @@
-
-# OpenTHOS 源代码镜像使用帮助
+## OpenTHOS 源代码镜像使用帮助
 
 **注意: 本镜像是 OpenTHOS 源代码的镜像，如果是希望下载 OpenTHOS 的安装镜像，请访问 <https://mirror.nju.edu.cn/openthos/>。**
 

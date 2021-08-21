@@ -1,4 +1,3 @@
-
 ## PHP 包仓库 Packagist 索引镜像使用帮助
 
 执行以下命令即可将 Composer 默认仓库设置为本站：

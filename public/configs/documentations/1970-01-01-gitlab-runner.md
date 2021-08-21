@@ -1,4 +1,3 @@
-
 ## Gitlab Runner 镜像使用帮助
 
 **注意: gitlab-runner 镜像支持 x86-64 和 ARM64(aarch64) 架构**
@@ -11,7 +10,7 @@
 curl https://packages.gitlab.com/gpg.key 2> /dev/null | sudo apt-key add - &>/dev/null
 ```
 
-再选择你的 Debian/Ubuntu 版本，文本框中内容写进 `/etc/apt/sources.list.d/gitlab-runner.list`
+根据你的 Debian/Ubuntu 版本，文本框中内容写进 `/etc/apt/sources.list.d/gitlab-runner.list`
 
 |  版本 | {{os_name}} | {{release_name}} | 
 | :----: | :----: | :----: |
@@ -25,13 +24,13 @@ curl https://packages.gitlab.com/gpg.key 2> /dev/null | sudo apt-key add - &>/de
 ```
 deb http://mirror.nju.edu.cn/gitlab-runner/{{os_name}} {{release_name}} main
 ```
+
 安装 gitlab-runner:
 
 ```
 sudo apt-get update
 sudo apt-get install gitlab-runner
 ```
-
 
 ### CentOS/RHEL
 
