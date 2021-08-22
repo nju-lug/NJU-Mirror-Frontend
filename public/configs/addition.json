@@ -114,6 +114,36 @@
     "path": "/github-release/texstudio-org/texstudio/"
   },
   {
+    "name": "be5invis",
+    "inherit": "github-release",
+    "path": "/github-release/be5invis/"
+  },
+  {
+    "name": "PowerShell",
+    "inherit": "github-release",
+    "path": "/github-release/PowerShell/PowerShell/"
+  },
+  {
+    "name": "frp",
+    "inherit": "github-release",
+    "path": "/github-release/fatedier/frp/"
+  },
+  {
+    "name": "gephi",
+    "inherit": "github-release",
+    "path": "/github-release/gephi/gephi/"
+  },
+  {
+    "name": "PowerToys",
+    "inherit": "github-release",
+    "path": "/github-release/microsoft/PowerToys/"
+  },
+  {
+    "name": "Ventoy",
+    "inherit": "github-release",
+    "path": "/github-release/ventoy/Ventoy/"
+  },
+  {
     "name": "aosp",
     "path": "/git/aosp"
   },
