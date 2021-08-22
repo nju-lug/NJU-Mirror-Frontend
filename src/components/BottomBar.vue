@@ -36,7 +36,7 @@
               </span>
               <el-dropdown-menu slot="dropdown">
                 <el-dropdown-item icon="el-icon-edit-outline"
-                                  command="https://github.com/nju-lug/NJU-Mirror-Issue">
+                                  command="https://github.com/nju-lug/NJU-Mirror-Issue/issues">
                   镜像Bug
                 </el-dropdown-item>
                 <el-dropdown-item icon="el-icon-edit-outline"
