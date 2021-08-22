@@ -260,6 +260,22 @@
     "path": "/git/qemu.git"
   },
   {
+    "name": "scoop-nonportable.git",
+    "path": "/git/scoop-nonportable.git"
+  },
+  {
+    "name": "scoop-extras.git",
+    "path": "/git/scoop-extras.git"
+  },
+  {
+    "name": "scoop-main.git",
+    "path": "/git/scoop-main.git"
+  },
+  {
+    "name": "scoop-versions.git",
+    "path": "/git/scoop-versions.git"
+  },
+  {
     "name": "docker-hub",
     "inherit": null,
     "status":"cache",
