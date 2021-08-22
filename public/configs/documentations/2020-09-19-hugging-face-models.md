@@ -9,12 +9,13 @@
 注意：`transformers > 3.1.0` 的版本支持下面的 `mirror` 选项。
 
 只需在 `from_pretrained` 函数调用中添加 `mirror` 选项，如：
-
+<!--
 ```python
 AutoModel.from_pretrained('bert-base-uncased', mirror='tuna')
 ```
 
 目前内置的两个来源为 `tuna` 与 `bfsu`。此外，也可以显式提供镜像地址，如：
+-->
 
 ```python
 AutoModel.from_pretrained('bert-base-uncased', mirror='https://mirror.nju.edu.cn/hugging-face-models')

@@ -23,8 +23,7 @@
 * Ubuntu
 * Debian
 * Fedora
-* openSUSE
-* SUSE Linux Enterprise Server
+* openSUSE / SUSE Linux Enterprise Server
 * Oracle Linux / Red Hat Enterprise Linux / CentOS
 
 如果您所使用的发行版不在上述列表之内，请下载通用的`run`文件（例如`VirtualBox-5.0.24-108355-Linux_x86.run`），然后使用 `chmod +x` 给予执行权限后，直接安装即可。
@@ -47,33 +46,22 @@ wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-
 wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
 ```
 
-再选择你的 Debian/Ubuntu 版本，将文本框中内容写进`/etc/apt/sources.list.d/virtualbox.list`
+将文本框中内容写进`/etc/apt/sources.list.d/virtualbox.list`
 
-<form class="form-inline">
-<div class="form-group">
-  <label>你的Debian/Ubuntu版本: </label>
-  <select class="form-control release-select" data-template="#apt-template" data-target="#apt-content">
-	  <option data-os="debian" data-release="buster" selected>Debian 10 (Buster)</option>
-    <option data-os="debian" data-release="stretch">Debian 9 (Stretch)</option>
-    <option data-os="debian" data-release="jessie">Debian 8 (Jessie)</option>
-	  <option data-os="ubuntu" data-release="bionic">Ubuntu 18.04 LTS</option>
-    <option data-os="ubuntu" data-release="xenial">Ubuntu 16.04 LTS</option>
-    <option data-os="ubuntu" data-release="trusty">Ubuntu 14.04 LTS</option>
-  </select>
-</div>
-</form>
+```
+deb https://mirror.nju.edu.cn/virtualbox/apt/ {{release_name}} contrib
+```
+请根据 Debian/Ubuntu 版本自行替换 {{release_name}}
 
-<p></p>
-<pre>
-<code id="apt-content">
-</code>
-</pre>
-
-{% raw %}
-<script id="apt-template" type="x-tmpl-markup">
-deb {{if os_name|equals>ubuntu}}https{{else}}http{{/if}}://{%endraw%}mirror.nju.edu.cn{%raw%}/virtualbox/apt/ {{release_name}} contrib
-</script>
-{% endraw %}
+|  版本 | {{os_name}} | {{release_name}} | 
+| :----: | :----: | :----: |
+| Debian 8   | debian |  jessie         | 
+| Debian 9   | debian |  stretch        | 
+| Debian 10  | debian |  buster         | 
+| Ubuntu 14.04 LTS | ubuntu | trusty |
+| Ubuntu 16.04 LTS | ubuntu | xenial |
+| Ubuntu 18.04 LTS | ubuntu | bionic |
+| Ubuntu 20.04 LTS | ubuntu | focal |
 
 安装 VirtualBox:
 
