@@ -19,3 +19,11 @@
 3. 打开 \"Advanced\" 选项卡
 4. 在 \"Registry mirrors\" 中添加 `https://docker.nju.edu.cn/`
 5. 点击下方的 \"Restart\" 按钮
+
+### Docker Desktop
+
+各平台都一样：
+
+1. 打开**Settings-Docker Engine**
+2. 在`registry-mirrors`中添加`https://docker.nju.edu.cn/`
+3. 点击**Apply&Restart**
