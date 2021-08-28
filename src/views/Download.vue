@@ -11,7 +11,7 @@
           <el-submenu index="os">
             <template slot="title">
               <i class="el-icon-s-platform"/>
-              <span>Linux Distros {{ show.os.length }}</span>
+              <span>OS {{ show.os.length }}</span>
             </template>
             <el-menu-item v-for="entry in show.os" :index="`/download/os/${entry.distro}`" :key="entry.distro">
               {{ entry.distro }}
