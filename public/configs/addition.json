@@ -144,10 +144,6 @@
     "path": "/github-release/ventoy/Ventoy/"
   },
   {
-    "name": "opensuse-ports",
-    "path": "/opensuse/ports"
-  },
-  {
     "name": "aosp",
     "path": "/git/aosp"
   },
