@@ -144,9 +144,9 @@
     "path": "/github-release/ventoy/Ventoy/"
   },
   {
-    "name": "NJUThesisUndergraduate",
+    "name": "NJUThesis",
     "inherit": "github-release",
-    "path": "/github-release/nju-lug/NJUThesisUndergraduate"
+    "path": "/github-release/nju-lug/NJUThesis"
   },
   {
     "name": "aosp",
