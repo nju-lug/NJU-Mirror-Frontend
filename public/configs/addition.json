@@ -134,6 +134,11 @@
     "path": "/github-release/gephi/gephi/"
   },
   {
+    "name": "joplin",
+    "inherit": "github-release",
+    "path": "/github-release/laurent22"
+  },
+  {
     "name": "PowerToys",
     "inherit": "github-release",
     "path": "/github-release/microsoft/PowerToys/"
