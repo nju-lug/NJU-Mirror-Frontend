@@ -405,6 +405,11 @@
     "route": "qubes"
   },
   {
+    "name": "qt",
+    "path": "2021-09-25-qt.md",
+    "route": "qt"
+  },
+  {
     "name": "raspbian",
     "path": "1970-01-01-raspbian.md",
     "route": "raspbian"
