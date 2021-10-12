@@ -286,11 +286,6 @@
     "path": "/git/scoop-versions.git"
   },
   {
-    "name": "kaggle-human-protein-atlas",
-    "status":"success",
-    "size": "267.3G"
-  },
-  {
     "name": "docker-hub",
     "inherit": null,
     "status":"cache",
