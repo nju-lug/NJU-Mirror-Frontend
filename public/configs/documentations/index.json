@@ -425,6 +425,11 @@
     "route": "repoforge"
   },
   {
+    "name": "rocky",
+    "path": "  2021-10-12-rocky.md",
+    "route": "rocky"
+  },
+  {
     "name": "ros",
     "path": "1970-01-01-ros.md",
     "route": "ros"
