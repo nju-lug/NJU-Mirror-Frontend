@@ -18,7 +18,7 @@
 <script lang="ts">
 import Vue from 'vue';
 import axios from 'axios';
-import moment from 'moment';
+import dayjs from 'dayjs';
 import marked from 'marked';
 
 import {NewsEntry} from '@/configs';
@@ -38,7 +38,7 @@ export default Vue.extend({
       this.show = true;
     },
     getDate(ts: number): string {
-      return moment.unix(ts).format('YYYY.M.D');
+      return dayjs.unix(ts).format('YYYY.M.D');
     }
   },
   watch: {

@@ -1,7 +1,10 @@
 import axios from 'axios';
 import {serverPrefix} from './common';
 import type {SyncEntry} from './common';
-import moment from 'moment';
+import dayjs from 'dayjs';
+import relativeTime from 'dayjs/plugin/relativeTime';
+
+dayjs.extend(relativeTime);
 
 interface RawEntry {
   name: string,
@@ -32,8 +35,8 @@ export async function fetchEntries(): Promise<Array<SyncEntry>> {
     name: value.name,
     status: value.status,
     path: '/' + value.name,
-    lastUpdate: value.last_update_ts > 0 ? moment.unix(value.last_update_ts).fromNow() : '-',
-    nextUpdate: value.next_schedule_ts > 0 ? moment.unix(value.next_schedule_ts).fromNow() : '-',
+    lastUpdate: value.last_update_ts > 0 ? dayjs.unix(value.last_update_ts).fromNow() : '-',
+    nextUpdate: value.next_schedule_ts > 0 ? dayjs.unix(value.next_schedule_ts).fromNow() : '-',
     size: value.size == 'unknown' ? '-' : value.size,
   });
 
