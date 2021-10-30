@@ -2,6 +2,7 @@
 'use strict';
 
 const path = require('path');
+const { ContextReplacementPlugin } = require('webpack');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 function resolve(dir) {
@@ -40,7 +41,8 @@ module.exports = {
   configureWebpack: config => {
     config.plugins = [
       ...config.plugins,
-      new BundleAnalyzerPlugin()
+      new BundleAnalyzerPlugin(),
+      new ContextReplacementPlugin(/moment[\\\/]locale$/, /NONE/)
     ]
   },
   assetsDir: 'static',
