@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import ElementUI from '@/configs/element-ui';
 import 'github-markdown-css/github-markdown.css';
+import '@/assets/theme/index.css';
 import App from '@/App.vue';
 import router from '@/router';
 import VueAnalytics from 'vue-analytics';
