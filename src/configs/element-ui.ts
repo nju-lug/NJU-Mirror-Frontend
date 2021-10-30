@@ -24,6 +24,8 @@ import {
   Backtop,
   PageHeader,
   Message,
+  Tag,
+  Icon
 } from 'element-ui';
 
 const components = [
@@ -49,7 +51,9 @@ const components = [
   Submenu,
   Card,
   Dialog,
-  Button
+  Button,
+  Tag,
+  Icon
 ];
 
 const ElementUI = {
