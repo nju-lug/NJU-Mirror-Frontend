@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import ElementUI from 'element-ui';
+import ElementUI from '@/configs/element-ui';
 import 'github-markdown-css/github-markdown.css';
 import '@/assets/theme/index.css';
 import App from '@/App.vue';

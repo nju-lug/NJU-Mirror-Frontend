@@ -2,6 +2,7 @@
 'use strict';
 
 const path = require('path');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 function resolve(dir) {
   return path.join(__dirname, dir);
@@ -10,7 +11,8 @@ function resolve(dir) {
 module.exports = {
   chainWebpack(config) {
     // split chunks optimization
-    config.when(process.env.NODE_ENV === 'production', config =>
+    config.when(process.env.NODE_ENV === 'production', config => {
+      config.plugin('webpack-bundle-analyzer').use(BundleAnalyzerPlugin)
       config.optimization.splitChunks({
         chunks: 'all',
         cacheGroups: {
@@ -33,8 +35,8 @@ module.exports = {
             reuseExistingChunk: true
           }
         }
-      }),
-    );
+      })
+    });
   },
   assetsDir: 'static',
 };
