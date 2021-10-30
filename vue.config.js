@@ -11,6 +11,9 @@ function resolve(dir) {
 module.exports = {
   chainWebpack(config) {
     // split chunks optimization
+    config.when(!!process.env.ANALYZER, config => {
+      config.plugin('webpack-bundle-analyzer').use(BundleAnalyzerPlugin)
+    })
     config.when(process.env.NODE_ENV === 'production', config => {
       config.optimization.splitChunks({
         chunks: 'all',
@@ -36,12 +39,6 @@ module.exports = {
         }
       })
     });
-  },
-  configureWebpack: config => {
-    config.plugins = [
-      ...config.plugins,
-      new BundleAnalyzerPlugin()
-    ]
   },
   assetsDir: 'static',
 };
