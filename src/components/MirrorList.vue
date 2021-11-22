@@ -112,6 +112,8 @@ export default Vue.extend({
         this.$router.push(`/help/${help.route}`);
       } else if (help?.redirect) {
         window.location.href = help.redirect;
+      } else {
+        this.$router.push(`/help/${row.name}`);
       }
     },
   },
