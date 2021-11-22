@@ -2,8 +2,9 @@ export const serverPrefix = '/configs/';
 
 export interface DocItem {
   name: string,
-  path: string,
-  route: string,
+  path?: string,
+  route?: string,
+  redirect?: string,
 }
 
 export interface LinkItem {

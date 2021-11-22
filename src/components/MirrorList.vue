@@ -107,7 +107,12 @@ export default Vue.extend({
       return this.docConfig.find(value => value.name == row.name);
     },
     handleHelp(row: SyncEntry) {
-      this.$router.push(`/help/${row.name}`);
+      const help = this.docConfig.find(value => value.name == row.name);
+      if (help?.route) {
+        this.$router.push(`/help/${help.route}`);
+      } else if (help?.redirect) {
+        window.location.href = help.redirect;
+      }
     },
   },
   mounted() {
