@@ -38,7 +38,9 @@ export default Vue.extend({
   computed: {
     show(): Array<DocItem> {
       // ts bug
-      return (this.$store.state.docConfig as Array<DocItem>).filter(value => value.name.toLowerCase().includes(this.filter.toLowerCase()));
+      return (this.$store.state.docConfig as Array<DocItem>).filter(
+        value => value.name.toLowerCase().includes(this.filter.toLowerCase()) 
+          && value.route);
     },
     showNavi(): boolean {
       return !this.isMobile || this.$route.path == '/help/index';
