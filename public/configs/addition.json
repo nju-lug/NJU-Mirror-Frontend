@@ -136,7 +136,7 @@
   {
     "name": "joplin",
     "inherit": "github-release",
-    "path": "/github-release/laurent22"
+    "path": "/github-release/laurent22/"
   },
   {
     "name": "PowerToys",
@@ -151,7 +151,47 @@
   {
     "name": "NJUThesis",
     "inherit": "github-release",
-    "path": "/github-release/nju-lug/NJUThesis"
+    "path": "/github-release/nju-lug/NJUThesis/"
+  },
+  {
+    "name": "mill",
+    "inherit": "github-release",
+    "path": "/github-release/com-lihaoyi/mill/"
+  },
+  {
+    "name": "dbeaver",
+    "inherit": "github-release",
+    "path": "/github-release/dbeaver/dbeaver/"
+  },
+  {
+    "name": "ibmruntimes",
+    "inherit": "github-release",
+    "path": "/github-release/ibmruntimes/"
+  },
+  {
+    "name": "iina-plus",
+    "inherit": "github-release",
+    "path": "/github-release/xjbeta/iina-plus/"
+  },
+  {
+    "name": "Synergy",
+    "inherit": "github-release",
+    "path": "/github-release/DEAKSoftware/Synergy-Binaries/"
+  },
+  {
+    "name": "Bob",
+    "inherit": "github-release",
+    "path": "/github-release/ripperhe/Bob/"
+  },
+  {
+    "name": "CuteTranslation",
+    "inherit": "github-release",
+    "path": "/github-release/jiangzc/CuteTranslation/"
+  },
+  {
+    "name": "Zettlr",
+    "inherit": "github-release",
+    "path": "/github-release/Zettlr/Zettlr/"
   },
   {
     "name": "aosp",
