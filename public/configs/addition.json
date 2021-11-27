@@ -194,6 +194,16 @@
     "path": "/github-release/Zettlr/Zettlr/"
   },
   {
+    "name": "pandoc",
+    "inherit": "github-release",
+    "path": "/github-release/jgm/pandoc/"
+  },
+  {
+    "name": "HandBrake",
+    "inherit": "github-release",
+    "path": "/github-release/HandBrake/HandBrake/"
+  },
+  {
     "name": "aosp",
     "path": "/git/aosp"
   },
