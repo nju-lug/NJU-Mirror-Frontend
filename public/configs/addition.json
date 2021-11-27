@@ -194,6 +194,11 @@
     "path": "/github-release/Zettlr/Zettlr/"
   },
   {
+    "name": "bilimini",
+    "inherit": "github-release",
+    "path": "/github-release/chitosai/bilimini/"
+  },
+  {
     "name": "aosp",
     "path": "/git/aosp"
   },
