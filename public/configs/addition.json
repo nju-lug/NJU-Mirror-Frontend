@@ -154,6 +154,11 @@
     "path": "/github-release/nju-lug/NJUThesis/"
   },
   {
+    "name": "NJUVisual",
+    "inherit": "github-release",
+    "path": "/github-release/nju-lug/NJUVisual/"
+  },
+  {
     "name": "mill",
     "inherit": "github-release",
     "path": "/github-release/com-lihaoyi/mill/"
